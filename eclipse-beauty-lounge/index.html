@@ -755,7 +755,8 @@ function showResult(r) {
   $('rcIc').className = 'rc-ic' + (ic === 'ok' ? '' : ' ' + ic); $('rcIc').innerHTML = ICONS[ic];
   $('rcTitle').textContent = title; $('rcMsg').textContent = msg;
   $('rcDemo').innerHTML = r.status === 'Demo' || r.status === 'DemoPay' ? '<span class="demo-tag">DEMO ONLY · no payment was made or checked</span>' : '';
-  $('rcPay').hidden = !(r.status === 'Online' && r.checkout_url); if (!$('rcPay').hidden) $('rcPay').href = r.checkout_url;
+  const pmOk = u => { try { const x = new URL(u); return x.protocol === 'https:' && /(^|\.)paymongo\.com$/.test(x.hostname); } catch { return false; } };
+  $('rcPay').hidden = !(r.status === 'Online' && pmOk(r.checkout_url)); $('rcPay').href = $('rcPay').hidden ? '#book' : r.checkout_url;
   const paid = r.status === 'Paid';
   const rows = [['Booking no.', r.ref], ['Status', paid ? '<span class="paid">✓ Paid, confirmed</span>' : esc(r.status === 'Demo' || r.status === 'DemoPay' ? 'Preview, not paid' : r.status === 'Receipt check needed' || r.status === 'Payment check needed' || r.status === 'Checking' ? 'Checking your payment' : r.status === 'Online' ? 'Waiting for down payment' : r.status)], ['Service', r.service], ['Requested slot', r.day ? `${r.day}, ${r.time}` : ''], [paid ? 'Down payment received' : 'Down payment', peso(r.amount)], ['Paid to', paid ? r.paidTo : ''], ['Reference no.', paid ? r.refNo : '']];
   $('rcpt').innerHTML = rows.filter(x => x[0] && x[1]).map(([k, v]) => `<div><span>${k}</span><span>${k === 'Status' ? v : esc(v)}</span></div>`).join('');
