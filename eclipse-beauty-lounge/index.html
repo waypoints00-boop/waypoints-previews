@@ -234,6 +234,8 @@ section{position:relative}
 @media (max-width:400px){.cal{padding:8px}.cal-g button,.cal-g span{min-height:48px}.cal-g button small{font-size:.56rem}}
 .dp-note{border-radius:16px;background:var(--blush);padding:14px 16px;font-size:.86rem;color:var(--ink)}
 .dp-note b{color:var(--plum)}
+html[data-pay=online] .if-qr,html:not([data-pay=online]) .if-online{display:none!important}
+.pmdemo{position:fixed;inset:0;z-index:500;background:rgba(20,8,14,.72);display:grid;place-items:center;padding:16px}.pmdemo .box{width:min(420px,100%);border-radius:22px;background:#fff;color:#1d2433;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.5);font-family:system-ui,sans-serif}.pmdemo .url{display:flex;align-items:center;gap:6px;font-size:.8rem;color:#1f6b45;background:#f1f5f3;border-radius:10px;padding:7px 10px;margin-bottom:12px}.pmdemo .warn{margin:0 0 12px;padding:8px 10px;border-radius:10px;background:#fdf3e2;color:#7a4e0e;font-size:.82rem;font-weight:600}.pmdemo .amt{font-size:1.8rem;font-weight:700;margin:4px 0 12px}.pmdemo .opts{display:grid;gap:8px;margin-bottom:14px}.pmdemo .opts label{display:flex;align-items:center;gap:10px;padding:12px;border-radius:12px;border:1.5px solid #e3e8ee;font-weight:600;cursor:pointer}.pmdemo button{width:100%;min-height:48px;border-radius:12px;border:0;background:#0b6e4f;color:#fff;font-weight:700;font-size:1rem;cursor:pointer}.pmdemo .cancel{background:none;color:#4b5563;font-weight:500;margin-top:6px}
 .pay .step-k{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
 .pay h3{font-size:1.9rem;margin:0 0 6px}
 .qtabs{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 12px}
@@ -397,7 +399,7 @@ section{position:relative}
       <div class="col-lg-6">
         <span class="eyebrow">Book your visit</span>
         <h2>Ready for your<br><span class="script rg">glow-up era?</span></h2>
-        <p class="mt-3" style="color:#e3c6d1;max-width:44ch">Pick your service and a day, then secure your slot with a <b class="feeTxt">₱200</b> down payment by GCash, Maya or bank QR. It's deducted from your bill, and your consultation is still free.</p>
+        <p class="mt-3" style="color:#e3c6d1;max-width:44ch">Pick your service and a day, then secure your slot with a <b class="feeTxt">₱200</b> down payment <span class="if-qr">by GCash, Maya or bank QR</span><span class="if-online">by GCash, Maya or card on PayMongo's secure page</span>. It's deducted from your bill, and your consultation is still free.</p>
         <a class="btn-e gold mt-2" href="https://m.me/61593057140350" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.4 2 2 6.1 2 11.4c0 2.9 1.3 5.4 3.5 7.2V22l3.2-1.8c1 .3 2.1.4 3.3.4 5.6 0 10-4.1 10-9.4S17.6 2 12 2zm1 12.6-2.6-2.7-5 2.7 5.5-5.8 2.6 2.7 4.9-2.7-5.4 5.8z"/></svg>Chat on Messenger</a>
       </div>
       <div class="col-lg-6">
@@ -422,7 +424,7 @@ section{position:relative}
             <div class="col-12"><label for="bfb" class="form-label">Facebook name (optional)</label><input class="form-control" id="bfb" name="facebook" placeholder="So we can message you"></div>
             <div class="col-12"><label for="bt" class="form-label">Notes (optional)</label><textarea class="form-control" id="bt" name="notes" rows="2" placeholder="Hair history, length, last rebond or color…"></textarea></div>
             <div class="col-12"><label for="bem" class="form-label" id="bemLbl">Email (for your confirmation)</label><input class="form-control" id="bem" name="email" type="email" required autocomplete="email" placeholder="you@email.com"></div>
-            <div class="col-12"><div class="dp-note"><b>Next: your <span class="feeTxt">₱200</span> down payment.</b> We'll show our GCash, Maya and bank QR. Pay, then upload a screenshot of your receipt. Your booking is confirmed once your payment is checked, and we email you right away.</div></div>
+            <div class="col-12"><div class="dp-note"><b>Next: your <span class="feeTxt">₱200</span> down payment.</b> <span class="if-qr">We'll show our GCash, Maya and bank QR. Pay, then upload a screenshot of your receipt. Your booking is confirmed once your payment is checked, and we email you right away.</span><span class="if-online">You'll go to PayMongo's secure checkout (GCash, Maya or card). Your booking is confirmed the moment PayMongo confirms your payment, and we email you right away. We never see your card or e-wallet login.</span></div></div>
             <div class="col-12"><label class="d-flex gap-2 align-items-start" style="font-size:.88rem;font-weight:500"><input type="checkbox" name="consent" value="Yes" required style="width:20px;height:20px;margin-top:2px;flex:none;accent-color:#9c3a75"> <span>I agree to the <a href="privacy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="terms/" target="_blank" rel="noopener">Terms</a>, and allow Eclipse Beauty Lounge to use my details to manage my booking.</span></label></div>
             <div class="col-12"><button class="btn-e w-100" type="submit" id="bBtn">Continue to down payment</button></div>
           </div>
@@ -451,7 +453,7 @@ section{position:relative}
           <p class="muted mb-0" id="rcMsg"></p>
           <div id="rcDemo"></div>
           <div class="rcpt" id="rcpt"></div>
-          <div class="d-grid gap-2" id="rcBtns"><button class="btn-e" type="button" id="rcPrint">Save or print confirmation</button><a class="btn-e ghost" style="color:var(--ink)" href="https://m.me/61593057140350" target="_blank" rel="noopener">Message us on Messenger</a><button class="btn-e ghost" style="color:var(--ink)" type="button" id="rcNew">Book another visit</button></div>
+          <div class="d-grid gap-2" id="rcBtns"><a class="btn-e" id="rcPay" hidden rel="noopener">Pay the down payment now</a><button class="btn-e" type="button" id="rcPrint">Save or print confirmation</button><a class="btn-e ghost" style="color:var(--ink)" href="https://m.me/61593057140350" target="_blank" rel="noopener">Message us on Messenger</a><button class="btn-e ghost" style="color:var(--ink)" type="button" id="rcNew">Book another visit</button></div>
           <p class="safe-note">Stay safe: we will never ask for your OTP, MPIN or card details by chat, text or call.</p>
         </div>
       </div>
@@ -684,6 +686,7 @@ async function loadAvailability() {
     const r = await (await fetch(BOOKING_API_URL + '?action=availability')).json();
     if (!r || !r.ok) throw 0;
     Object.assign(CAL, { capacity: r.capacity || CAL.capacity, open: r.openDays || CAL.open, counts: r.counts || {}, live: true });
+    if (r.online && !document.documentElement.hasAttribute('data-demo')) document.documentElement.dataset.pay = 'online';
   } catch {
     if (document.documentElement.hasAttribute('data-demo')) { // preview only: believable sample numbers
       CAL.sample = true;
@@ -694,11 +697,14 @@ async function loadAvailability() {
 }
 renderCal(); loadAvailability();
 document.addEventListener('click', e => { const a = e.target.closest('[data-svc]'); if (!a) return; const v = a.dataset.svc, opt = [...$('bs').options].find(o => o.value === v); if (opt) $('bs').value = v; toast(`${v} added to your booking.`); });
-/* ---------- Booking + down payment by QR (no payment company: money goes straight to Eclipse's own accounts) ----------
-   1) details -> Code.gs holds the slot and returns the QR codes
-   2) customer pays in their own app, uploads the receipt -> Code.gs reads it and checks amount, names and reference number
-   3) only a passed check (or the owner's approval) marks the booking Paid and sends the confirmation emails */
+/* ---------- Booking + down payment ----------
+   PayMongo mode (Code.gs has a PayMongo key): details -> Code.gs holds the slot and opens a PayMongo checkout -> the customer pays
+     on checkout.paymongo.com -> back here, Code.gs asks PayMongo itself. Only PayMongo's answer can mark the booking Paid.
+   QR mode (no key): details -> QR codes -> the customer pays in their own app and uploads the receipt -> the owner confirms.
+   The preview (data-demo) shows the PayMongo flow with nothing real behind it, and never says "Paid". */
 const DEMO = document.documentElement.hasAttribute('data-demo');
+if (DEMO) document.documentElement.dataset.pay = 'online';
+const toPayMongo = url => { const u = new URL(url); if (u.protocol !== 'https:' || !/(^|\.)paymongo\.com$/.test(u.hostname)) throw new Error('Unexpected payment page. Please message us instead.'); location.assign(u.href); };
 const LIVE = !!BOOKING_API_URL && !DEMO;
 const peso = n => '₱' + Number(n).toLocaleString('en-PH');
 const setAmt = n => document.querySelectorAll('.feeTxt,.amtTxt').forEach(el => el.textContent = peso(n));
@@ -739,19 +745,25 @@ function showResult(r) {
     Paid: ['ok', "You're booked. Salamat!", `We checked your ${peso(r.amount)} down payment. Your confirmation is in your email. We may message you to confirm your exact time.`],
     'Receipt check needed': ['wait', 'Receipt received. We\'re checking it.', 'Your slot stays held while we check your payment. You\'ll get a confirmation email as soon as it\'s done, usually within a few hours (Tue to Sat, 10 AM to 7 PM).'],
     Expired: ['warn', 'Your slot hold has ended', 'If you already paid, upload your receipt anyway and we\'ll check if your day still has room. Or message us on Messenger.'],
-    Demo: ['wait', 'Receipt received (demo)', 'This is a preview, so nothing was sent or checked. On the real website, our system reads your receipt, checks the amount and names against your booking, then emails you and Eclipse. Your booking is only confirmed after that check.']
+    Demo: ['wait', 'Receipt received (demo)', 'This is a preview, so nothing was sent or checked. On the real website, Eclipse checks that the money arrived in their account before your booking is confirmed.'],
+    DemoPay: ['warn', 'Demo: no payment was made', 'This preview has no real payment behind it, so the booking is not confirmed. On the real website you pay on PayMongo\'s own page, and the booking only shows "Paid" after PayMongo itself tells our system the money arrived.'],
+    Checking: ['wait', 'Confirming your payment…', 'We\'re asking PayMongo directly. This takes a few seconds.'],
+    'Payment check needed': ['wait', 'We\'re checking your payment', 'Something about the payment needs a quick look from Eclipse (for example the amount). Your slot stays held and we\'ll email you shortly.'],
+    Online: ['warn', 'Not paid yet', r.checkout_url ? 'Your slot is held, but we haven\'t received your down payment. Tap below to pay on PayMongo\'s secure page.' : 'We haven\'t received your down payment yet. If you just paid, wait a minute and refresh this page. Otherwise message us on Messenger.']
   };
   const [ic, title, msg] = T[r.status] || ['warn', 'Booking not confirmed yet', 'Please message us on Messenger with your booking number.'];
   $('rcIc').className = 'rc-ic' + (ic === 'ok' ? '' : ' ' + ic); $('rcIc').innerHTML = ICONS[ic];
   $('rcTitle').textContent = title; $('rcMsg').textContent = msg;
-  $('rcDemo').innerHTML = r.status === 'Demo' ? '<span class="demo-tag">DEMO ONLY · no payment was made or checked</span>' : '';
+  $('rcDemo').innerHTML = r.status === 'Demo' || r.status === 'DemoPay' ? '<span class="demo-tag">DEMO ONLY · no payment was made or checked</span>' : '';
+  $('rcPay').hidden = !(r.status === 'Online' && r.checkout_url); if (!$('rcPay').hidden) $('rcPay').href = r.checkout_url;
   const paid = r.status === 'Paid';
-  const rows = [['Booking no.', r.ref], ['Status', paid ? '<span class="paid">✓ Paid, confirmed</span>' : esc(r.status === 'Demo' ? 'Preview' : r.status === 'Receipt check needed' ? 'Checking your payment' : r.status)], ['Service', r.service], ['Requested slot', r.day ? `${r.day}, ${r.time}` : ''], [paid ? 'Down payment received' : 'Down payment', peso(r.amount)], ['Paid to', paid ? r.paidTo : ''], ['Reference no.', paid ? r.refNo : '']];
+  const rows = [['Booking no.', r.ref], ['Status', paid ? '<span class="paid">✓ Paid, confirmed</span>' : esc(r.status === 'Demo' || r.status === 'DemoPay' ? 'Preview, not paid' : r.status === 'Receipt check needed' || r.status === 'Payment check needed' || r.status === 'Checking' ? 'Checking your payment' : r.status === 'Online' ? 'Waiting for down payment' : r.status)], ['Service', r.service], ['Requested slot', r.day ? `${r.day}, ${r.time}` : ''], [paid ? 'Down payment received' : 'Down payment', peso(r.amount)], ['Paid to', paid ? r.paidTo : ''], ['Reference no.', paid ? r.refNo : '']];
   $('rcpt').innerHTML = rows.filter(x => x[0] && x[1]).map(([k, v]) => `<div><span>${k}</span><span>${k === 'Status' ? v : esc(v)}</span></div>`).join('');
-  $('rcPrint').hidden = !paid; $('rcNew').hidden = !paid && r.status !== 'Demo';
+  $('rcPrint').hidden = !paid; $('rcNew').hidden = !paid && r.status !== 'Demo' && r.status !== 'DemoPay';
   card('bookOk');
 }
 $('rcPrint').onclick = () => print();
+$('rcPay').onclick = e => { e.preventDefault(); try { toPayMongo($('rcPay').href); } catch (err) { toast(err.message); } };
 $('rcNew').onclick = () => { PAY = null; forget(); $('rcForm').reset(); $('rpPrev').hidden = true; card('bookForm'); };
 
 /* Step 1: details -> hold the slot, get the QR codes */
@@ -763,9 +775,13 @@ $('bookForm').addEventListener('submit', async e => {
   const btn = $('bBtn'), label = btn.textContent; btn.disabled = true; btn.textContent = 'Holding your slot…';
   try {
     let r;
-    if (DEMO || !BOOKING_API_URL) r = { ok: true, ref: 'ECL-DEMO-' + Math.random().toString(36).slice(2, 6).toUpperCase(), k: 'demo', amount: DOWN_PAYMENT, payBy: 'one hour from now', accounts: [{ label: 'GCash (sample)', name: 'Eclipse Beauty Lounge', qr: sampleQR() }, { label: 'Bank (sample)', name: 'Eclipse Beauty Lounge', qr: sampleQR(1) }], demo: 1 };
-    else r = await api(data);
+    if (DEMO || !BOOKING_API_URL) { btn.disabled = false; btn.textContent = label; return demoPayMongo(Object.assign({ ref: 'ECL-DEMO-' + Math.random().toString(36).slice(2, 6).toUpperCase(), amount: DOWN_PAYMENT }, data)); }
+    r = await api(Object.assign({ back: location.origin + location.pathname }, data));
     if (!r.ok) throw new Error(r.error || 'Could not hold your slot. Please try again.');
+    if (r.online) {
+      if (!r.ref || !r.checkout_url) throw new Error('Online payment isn\'t ready yet. Please message us on Messenger to book.');
+      remember(r); btn.textContent = 'Opening secure checkout…'; toPayMongo(r.checkout_url); return;
+    }
     if (!r.demo) r.accounts = await withQR(r.accounts);
     if (!r.ref || !r.accounts || !r.accounts.length) throw new Error('Online down payment isn\'t ready yet. Please message us on Messenger to book.');
     Object.assign(r, { service: data.service, day: data.day, time: data.time });
@@ -809,6 +825,15 @@ $('rcForm').addEventListener('submit', async e => {
   btn.disabled = false; btn.textContent = label;
 });
 
+/* Preview only: what PayMongo's page looks like. Nothing is charged and the result never says "Paid". */
+function demoPayMongo(b) {
+  const d = document.createElement('div'); d.className = 'pmdemo'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-modal', 'true'); d.setAttribute('aria-label', 'Demo payment page');
+  d.innerHTML = '<div class="box"><div class="url">checkout.paymongo.com <small style="color:#7a4e0e;margin-left:auto">DEMO</small></div><p class="warn">Demo page only. No money will move. The real website opens PayMongo\'s own checkout.</p><div style="font-size:.85rem;color:#4b5563">Eclipse Beauty Lounge · down payment</div><div class="amt">' + peso(b.amount) + '</div><div class="opts">' + ['GCash', 'Maya', 'Card'].map((m, i) => '<label><input type="radio" name="pmm" value="' + m + '"' + (i ? '' : ' checked') + '><span>' + m + '</span></label>').join('') + '</div><button type="button" id="pmPay">Try demo payment</button><button type="button" class="cancel" id="pmCancel">Cancel</button></div>';
+  document.body.append(d); d.querySelector('#pmPay').focus();
+  d.querySelector('#pmCancel').onclick = () => { d.remove(); toast('Payment cancelled. Your details are still here.'); };
+  d.querySelector('#pmPay').onclick = () => { d.remove(); showResult({ status: 'Checking', ref: b.ref, service: b.service, day: b.day, time: b.time, amount: b.amount }); setTimeout(() => showResult({ status: 'DemoPay', ref: b.ref, service: b.service, day: b.day, time: b.time, amount: b.amount }), 1400); };
+}
+
 /* Preview only: a placeholder QR (not scannable to any account) */
 function sampleQR(v) {
   const n = 25, c = document.createElement('canvas'); c.width = c.height = n * 8; const g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height); g.fillStyle = '#2e1424';
@@ -830,7 +855,17 @@ function sampleQR(v) {
   try {
     const r = await api(null, `?action=pay&ref=${encodeURIComponent(ref)}&k=${encodeURIComponent(k)}`);
     if (!r.ok) { forget(); if (fromLink) throw new Error(r.error); return; }
-    const p = Object.assign(r, { k }); p.accounts = await withQR(r.accounts);
+    const p = Object.assign(r, { k });
+    if (r.online) {
+      let x = p;
+      if (x.status === 'Awaiting down payment' && q.get('paid')) { // PayMongo can take a few seconds to mark it paid
+        showResult(Object.assign({}, x, { status: 'Checking' }));
+        for (let i = 0; i < 6 && x.status === 'Awaiting down payment'; i++) { await new Promise(s => setTimeout(s, 3000)); const y = await api(null, `?action=pay&ref=${encodeURIComponent(ref)}&k=${encodeURIComponent(k)}`); if (y.ok) x = Object.assign(y, { k }); }
+      }
+      if (x.status === 'Awaiting down payment') { remember(x); return showResult(Object.assign({}, x, { status: 'Online' })); }
+      forget(); return showResult(x);
+    }
+    p.accounts = await withQR(r.accounts);
     if (r.status === 'Awaiting down payment' && p.accounts.length) { remember(p); showPay(p); toast(`Welcome back. Booking ${r.ref} is waiting for your down payment.`); }
     else if (fromLink && r.status === 'Expired' && p.accounts.length) showPay(p);
     else { forget(); if (fromLink) showResult(p); }
