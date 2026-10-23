@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en" data-demo>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pop Haus Staycation | Maximalist Units Near Mall of Asia, Pasay</title>
+<meta name="description" content="Pop Haus: three maximalist staycation units at Shell Residences, a five-minute walk to Mall of Asia. Pool or MOA views, smart features, Netflix and karaoke. Check dates and book.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Pop Haus, your nearest staycation to Mall of Asia">
+<meta property="og:description" content="Play, Spring or Friends: colorful units at Shell Residences, five minutes' walk to MOA.">
+<meta name="theme-color" content="#F6F5FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121019" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<style>
+/* Pop Haus. Design read: playful maximalist hospitality brand, conversion = booking.
+   Dials: VARIANCE 9 / MOTION 7 / DENSITY 4. One action accent (pink) on the whole page.
+   Unit colors (sun, mint, grape) are identity only: unit tags, calendar range, gallery tabs.
+   Shape rule: cards 24px, photos inside cards 18px, inputs 14px, buttons and chips full pill. */
+:root{--bg:#F6F5FA;--surface:#FFFFFF;--ink:#1B1830;--muted:#57536B;--line:#E4E1EE;--pink:#C80C3B;--pink-soft:#FFE4EB;--sun:#F5B700;--sun-ink:#1B1830;--mint:#13805A;--grape:#6640C2;--shadow:0 30px 60px -38px rgba(42,26,92,.45);
+  --display:"Bricolage Grotesque",system-ui,sans-serif;--body:"Poppins",system-ui,sans-serif;--ease:cubic-bezier(.22,1,.36,1);--ease-io:cubic-bezier(.65,0,.35,1)}
+@media (prefers-color-scheme:dark){:root{--bg:#121019;--surface:#1C1926;--ink:#F4F2FA;--muted:#B9B4CC;--line:#2E2A3B;--pink:#E8104A;--pink-soft:#3A1622;--sun:#FFC83D;--mint:#3CC48E;--grape:#9B7BFF;--shadow:0 30px 60px -38px rgba(0,0,0,.8)}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16.5px/1.65 var(--body)}
+[hidden]{display:none!important}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{max-width:1240px;--bs-gutter-x:2.5rem}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.025em;line-height:1.02;margin:0}
+h2{font-size:clamp(2.2rem,4.8vw,3.9rem)}
+.muted{color:var(--muted)}
+.ti{width:1.15em;height:1.15em;flex:none;vertical-align:-.2em}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:10px}
+.skip{position:absolute;left:-999px;top:8px;z-index:500;background:var(--surface);padding:8px 14px;border-radius:10px}.skip:focus{left:16px}
+section{position:relative}
+.pad{padding:clamp(72px,10vw,130px) 0}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* buttons: full pill, one accent */
+.btn-p{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:0;background:var(--pink);color:#fff;font:600 1rem var(--body);text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform .2s var(--ease),box-shadow .25s var(--ease),background .2s;box-shadow:0 14px 28px -14px rgba(200,12,59,.7)}
+.btn-p:hover{color:#fff;transform:translateY(-2px)}
+.btn-p:active{transform:translateY(0) scale(.98)}
+.btn-p.ghost{background:var(--surface);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-p.ghost:hover{color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-p:disabled{opacity:.6;cursor:wait}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--bg);box-shadow:inset 0 0 0 1px var(--line);font-size:.82rem;font-weight:500;color:var(--ink);white-space:nowrap}
+/* wordmark */
+.wm{display:inline-flex;align-items:baseline;gap:0;font-family:var(--display);font-weight:800;font-size:1.5rem;letter-spacing:-.02em;text-decoration:none;color:var(--ink);line-height:1}
+.wm .p2{margin-right:.22em}.wm .p1{color:var(--pink)}.wm .o{color:var(--sun)}.wm .p2{color:var(--grape)}
+/* header: one-line pill nav; phones get a Menu drop-down */
+.hdr{position:fixed;top:12px;left:12px;right:12px;z-index:100;border-radius:22px;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);box-shadow:var(--shadow),inset 0 0 0 1px var(--line)}
+.hdr .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.hdr nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;align-items:center}
+.hdr nav a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem}
+.hdr nav a:hover{background:var(--bg)}
+.hdr nav a.btn-p{display:inline-flex;padding:0 20px;min-height:44px}
+.mbtn{display:none}
+@media (max-width:991.98px){
+  .hdr{top:8px;left:8px;right:8px;border-radius:18px}
+  .hdr .bar{min-height:58px}
+  .mbtn{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border:0;border-radius:999px;background:var(--ink);color:var(--bg);font:600 .9rem var(--body);cursor:pointer}
+  .hdr nav{position:absolute;left:0;right:0;top:calc(100% + 8px);padding:10px;border-radius:18px;background:var(--surface);box-shadow:var(--shadow),inset 0 0 0 1px var(--line);opacity:0;visibility:hidden;transform:translateY(-8px);transform-origin:top center;transition:opacity .2s var(--ease),transform .25s var(--ease),visibility .25s}
+  .hdr.menu nav{opacity:1;visibility:visible;transform:none}
+  .hdr nav ul{flex-direction:column;align-items:stretch;gap:2px}
+  .hdr nav a{padding:13px 14px;font-size:1.05rem;font-weight:600}
+  .hdr nav a.btn-p{display:flex;margin-top:6px;min-height:50px}
+}
+/* 1 · HERO: split, fits the first screen */
+.hero{min-height:100svh;display:flex;align-items:center;padding:110px 0 56px;overflow:hidden}
+.hero h1{font-size:clamp(2.7rem,5.6vw,4.9rem);max-width:12.5ch}
+.hero h1 em{font-style:normal;color:var(--pink)}
+.hero .sub{font-size:clamp(1.02rem,1.4vw,1.15rem);color:var(--muted);max-width:44ch;margin:20px 0 28px}
+.deck{position:relative;height:clamp(380px,46vw,560px);perspective:1500px}
+.deck .rig{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+.key{position:absolute;width:min(300px,44%);aspect-ratio:3/4;border-radius:24px;overflow:hidden;background:var(--surface);box-shadow:0 40px 70px -30px rgba(27,24,48,.55),0 0 0 6px var(--surface);transform-style:preserve-3d;will-change:transform}
+.key img{width:100%;height:100%;object-fit:cover}
+.key::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(18,14,30,.78))}
+.key .tag{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;color:#fff}
+.key .tag b{display:block;font-family:var(--display);font-size:1.6rem;line-height:1}
+.key .tag span{font-size:.82rem;opacity:.92}
+.key .flr{position:absolute;top:12px;left:12px;z-index:1;padding:5px 11px;border-radius:999px;font-size:.75rem;font-weight:700}
+@media (max-width:991.98px){.hero{padding-top:96px;align-items:flex-start}.deck{height:auto;aspect-ratio:1.15;margin-top:28px}.key{width:44%}}
+/* trust strip (under the hero, per layout rules) */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+.trust ul{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 28px;margin:0;padding:0;list-style:none}
+.trust li{display:flex;align-items:center;gap:10px;font-weight:600}
+.trust li .ti{width:26px;height:26px;color:var(--pink)}
+.trust small{display:block;font-weight:400;color:var(--muted);font-size:.82rem}
+/* 2 · MISSION: zoom parallax (adapted from 21st.dev "Zoom Parallax" by efferd) */
+.zoom{height:300vh}
+.zoom .stage{position:sticky;top:0;height:100svh;overflow:hidden;background:#100d18}
+.zoom .z{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;will-change:transform}
+.zoom .z>div{position:relative;width:25vw;height:25vh;border-radius:14px;overflow:hidden}
+.zoom .z img{width:100%;height:100%;object-fit:cover}
+.zoom .z1>div{top:-30vh;left:5vw;width:35vw;height:30vh}
+.zoom .z2>div{top:-10vh;left:-25vw;width:20vw;height:45vh}
+.zoom .z3>div{left:27.5vw;width:25vw;height:25vh}
+.zoom .z4>div{top:27.5vh;left:5vw;width:20vw;height:25vh}
+.zoom .z5>div{top:27.5vh;left:-22.5vw;width:30vw;height:25vh}
+.zoom .z6>div{top:22.5vh;left:25vw;width:15vw;height:15vh}
+.zoom .scrim{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(16,13,24,.35),rgba(16,13,24,.8));opacity:0;pointer-events:none}
+.zoom .msg{position:absolute;inset:0;opacity:0;display:flex;align-items:center;padding:0 6vw;pointer-events:none}
+.zoom .msg p{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,4.2vw,3.6rem);line-height:1.12;letter-spacing:-.02em;color:#fff;max-width:20ch;margin:0}
+.zoom .msg .w{opacity:.12;transition:opacity .25s}
+.zoom .msg .w.em{color:var(--sun)}
+.zoom .hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);color:#d9d4ea;font-size:.8rem;letter-spacing:.08em}
+@media (max-width:767.98px){.zoom .z>div{width:40vw;height:22vh}.zoom .z1>div{top:-31vh;left:8vw;width:46vw;height:20vh}.zoom .z2>div{top:-6vh;left:-30vw;width:34vw;height:26vh}.zoom .z3>div{left:30vw;width:34vw;height:20vh}.zoom .z4>div{top:28vh;left:10vw;width:36vw;height:18vh}.zoom .z5>div{top:26vh;left:-26vw;width:40vw;height:20vh}.zoom .z6>div{top:-28vh;left:-30vw;width:28vw;height:13vh}}
+/* 3 · UNITS: asymmetric bento (1 tall + 2 stacked), not three equal cards */
+.units{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);grid-template-rows:auto auto;gap:22px;margin-top:40px}
+.units .u:first-child{grid-row:span 2}
+@media (max-width:991.98px){.units{grid-template-columns:minmax(0,1fr)}.units .u:first-child{grid-row:auto}}
+.u{position:relative;border-radius:24px;background:var(--surface);box-shadow:var(--shadow),inset 0 0 0 1px var(--line);padding:12px 12px 22px;display:flex;flex-direction:column;perspective:1200px}
+.u .tilt{transform-style:preserve-3d;transition:transform .25s var(--ease);display:flex;flex-direction:column;height:100%}
+.u .ph{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/10;transform:translateZ(18px)}
+.units .u:first-child .ph{aspect-ratio:auto;flex:1;min-height:340px}
+.u .ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.u:hover .ph img{transform:scale(1.05)}
+.u .flr{position:absolute;left:12px;top:12px;padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:700;transform:translateZ(40px)}
+.u .ico{position:absolute;right:16px;bottom:-22px;width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--surface);box-shadow:0 16px 30px -14px rgba(27,24,48,.5),inset 0 0 0 1px var(--line);transform:translateZ(60px)}
+.u .ico .ti{width:28px;height:28px}
+.u .bd{padding:18px 8px 0;transform:translateZ(26px)}
+.u h3{font-size:2.1rem;margin-bottom:4px}
+.u .meta{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 14px}
+.u .price{display:flex;align-items:baseline;gap:8px;margin-bottom:14px}
+.u .price b{font-family:var(--display);font-size:1.7rem}
+.u .row-a{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.u .peek{font-weight:600;text-decoration:underline;text-underline-offset:4px;padding:10px 6px;cursor:pointer;background:none;border:0;color:var(--ink);font-family:var(--body)}
+.t-play{background:var(--sun);color:var(--sun-ink)}.t-spring{background:var(--mint);color:#fff}.t-friends{background:var(--grape);color:#fff}
+.c-play{color:#a87a00}.c-spring{color:var(--mint)}.c-friends{color:var(--grape)}
+@media (prefers-color-scheme:dark){.c-play{color:var(--sun)}.t-spring,.t-friends{color:#120f1b}}
+/* 4 · REVIEWS */
+.rev{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);align-items:center;margin-top:36px}
+@media (max-width:991.98px){.rev{grid-template-columns:minmax(0,1fr)}}
+.badges{display:grid;gap:12px}
+.badge-row{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:24px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.badge-row .ti{width:32px;height:32px;color:var(--pink)}
+.badge-row b{display:block;font-family:var(--display);font-size:1.25rem;line-height:1.1}
+.badge-row small{color:var(--muted)}
+.quote{position:relative;padding:clamp(24px,4vw,44px);border-radius:24px;background:var(--ink);color:var(--bg);min-height:320px;display:flex;flex-direction:column}
+.quote blockquote{font-family:var(--display);font-weight:600;font-size:clamp(1.4rem,2.6vw,2.15rem);line-height:1.22;letter-spacing:-.01em;margin:0 0 22px}
+.quote blockquote .w{opacity:.15;transition:opacity .3s}
+.quote .who{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;flex-wrap:wrap}
+.quote .stars{color:var(--sun);display:flex;gap:2px}
+.quote .stars .ti{width:18px;height:18px;fill:currentColor}
+.qnav{display:flex;gap:8px}
+.qnav button{width:46px;height:46px;border-radius:50%;border:0;background:color-mix(in srgb,var(--bg) 16%,transparent);color:var(--bg);display:grid;place-items:center;cursor:pointer}
+.qnav button:hover{background:color-mix(in srgb,var(--bg) 26%,transparent)}
+/* 5 · GALLERY: 3D coverflow per unit */
+.gal{background:#120f1b;color:#f4f2fa;overflow:clip}
+.gal .amb{position:absolute;inset:0}
+.gal .amb img{width:100%;height:100%;object-fit:cover;filter:brightness(.3) blur(38px) saturate(1.3);transform:scale(1.2);transition:opacity .8s var(--ease)}
+.gal .container{position:relative}
+.tabs{display:inline-flex;gap:6px;padding:6px;border-radius:999px;background:rgba(255,255,255,.08);margin-top:24px}
+.tabs button{border:0;min-height:44px;padding:0 18px;border-radius:999px;background:none;color:#f4f2fa;font:600 .95rem var(--body);cursor:pointer}
+.tabs button[aria-pressed=true]{color:#1b1830}
+.tabs button[data-u=play][aria-pressed=true]{background:#FFC83D}.tabs button[data-u=spring][aria-pressed=true]{background:#5fd6a5}.tabs button[data-u=friends][aria-pressed=true]{background:#c7b5ff}
+.cf{position:relative;height:min(540px,128vw);perspective:1400px;margin-top:26px;touch-action:pan-y}
+.cf-item{position:absolute;left:50%;top:50%;width:min(360px,72vw);aspect-ratio:4/5;margin-left:calc(min(360px,72vw) / -2);border-radius:24px;overflow:hidden;background:#221d30;transition:transform .7s var(--ease),opacity .7s var(--ease),filter .7s var(--ease);cursor:pointer}
+.cf-item img{width:100%;height:100%;object-fit:cover}
+.cf-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,8,16,.85))}
+.cf-item figcaption{position:absolute;left:18px;bottom:16px;z-index:1;font-family:var(--display);font-weight:700;font-size:1.4rem;opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s var(--ease)}
+.cf-item.on figcaption{opacity:1;transform:none}
+.cf-nav{position:absolute;top:50%;z-index:40;width:50px;height:50px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(10,8,16,.55);backdrop-filter:blur(8px);color:#fff;display:grid;place-items:center;transform:translateY(-50%);cursor:pointer}
+.cf-nav.prev{left:0}.cf-nav.next{right:0}
+/* 6 · SAY HELLO */
+.hello-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:991.98px){.hello-grid{grid-template-columns:minmax(0,1fr)}}
+.stack{position:relative;height:clamp(420px,46vw,560px)}
+.stack figure{position:absolute;margin:0;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.stack figure img{width:100%;height:118%;object-fit:cover}
+.stack .s1{left:0;top:0;width:64%;height:74%}
+.stack .s2{right:0;bottom:0;width:52%;height:60%;border:8px solid var(--bg)}
+.stack .note{position:absolute;left:40%;top:56%;z-index:2;padding:14px 18px;border-radius:18px;background:var(--sun);color:var(--sun-ink);font-family:var(--display);font-weight:800;font-size:1.15rem;line-height:1.1;box-shadow:var(--shadow);transform:rotate(-4deg)}
+.near{list-style:none;margin:18px 0 0;padding:0;columns:2;column-gap:28px}
+.near li{break-inside:avoid;display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.near li span:last-child{font-weight:600;white-space:nowrap}
+@media (max-width:575.98px){.near{columns:1}}
+.amen{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.joke{margin:18px 0 0;padding:14px 18px;border-radius:18px;background:var(--pink-soft);font-weight:500}
+/* 7 · BOOKING */
+.book{background:#1B1830;color:#F4F2FA}
+@media (prefers-color-scheme:dark){.book{background:#0B0910}.book .panel{box-shadow:inset 0 0 0 1px var(--line)}}
+.book h2 em{font-style:normal;color:var(--sun)}
+.bk{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:22px;margin-top:34px;align-items:start}
+@media (max-width:991.98px){.bk{grid-template-columns:minmax(0,1fr)}}
+.panel{border-radius:24px;background:var(--surface);color:var(--ink);padding:clamp(18px,2.6vw,28px)}
+.pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.pick input{position:absolute;opacity:0;pointer-events:none}
+.pick label{display:block;padding:12px;border-radius:18px;box-shadow:inset 0 0 0 1.5px var(--line);cursor:pointer;line-height:1.25;transition:box-shadow .15s}
+.pick label b{display:block;font-family:var(--display);font-size:1.2rem}
+.pick label small{color:var(--muted);font-size:.78rem}
+.pick input:checked+label{box-shadow:inset 0 0 0 2.5px var(--pink);background:var(--pink-soft)}
+.pick input:focus-visible+label{outline:3px solid var(--pink);outline-offset:2px}
+@media (max-width:420px){.pick label small{display:none}}
+.cal-h{display:flex;align-items:center;justify-content:space-between;margin:20px 0 8px}
+.cal-h b{font-family:var(--display);font-size:1.35rem}
+.cal-h button{width:42px;height:42px;border-radius:50%;border:0;background:var(--bg);color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.cal-h button:disabled{opacity:.35;cursor:default}
+.cal-w,.cal-g{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.cal-w span{text-align:center;font-size:.74rem;font-weight:600;color:var(--muted);padding-bottom:4px}
+.cal-g button,.cal-g span{min-height:48px;border:0;border-radius:14px;background:none;color:var(--ink);font:600 .95rem var(--body);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1}
+.cal-g button{cursor:pointer;background:var(--bg)}
+.cal-g button small{font-size:.6rem;font-weight:500;color:var(--muted)}
+.cal-g button:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.cal-g button.off{background:none;color:var(--muted);text-decoration:line-through;cursor:not-allowed;opacity:.55}
+.cal-g button.off:hover{box-shadow:none}
+.cal-g button.in{background:color-mix(in srgb,var(--u) 22%,var(--surface))}
+.cal-g button.end{background:var(--u);color:var(--uo)}
+.cal-g button.end small{color:var(--uo)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-top:10px}
+.guests{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.step{display:flex;align-items:center;gap:4px;background:var(--bg);border-radius:999px;padding:4px}
+.step button{width:42px;height:42px;border-radius:50%;border:0;background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.step button:disabled{opacity:.35;cursor:default}
+.step output{min-width:30px;text-align:center;font-weight:700}
+.sum h3{font-size:1.5rem;margin-bottom:12px}
+.sum .lines{list-style:none;margin:0 0 12px;padding:0}
+.sum .lines li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.93rem}
+.sum .lines li span:last-child{font-weight:600;white-space:nowrap}
+.sum .tot{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--display);font-size:1.6rem;margin:6px 0 10px}
+.payopt{display:grid;gap:8px;margin:12px 0}
+.payopt input{position:absolute;opacity:0;pointer-events:none}
+.payopt label{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 14px;border-radius:14px;box-shadow:inset 0 0 0 1.5px var(--line);cursor:pointer;font-weight:500}
+.payopt label b{font-family:var(--display);font-size:1.15rem}
+.payopt input:checked+label{box-shadow:inset 0 0 0 2.5px var(--pink);background:var(--pink-soft)}
+.payopt input:focus-visible+label{outline:3px solid var(--pink)}
+.panel label.f{display:block;font-weight:600;font-size:.86rem;margin:12px 0 6px}
+.panel input.in,.panel textarea{width:100%;min-height:48px;border-radius:14px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);padding:10px 14px;font:inherit}
+.panel input.in:focus,.panel textarea:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 4px color-mix(in srgb,var(--pink) 18%,transparent)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.86rem;margin:14px 0}
+.consent input{width:20px;height:20px;margin-top:2px;accent-color:var(--pink);flex:none}
+.consent a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--pink);text-underline-offset:3px}
+.fine{font-size:.8rem;color:var(--muted);margin:12px 0 0}
+.fine li{margin-bottom:4px}
+.hp{position:absolute;left:-9999px}
+.done{text-align:left}
+.done .tick{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--mint) 18%,var(--surface));color:var(--mint);margin-bottom:12px}
+.done .tick .ti{width:30px;height:30px}
+.rcpt{background:var(--bg);border-radius:18px;padding:6px 16px;margin:14px 0}
+.rcpt div{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.93rem}
+.rcpt div:last-child{border:0}
+.rcpt span:first-child{color:var(--muted)}
+.rcpt span:last-child{font-weight:600;text-align:right}
+.demo-tag{display:inline-block;margin-top:6px;padding:3px 10px;border-radius:999px;background:color-mix(in srgb,var(--sun) 30%,var(--surface));font-size:.75rem;font-weight:700}
+.pmdemo{position:fixed;inset:0;z-index:600;background:rgba(10,8,16,.7);backdrop-filter:blur(6px);display:grid;place-items:center;padding:16px}
+.pmdemo .box{width:min(420px,100%);border-radius:22px;background:#fff;color:#1d2433;padding:22px;font-family:system-ui,sans-serif;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.pmdemo .url{display:flex;align-items:center;gap:6px;font-size:.8rem;color:#1f6b45;background:#f1f5f3;border-radius:10px;padding:7px 10px;margin-bottom:14px}
+.pmdemo .amt{font-size:1.8rem;font-weight:700;margin:4px 0 12px}
+.pmdemo .opts{display:grid;gap:8px;margin-bottom:14px}
+.pmdemo .opts label{display:flex;gap:10px;padding:12px;border-radius:12px;border:1.5px solid #e3e8ee;font-weight:600;cursor:pointer}
+.pmdemo button{width:100%;min-height:48px;border-radius:12px;border:0;background:#0b6e4f;color:#fff;font-weight:700;font-size:1rem;cursor:pointer}
+.pmdemo .cancel{background:none;color:#5b6472;font-weight:500;margin-top:6px}
+/* footer */
+.ftr{padding:56px 0 110px;border-top:1px solid var(--line)}
+.ftr h2{font-size:1.15rem;margin-bottom:10px}
+.ftr a{text-decoration:none}.ftr a:hover{text-decoration:underline}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.legal{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.88rem;margin-top:28px}
+.legal a{text-decoration:underline!important;text-underline-offset:3px}
+.note{font-size:.8rem;color:var(--muted);margin-top:10px}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:90;display:none;transform:translateY(160%);transition:transform .45s var(--ease)}
+.sticky.on{transform:none}
+.sticky .btn-p{width:100%}
+@media (max-width:767.98px){.sticky{display:block}body{padding-bottom:80px}}
+.toast-p{position:fixed;left:50%;bottom:86px;z-index:700;transform:translate(-50%,160%);visibility:hidden;background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:14px;font-weight:500;font-size:.92rem;transition:transform .45s var(--ease);max-width:calc(100vw - 32px)}
+.toast-p.show{transform:translate(-50%,0);visibility:visible}
+/* entrance: headings only, a short rise. No blur, no stagger spam */
+.rise{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rise.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.zoom .msg{opacity:1}*,*::before,*::after{transition:none!important;animation:none!important}.rise{opacity:1;transform:none}.zoom{height:auto}.zoom .stage{position:relative;height:auto;padding:110px 0}.zoom .z{position:static;display:none}.zoom .z0{display:flex}.zoom .z0>div{width:100%;height:60vh;border-radius:0}.zoom .scrim{opacity:1}.zoom .msg .w{opacity:1}.zoom .hint{display:none}}
+</style>
+<noscript><style>.zoom .msg{opacity:1}.rise{opacity:1!important;transform:none!important}.zoom .msg .w{opacity:1}.zoom .scrim{opacity:1}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr"><div class="container"><div class="bar">
+  <a class="wm" href="#top" aria-label="Pop Haus, home"><span class="p1">P</span><span class="o">O</span><span class="p2">P</span><span>HAUS</span></a>
+  <button class="mbtn" id="mbtn" type="button" aria-expanded="false" aria-controls="nav">Menu <i data-ic="chevron-right" class="mchev"></i></button>
+  <nav id="nav" aria-label="Main"><ul>
+    <li><a href="#units">The units</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#inside">Peek inside</a></li>
+    <li><a href="#hello">Location</a></li>
+    <li><a class="btn-p" href="#book">Check dates</a></li>
+  </ul></nav>
+</div></div></header>
+
+<main id="main">
+<!-- 1 · FAT HEADLINE + CTA -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <h1>Your nearest staycation to <em>Mall of Asia.</em></h1>
+        <p class="sub">Three maximalist units at Shell Residences, five minutes' walk to MOA. Pool or MOA views and a lot of color.</p>
+        <div class="d-flex flex-wrap gap-2"><a class="btn-p" href="#book">Check dates <i data-ic="arrow-right"></i></a><a class="btn-p ghost" href="#units">See the units</a></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="deck" id="deck" aria-hidden="true"><div class="rig" id="rig">
+          <div class="key" data-k="0" style="left:4%;top:12%"><img src="img/play-living.jpg" alt=""><span class="flr t-play">3rd floor</span><span class="tag"><b>Play</b><span>Pool view, up to 4</span></span></div>
+          <div class="key" data-k="1" style="left:28%;top:2%"><img src="img/friends-sofa.jpg" alt=""><span class="flr t-friends">9th floor</span><span class="tag"><b>Friends</b><span>MOA view, up to 4</span></span></div>
+          <div class="key" data-k="2" style="left:52%;top:14%"><img src="img/spring-dining.jpg" alt=""><span class="flr t-spring">1st floor</span><span class="tag"><b>Spring</b><span>Pool view, up to 5</span></span></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-label="Guest favorites">
+  <div class="container"><ul>
+    <li><i data-ic="brand-airbnb"></i><span>Guest favorite<small>on Airbnb</small></span></li>
+    <li><i data-ic="star"></i><span>Top 5% of homes<small>Airbnb guest ratings</small></span></li>
+    <li><i data-ic="shield-check"></i><span>Superhost<small>fast, reliable hosting</small></span></li>
+    <li><i data-ic="brand-facebook"></i><span>8.9K followers<small>on Facebook</small></span></li>
+  </ul></div>
+</section>
+
+<!-- 2 · BRAND MISSION (zoom parallax) -->
+<section class="zoom" id="mission" aria-label="Why Pop Haus">
+  <div class="stage">
+    <div class="z z0"><div><img src="img/friends-view.jpg" alt="Night view of Mall of Asia and its Ferris wheel from the Friends unit balcony"></div></div>
+    <div class="z z1" aria-hidden="true"><div><img src="img/pool.jpg" alt=""></div></div>
+    <div class="z z2" aria-hidden="true"><div><img src="img/play-bed.jpg" alt=""></div></div>
+    <div class="z z3" aria-hidden="true"><div><img src="img/spring-balcony.jpg" alt=""></div></div>
+    <div class="z z4" aria-hidden="true"><div><img src="img/friends-living.jpg" alt=""></div></div>
+    <div class="z z5" aria-hidden="true"><div><img src="img/kiddie-pool.jpg" alt=""></div></div>
+    <div class="z z6" aria-hidden="true"><div><img src="img/play-tv.jpg" alt=""></div></div>
+    <div class="scrim" id="zscrim"></div>
+    <div class="msg"><p id="missionText">Pop Haus is for trips that should feel like a *treat:* colorful rooms, spotless sheets, everything you need, and MOA a *five-minute* *walk* away.</p></div>
+    <p class="hint" id="zhint" aria-hidden="true">Scroll</p>
+  </div>
+</section>
+
+<!-- 3 · YOUR MAGIC: the units -->
+<section class="pad" id="units">
+  <div class="container">
+    <h2 class="rise">Pick your Haus.</h2>
+    <p class="muted rise" style="max-width:56ch;margin:14px 0 0">Every unit has a full kitchen, 100 Mbps Wi-Fi, a 50-inch TV with Netflix, karaoke and games, and an honesty store for late-night cravings.</p>
+    <div class="units" id="unitGrid"></div>
+  </div>
+</section>
+
+<!-- 4 · HAPPY CLIENTS -->
+<section class="pad" id="reviews" style="padding-top:0">
+  <div class="container">
+    <h2 class="rise">Guests keep coming back.</h2>
+    <div class="rev">
+      <div class="badges">
+        <div class="badge-row"><i data-ic="brand-airbnb"></i><div><b>Guest favorite</b><small>One of the most loved homes on Airbnb</small></div></div>
+        <div class="badge-row"><i data-ic="star"></i><div><b>Top 5% of homes</b><small>Based on ratings, reviews and reliability</small></div></div>
+        <div class="badge-row"><i data-ic="sparkles"></i><div><b>Spotless, every stay</b><small>The word guests use most</small></div></div>
+      </div>
+      <figure class="quote" aria-live="polite" style="margin:0">
+        <blockquote id="qText"></blockquote>
+        <figcaption class="who"><div><div class="stars" role="img" aria-label="5 out of 5 stars"><i data-ic="star"></i><i data-ic="star"></i><i data-ic="star"></i><i data-ic="star"></i><i data-ic="star"></i></div><b id="qWho"></b> <span id="qWhen" style="opacity:.75"></span></div>
+          <div class="qnav"><button type="button" id="qPrev" aria-label="Previous review"><i data-ic="chevron-left"></i></button><button type="button" id="qNext" aria-label="Next review"><i data-ic="chevron-right"></i></button></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · YOUR WORK: peek inside -->
+<section class="gal pad" id="inside">
+  <div class="amb" aria-hidden="true"><img id="amb" src="img/play-living.jpg" alt=""></div>
+  <div class="container text-center">
+    <h2 style="color:#fff" class="rise">Peek inside.</h2>
+    <div class="tabs" role="group" aria-label="Choose a unit" id="galTabs"><button type="button" data-u="play" aria-pressed="true">Play</button><button type="button" data-u="spring" aria-pressed="false">Spring</button><button type="button" data-u="friends" aria-pressed="false">Friends</button></div>
+    <div class="cf" id="cf" aria-roledescription="carousel" aria-label="Unit photos">
+      <button class="cf-nav prev" type="button" id="cfPrev" aria-label="Previous photo"><i data-ic="chevron-left"></i></button>
+      <button class="cf-nav next" type="button" id="cfNext" aria-label="Next photo"><i data-ic="chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · SAY HELLO -->
+<section class="pad" id="hello">
+  <div class="container">
+    <div class="hello-grid">
+      <div>
+        <h2 class="rise">Hi, we're Pop Haus.</h2>
+        <p style="margin:16px 0 0">We turned three Shell Residences units into the most colorful stays near MOA, and we just celebrated our first year. Self check-in, smart features in Play, and a team that replies from 8 AM to 9 PM.</p>
+        <p class="joke">Fair warning: guests keep asking to extend. We blame the karaoke.</p>
+        <ul class="near" aria-label="Distances from Shell Residences">
+          <li><span>Mall of Asia</span><span>500 m</span></li><li><span>MOA Arena</span><span>1.0 km</span></li>
+          <li><span>SMX Convention Center</span><span>1.2 km</span></li><li><span>World Trade Center</span><span>2.1 km</span></li>
+          <li><span>Ayala Malls Manila Bay</span><span>2.3 km</span></li><li><span>PICC and Star City</span><span>2.7 km</span></li>
+          <li><span>Solaire and Okada</span><span>4.0 km</span></li><li><span>NAIA Terminal</span><span>5.8 km</span></li>
+        </ul>
+        <div class="amen" aria-label="Building amenities"><span class="chip"><i data-ic="pool"></i>Adult pool</span><span class="chip"><i data-ic="swimming"></i>Kiddie pool</span><span class="chip"><i data-ic="sparkles"></i>Kids' playground</span><span class="chip"><i data-ic="armchair"></i>Lobby lounge</span><span class="chip"><i data-ic="tools-kitchen-2"></i>Alfamart, Watsons, cafes</span><span class="chip"><i data-ic="car"></i>Paid parking</span></div>
+        <div class="d-flex flex-wrap gap-2 mt-4"><a class="btn-p ghost" href="https://www.google.com/maps/search/?api=1&query=Shell+Residences+Tower+B+Mall+of+Asia+Pasay" target="_blank" rel="noopener"><i data-ic="map-pin"></i>Open in Maps</a></div>
+      </div>
+      <div class="stack" aria-hidden="true">
+        <figure class="s1" data-par="-7"><img src="img/pool.jpg" alt=""></figure>
+        <figure class="s2" data-par="7"><img src="img/playground.jpg" alt=""></figure>
+        <span class="note">500 m<br>to MOA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · CTA: check dates and book -->
+<section class="book pad" id="book">
+  <div class="container">
+    <h2 class="rise">Check dates. <em>Lock it in.</em></h2>
+    <p class="rise" style="max-width:56ch;margin:14px 0 0;opacity:.85">Pick a unit and your nights. Reserve with half now, or pay in full. You'll get a confirmation right away.</p>
+    <div class="bk">
+      <div class="panel">
+        <div class="pick" role="radiogroup" aria-label="Unit" id="unitPick"></div>
+        <div class="cal-h"><button type="button" id="calPrev" aria-label="Previous month"><i data-ic="chevron-left"></i></button><b id="calMonth" aria-live="polite"></b><button type="button" id="calNext" aria-label="Next month"><i data-ic="chevron-right"></i></button></div>
+        <div class="cal-w" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+        <div class="cal-g" id="calGrid"></div>
+        <div class="legend"><span>Tap your check-in, then your check-out</span><span><s>12</s> booked</span><span id="calNote"></span></div>
+        <div class="guests"><div><b>Guests</b><br><small class="muted" id="gNote">2 included in the rate</small></div><div class="step"><button type="button" id="gMinus" aria-label="Fewer guests"><i data-ic="minus"></i></button><output id="gOut" aria-live="polite">2</output><button type="button" id="gPlus" aria-label="More guests"><i data-ic="plus"></i></button></div></div>
+      </div>
+      <div class="panel sum">
+        <form id="bkForm" name="pophaus-booking" method="POST" data-netlify="true" netlify-honeypot="company" novalidate>
+          <input type="hidden" name="form-name" value="pophaus-booking">
+          <input type="hidden" name="summary" id="fSummary">
+          <p class="hp"><label>Leave empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
+          <h3 id="sumTitle">Your stay</h3>
+          <ul class="lines" id="sumLines"><li><span class="muted">Pick your dates on the calendar.</span></li></ul>
+          <div class="tot"><span>Total</span><span id="sumTot">₱0</span></div>
+          <div class="payopt" role="radiogroup" aria-label="Payment"><input type="radio" name="pay" id="payHalf" value="Reservation (50%)" checked><label for="payHalf"><span>Reserve now, pay the rest at check-in</span><b id="payHalfAmt">₱0</b></label><input type="radio" name="pay" id="payFull" value="Full payment"><label for="payFull"><span>Pay in full</span><b id="payFullAmt">₱0</b></label></div>
+          <label class="f" for="fName">Full name</label><input class="in" id="fName" name="name" required autocomplete="name">
+          <label class="f" for="fPhone">Mobile number</label><input class="in" id="fPhone" name="phone" type="tel" required pattern="[0-9+ ]{10,15}" placeholder="0917 123 4567" autocomplete="tel">
+          <label class="f" for="fEmail">Email (for your confirmation)</label><input class="in" id="fEmail" name="email" type="email" required autocomplete="email">
+          <label class="f" for="fNotes">Notes (optional)</label><textarea id="fNotes" name="notes" rows="2" placeholder="Celebrating something? Arriving late?"></textarea>
+          <label class="consent"><input type="checkbox" name="consent" value="Yes" required><span>I agree to the <a href="privacy/" target="_blank" rel="noopener">Privacy Policy</a>, <a href="terms/" target="_blank" rel="noopener">House rules and Terms</a> and <a href="refunds/" target="_blank" rel="noopener">Cancellation Policy</a>.</span></label>
+          <button class="btn-p w-100" type="submit" id="bkBtn">Check dates first</button>
+          <ul class="fine"><li>₱1,000 refundable security deposit at check-in.</li><li>One valid ID per booking. No pets (building rule).</li><li>Pool access and parking are not included.</li></ul>
+        </form>
+        <div class="done" id="bkDone" hidden tabindex="-1" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr"><div class="container">
+  <div class="row g-4">
+    <div class="col-md-5"><a class="wm" href="#top"><span class="p1">P</span><span class="o">O</span><span class="p2">P</span><span>HAUS</span></a><p class="muted mt-3 mb-0">Maximalist staycation units at Shell Residences Tower B, Mall of Asia, Pasay City.</p></div>
+    <div class="col-6 col-md-3"><h2>Contact</h2><ul><li><a href="tel:+639765200921">0976 520 0921</a></li><li><a href="mailto:pophaus.staycation@gmail.com">pophaus.staycation@gmail.com</a></li><li class="muted">Replies 8 AM to 9 PM</li></ul></div>
+    <div class="col-6 col-md-4"><h2>Follow and book</h2><ul><li><a href="https://www.facebook.com/PopHausStaycation/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/pophaus.staycation" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.tiktok.com/@pophaus.staycation" target="_blank" rel="noopener">TikTok</a></li><li><a href="http://airbnb.com/h/pop-haus" target="_blank" rel="noopener">Also on Airbnb</a></li></ul></div>
+  </div>
+  <nav class="legal" aria-label="Policies"><a href="privacy/">Privacy Policy</a><a href="terms/">House rules and Terms</a><a href="cookies/">Cookie Policy</a><a href="refunds/">Cancellation Policy</a></nav>
+  <p class="note">Website mock-up for Pop Haus by Waypoints Web Design. Not the official site yet. Photos: Pop Haus. Booked dates on this preview are samples.</p>
+</div></footer>
+<aside class="sticky" id="sticky" aria-label="Quick action"><a class="btn-p" href="#book">Check dates</a></aside>
+<div class="toast-p" id="toast" role="status"></div>
+
+<script src="assets/icons.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script>
+/* Booking endpoint (Apps Script). Empty = preview mode: payment is simulated and nothing is charged. */
+const BOOKING_API_URL = '';
+const $ = id => document.getElementById(id);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, fine = matchMedia('(pointer: fine)').matches;
+const DEMO = document.documentElement.hasAttribute('data-demo');
+gsap.registerPlugin(ScrollTrigger);
+const peso = n => '₱' + Math.round(n).toLocaleString('en-PH');
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const toast = m => { const t = $('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2800); };
+
+/* ---------- data (from Pop Haus's own listings) ---------- */
+const UNITS = {
+  play: { name: 'Play', floor: '3rd floor', view: 'Pool view', sqm: 29, max: 4, wd: 2500, we: 3000, inT: '5 PM', outT: '3 PM', color: 'var(--sun)', on: '#1B1830', tag: 't-play', icon: 'device-tv', img: 'play-living', blurb: 'Bright and playful, with smart features: keyless lock, Alexa, smart curtains and color lamps.' },
+  spring: { name: 'Spring', floor: '1st floor', view: 'Pool view', sqm: 41, max: 5, wd: 2700, we: 3200, inT: '7 PM', outT: '5 PM', color: 'var(--mint)', on: '#ffffff', tag: 't-spring', icon: 'sofa', img: 'spring-dining', blurb: 'Our biggest unit, with a study desk, washing machine and a balcony with a swing and billiards.' },
+  friends: { name: 'Friends', floor: '9th floor', view: 'MOA view', sqm: 38, max: 4, wd: 3000, we: 3500, inT: '3 PM', outT: '1 PM', color: 'var(--grape)', on: '#ffffff', tag: 't-friends', icon: 'building-skyscraper', img: 'friends-sofa', blurb: 'A coffee nook, recliner and guitar, plus balcony dining with Mall of Asia lights at night.' }
+};
+const GALLERY = {
+  play: [['play-living', 'Living room'], ['play-bed', 'Bedroom'], ['play-kitchen', 'Kitchen'], ['play-dining', 'Dining'], ['play-tv', 'Entertainment'], ['play-bath', 'Bathroom'], ['play-balcony', 'Balcony'], ['play-view', 'Pool view at night']],
+  spring: [['spring-dining', 'Living and dining'], ['spring-bed', 'Bedroom'], ['spring-kitchen', 'Kitchen'], ['spring-living', 'Dining nook'], ['spring-tv', 'Entertainment'], ['spring-balcony', 'Balcony swing'], ['spring-view', 'Pool view'], ['spring-bath', 'Bathroom']],
+  friends: [['friends-sofa', 'Living room'], ['friends-bed', 'Bedroom'], ['friends-kitchen', 'Kitchen'], ['friends-dining', 'Dining'], ['friends-living', 'Coffee nook'], ['friends-tv', 'Entertainment'], ['friends-balcony', 'Balcony'], ['friends-view', 'MOA view']]
+};
+const REVIEWS = [
+  ['I rave about your place, 10/10 for me. Maximalist but not overstimulating! If you want to be right in the smack of MOA, this is the place to be.', 'Julie Ann', 'February 2026'],
+  ['The unit was spotless, beautifully designed, equipped with everything we needed. The host was incredibly responsive and helpful.', 'John Oly', 'June 2026'],
+  ['The place is so fun and quirky. They make sure you have everything you need, from the honesty store, wifi, entertainment, and amenities.', 'Jhizel', 'April 2026'],
+  ['This was one of the best Airbnbs that I\'ve booked. The price was worth every penny. Clean, top tier.', 'Jan Eureshi', 'January 2026'],
+  ['We\'ve been eyeing this one since last year. By far my most favorite and most hassle-free unit.', 'Jochelle', 'June 2026'],
+  ['The room is immaculate, spotless, and it smells so nice as well. It has a whole new vibe when you\'re there.', 'Ollie', 'October 2025']
+];
+/* PH regular and special holidays in the booking window (charged at the weekend rate) */
+const HOLIDAYS = ['2026-11-01', '2026-11-02', '2026-11-30', '2026-12-08', '2026-12-24', '2026-12-25', '2026-12-30', '2026-12-31', '2027-01-01'];
+
+/* ---------- smooth scroll + header (ScrollTrigger, no raw scroll listeners) ---------- */
+let lenis = null;
+if (!reduce && fine && window.Lenis) { lenis = new Lenis({ lerp: .1 }); lenis.on('scroll', ScrollTrigger.update); gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0); }
+const hdr = $('hdr');
+const jump = sel => { const el = document.querySelector(sel); if (!el) return; lenis ? lenis.scrollTo(el, { offset: -(hdr.offsetHeight + 16) }) : el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); };
+document.documentElement.style.scrollPaddingTop = '96px';
+document.addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); if (!a) return; const h = a.getAttribute('href'); if (h.length > 1) { e.preventDefault(); setMenu(false); jump(h); } });
+const setMenu = open => { hdr.classList.toggle('menu', open); $('mbtn').setAttribute('aria-expanded', open); };
+$('mbtn').addEventListener('click', e => { e.stopPropagation(); setMenu(!hdr.classList.contains('menu')); });
+document.addEventListener('click', e => { if (!e.target.closest('#hdr')) setMenu(false); });
+addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+ScrollTrigger.create({ trigger: '#book', start: 'top 85%', end: 'bottom top', onToggle: s => $('sticky').classList.toggle('on', !s.isActive && scrollY > innerHeight * .6) });
+ScrollTrigger.create({ start: () => innerHeight * .6, end: 'max', onToggle: s => { const inBook = ScrollTrigger.isInViewport($('book'), .15); $('sticky').classList.toggle('on', s.isActive && !inBook); } });
+
+/* ---------- 1 · hero: three keycards in 3D. Pointer tilt; they fan out as you leave the hero ---------- */
+(() => {
+  const rig = $('rig'), keys = [...document.querySelectorAll('.key')];
+  const base = [{ ry: 16, rz: -7, z: -40 }, { ry: 0, rz: 2, z: 60 }, { ry: -16, rz: 7, z: -10 }];
+  let px = 0, py = 0, tx = 0, ty = 0, p = 0;
+  const paint = () => {
+    rig.style.transform = `rotateY(${-10 + px * 8}deg) rotateX(${6 - py * 6}deg)`;
+    keys.forEach((k, i) => { const b = base[i], spread = (i - 1) * 60 * p; k.style.transform = `translate3d(${spread}px, ${-30 * p * (i === 1)}px, ${b.z + 40 * p}px) rotateY(${b.ry * (1 - p)}deg) rotateZ(${b.rz * (1 - p * .6)}deg)`; });
+  };
+  paint();
+  if (reduce) return;
+  gsap.from(keys, { y: 60, opacity: 0, duration: 1, ease: 'expo.out', stagger: .08, delay: .1 });
+  if (fine) addEventListener('pointermove', e => { tx = (e.clientX / innerWidth - .5) * 2; ty = (e.clientY / innerHeight - .5) * 2; }, { passive: true });
+  ScrollTrigger.create({ trigger: '.hero', start: 'top top', end: 'bottom top', scrub: .6, onUpdate: s => p = s.progress });
+  gsap.ticker.add(() => { px += (tx - px) * .07; py += (ty - py) * .07; paint(); });
+})();
+
+/* ---------- 2 · mission: zoom parallax (center photo grows to fill the screen) ---------- */
+(() => {
+  const el = $('missionText'); el.innerHTML = el.textContent.split(/\s+/).map(w => `<span class="w${/^\*.*\*/.test(w) ? ' em' : ''}">${w.replace(/\*/g, '')}</span>`).join(' ');
+  if (reduce) return;
+  const words = el.querySelectorAll('.w'), layers = [...document.querySelectorAll('.zoom .z')], scales = [4, 5, 6, 5, 6, 8, 9];
+  ScrollTrigger.create({ trigger: '.zoom', start: 'top top', end: 'bottom bottom', scrub: true, onUpdate: s => {
+    const p = s.progress;
+    layers.forEach((l, i) => l.style.transform = `scale(${1 + (scales[i] - 1) * Math.min(1, p / .78)})`);
+    const sc = Math.max(0, Math.min(1, (p - .55) / .2)); $('zscrim').style.opacity = sc; el.parentElement.style.opacity = sc;
+    $('zhint').style.opacity = 1 - Math.min(1, p / .1);
+    const k = Math.round(Math.max(0, (p - .62) / .3) * words.length); words.forEach((w, i) => w.style.opacity = i < k ? 1 : .12);
+  } });
+})();
+
+/* ---------- 3 · units: bento with layered 3D tilt ---------- */
+$('unitGrid').innerHTML = ['friends', 'play', 'spring'].map(id => { const u = UNITS[id]; return `<article class="u"><div class="tilt">
+  <div class="ph"><img src="img/${u.img}.jpg" alt="${u.name} unit at Pop Haus, ${u.view.toLowerCase()}" loading="lazy" decoding="async"><span class="flr ${u.tag}">${u.floor}, ${u.view}</span><span class="ico c-${id}">${ic(u.icon)}</span></div>
+  <div class="bd"><h3>${u.name}</h3><p class="muted mb-0">${u.blurb}</p>
+  <div class="meta"><span class="chip">${ic('users')}Up to ${u.max}</span><span class="chip">${ic('ruler-2')}${u.sqm} sqm</span><span class="chip">${ic('clock')}In ${u.inT}, out ${u.outT}</span></div>
+  <div class="price"><b>${peso(u.wd)}</b><span class="muted">a night, Mon to Thu, 2 guests</span></div>
+  <div class="row-a"><a class="btn-p" href="#book" data-unit="${id}">Check dates</a><button class="peek" type="button" data-peek="${id}">Peek inside</button></div></div></div></article>`; }).join('');
+document.querySelectorAll('.u').forEach(c => {
+  if (!fine || reduce) return; const t = c.querySelector('.tilt');
+  c.addEventListener('pointermove', e => { const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; t.style.transform = `rotateY(${x * 8}deg) rotateX(${-y * 7}deg)`; });
+  c.addEventListener('pointerleave', () => t.style.transform = '');
+});
+
+/* ---------- 4 · reviews (real guest reviews from Pop Haus's listing) ---------- */
+(() => {
+  let i = 0, timer;
+  const show = n => { i = (n + REVIEWS.length) % REVIEWS.length; const [q, who, when] = REVIEWS[i]; $('qText').innerHTML = '“' + q.split(' ').map(w => `<span class="w">${esc(w)}</span>`).join(' ') + '”'; $('qWho').textContent = who; $('qWhen').textContent = when;
+    const ws = $('qText').querySelectorAll('.w'); ws.forEach((w, k) => reduce ? w.style.opacity = 1 : setTimeout(() => w.style.opacity = 1, k * 35)); };
+  const auto = () => { clearInterval(timer); if (!reduce) timer = setInterval(() => show(i + 1), 8000); };
+  $('qPrev').onclick = () => { show(i - 1); auto(); }; $('qNext').onclick = () => { show(i + 1); auto(); };
+  ScrollTrigger.create({ trigger: '#reviews', start: 'top 70%', once: true, onEnter: () => { show(0); auto(); } });
+  if (reduce) show(0);
+})();
+
+/* ---------- 5 · peek inside: coverflow per unit ---------- */
+const cover = (() => {
+  const cf = $('cf'); let list = [], cur = 0, unit = 'play', timer;
+  const build = u => {
+    unit = u; cur = 0; cf.querySelectorAll('.cf-item').forEach(x => x.remove());
+    list = GALLERY[u].map(([src, cap], i) => { const f = document.createElement('figure'); f.className = 'cf-item'; f.setAttribute('role', 'group'); f.setAttribute('aria-label', `${i + 1} of ${GALLERY[u].length}: ${UNITS[u].name}, ${cap}`);
+      f.innerHTML = `<img src="img/${src}.jpg" alt="${UNITS[u].name} unit, ${cap.toLowerCase()}" loading="lazy" decoding="async"><figcaption>${cap}</figcaption>`; f.addEventListener('click', () => { if (i !== cur) go(i); }); cf.append(f); return f; });
+    $('galTabs').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.u === u)); layout();
+  };
+  const layout = () => {
+    const n = list.length, w = Math.min(360, innerWidth * .72), s1 = innerWidth < 768 ? w * .6 : w * .82, s2 = innerWidth < 768 ? w * 1.02 : w * 1.5;
+    list.forEach((el, i) => { const o = (i - cur + n) % n; let t = 'scale(.5)', op = 0, z = 0;
+      if (o === 0) { t = 'translateZ(60px)'; op = 1; z = 30; } else if (o === 1) { t = `translateX(${s1}px) scale(.84) rotateY(-28deg)`; op = .75; z = 20; } else if (o === n - 1) { t = `translateX(${-s1}px) scale(.84) rotateY(28deg)`; op = .75; z = 20; }
+      else if (o === 2) { t = `translateX(${s2}px) scale(.68) rotateY(-42deg)`; op = .35; z = 10; } else if (o === n - 2) { t = `translateX(${-s2}px) scale(.68) rotateY(42deg)`; op = .35; z = 10; }
+      el.style.transform = `translateY(-50%) ${t}`; el.style.opacity = op; el.style.zIndex = z; el.style.filter = o === 0 ? 'none' : 'brightness(.6)'; el.classList.toggle('on', o === 0); });
+    const amb = $('amb'); amb.style.opacity = 0; setTimeout(() => { amb.src = `img/${GALLERY[unit][cur][0]}.jpg`; amb.style.opacity = 1; }, 250);
+  };
+  const go = i => { cur = (i + list.length) % list.length; layout(); restart(); };
+  const restart = () => { clearInterval(timer); if (!reduce) timer = setInterval(() => { cur = (cur + 1) % list.length; layout(); }, 4500); };
+  $('cfPrev').onclick = () => go(cur - 1); $('cfNext').onclick = () => go(cur + 1);
+  $('galTabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { build(b.dataset.u); restart(); } });
+  let sx = 0; cf.addEventListener('touchstart', e => sx = e.touches[0].clientX, { passive: true }); cf.addEventListener('touchend', e => { const d = e.changedTouches[0].clientX - sx; if (Math.abs(d) > 45) go(cur + (d < 0 ? 1 : -1)); });
+  cf.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') go(cur - 1); if (e.key === 'ArrowRight') go(cur + 1); });
+  cf.addEventListener('pointerenter', () => clearInterval(timer)); cf.addEventListener('pointerleave', restart);
+  addEventListener('resize', layout); build('play'); restart();
+  return { build };
+})();
+document.addEventListener('click', e => { const b = e.target.closest('[data-peek]'); if (b) { cover.build(b.dataset.peek); jump('#inside'); } });
+
+/* ---------- 6 · say hello: soft parallax on the photo pair ---------- */
+if (!reduce) document.querySelectorAll('[data-par]').forEach(el => gsap.fromTo(el.querySelector('img'), { yPercent: -+el.dataset.par }, { yPercent: +el.dataset.par, ease: 'none', scrollTrigger: { trigger: '.stack', start: 'top bottom', end: 'bottom top', scrub: true } }));
+
+/* headings rise once; nothing else animates on entry */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .2 });
+document.querySelectorAll('.rise').forEach(el => reduce ? el.classList.add('in') : io.observe(el));
+
+/* ---------- 7 · booking: calendar, guests, live price ---------- */
+const BK = { unit: 'play', inD: null, outD: null, guests: 2, view: null, booked: {} };
+const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const today = new Date(); today.setHours(0, 0, 0, 0);
+const firstDay = new Date(today); firstDay.setDate(firstDay.getDate() + 1);
+const lastDay = new Date(today); lastDay.setDate(lastDay.getDate() + 120);
+BK.view = new Date(firstDay.getFullYear(), firstDay.getMonth(), 1);
+/* preview only: believable booked nights per unit (the live site reads real availability) */
+Object.keys(UNITS).forEach((u, ui) => { const s = new Set(); for (let d = new Date(firstDay); d <= lastDay; d.setDate(d.getDate() + 1)) { const h = (d.getDate() * 13 + d.getMonth() * 7 + ui * 5) % 17; if (h < 5 || (d.getDay() === 6 && h < 9)) s.add(iso(d)); } BK.booked[u] = s; });
+const isWeekendRate = d => [0, 5, 6].includes(d.getDay()) || HOLIDAYS.includes(iso(d));
+function nights() { const out = []; if (!BK.inD || !BK.outD) return out; for (let d = new Date(BK.inD); d < BK.outD; d.setDate(d.getDate() + 1)) out.push(new Date(d)); return out; }
+function quote() {
+  const u = UNITS[BK.unit], ns = nights(); let wd = 0, we = 0; ns.forEach(d => isWeekendRate(d) ? we++ : wd++);
+  const extra = Math.max(0, BK.guests - 2) * 300 * ns.length, total = wd * u.wd + we * u.we + extra;
+  return { ns, wd, we, extra, total, half: Math.ceil(total / 2) };
+}
+$('unitPick').innerHTML = Object.entries(UNITS).map(([id, u]) => `<input type="radio" name="unit" id="u-${id}" value="${id}" ${id === BK.unit ? 'checked' : ''}><label for="u-${id}"><b>${u.name}</b><small>${u.view}, up to ${u.max}</small></label>`).join('');
+$('unitPick').addEventListener('change', e => setUnit(e.target.value));
+function setUnit(id) { BK.unit = id; const u = UNITS[id]; $('calGrid').style.setProperty('--u', u.color); $('calGrid').style.setProperty('--uo', matchMedia('(prefers-color-scheme: dark)').matches ? '#120f1b' : u.on); BK.guests = Math.min(BK.guests, u.max);
+  if (BK.inD && rangeHasBooked(BK.inD, BK.outD || BK.inD)) { BK.inD = BK.outD = null; toast(`Some of those nights are booked in ${u.name}. Pick new dates.`); }
+  const r = document.getElementById('u-' + id); if (r) r.checked = true; renderCal(); renderSum(); }
+function rangeHasBooked(a, b) { for (let d = new Date(a); d < b; d.setDate(d.getDate() + 1)) if (BK.booked[BK.unit].has(iso(d))) return true; return BK.booked[BK.unit].has(iso(a)); }
+function renderCal() {
+  const y = BK.view.getFullYear(), m = BK.view.getMonth(), start = new Date(y, m, 1).getDay(), dim = new Date(y, m + 1, 0).getDate(), u = UNITS[BK.unit];
+  $('calMonth').textContent = BK.view.toLocaleDateString('en-PH', { month: 'long', year: 'numeric' });
+  $('calPrev').disabled = y === firstDay.getFullYear() && m === firstDay.getMonth(); $('calNext').disabled = new Date(y, m + 1, 1) > lastDay;
+  let h = '<span></span>'.repeat(start);
+  for (let day = 1; day <= dim; day++) {
+    const d = new Date(y, m, day), k = iso(d), out = d < firstDay || d > lastDay, booked = BK.booked[BK.unit].has(k);
+    const isIn = BK.inD && k === iso(BK.inD), isOut = BK.outD && k === iso(BK.outD), mid = BK.inD && BK.outD && d > BK.inD && d < BK.outD;
+    const canCheckout = BK.inD && !BK.outD && d > BK.inD && !rangeHasBooked(BK.inD, d);
+    const off = out || (booked && !canCheckout);
+    const price = isWeekendRate(d) ? u.we : u.wd, long = d.toLocaleDateString('en-PH', { weekday: 'long', month: 'long', day: 'numeric' });
+    const label = off ? `${long}: not available` : `${long}: ${peso(price)} a night${isIn ? ', check-in' : isOut ? ', check-out' : ''}`;
+    h += `<button type="button" data-k="${k}" class="${off ? 'off' : ''}${mid ? ' in' : ''}${isIn || isOut ? ' end' : ''}" aria-label="${label}" aria-pressed="${!!(isIn || isOut)}" ${off ? 'aria-disabled="true"' : ''}>${day}${off ? '' : `<small>${(price / 1000).toFixed(1)}k</small>`}</button>`;
+  }
+  $('calGrid').innerHTML = h;
+  $('calNote').textContent = BK.inD && !BK.outD ? `Check-in ${BK.inD.toLocaleDateString('en-PH', { month: 'short', day: 'numeric' })}. Now pick check-out.` : '';
+}
+$('calGrid').addEventListener('click', e => {
+  const b = e.target.closest('button[data-k]'); if (!b) return;
+  if (b.getAttribute('aria-disabled')) { toast('That night is booked. Try another date.'); return; }
+  const [y, mo, da] = b.dataset.k.split('-').map(Number), d = new Date(y, mo - 1, da);
+  if (!BK.inD || BK.outD || d <= BK.inD) { BK.inD = d; BK.outD = null; }
+  else if (rangeHasBooked(BK.inD, d)) { toast('Some nights in between are booked. Pick a shorter stay.'); return; }
+  else BK.outD = d;
+  renderCal(); renderSum();
+});
+$('calPrev').onclick = () => { BK.view = new Date(BK.view.getFullYear(), BK.view.getMonth() - 1, 1); renderCal(); };
+$('calNext').onclick = () => { BK.view = new Date(BK.view.getFullYear(), BK.view.getMonth() + 1, 1); renderCal(); };
+$('gMinus').onclick = () => { BK.guests = Math.max(1, BK.guests - 1); renderSum(); };
+$('gPlus').onclick = () => { BK.guests = Math.min(UNITS[BK.unit].max, BK.guests + 1); renderSum(); };
+function renderSum() {
+  const u = UNITS[BK.unit], q = quote(), fmt = d => d.toLocaleDateString('en-PH', { weekday: 'short', month: 'short', day: 'numeric' });
+  $('gOut').textContent = BK.guests; $('gMinus').disabled = BK.guests <= 1; $('gPlus').disabled = BK.guests >= u.max;
+  $('gNote').textContent = BK.guests > 2 ? `+₱300 per extra guest a night, max ${u.max}` : `2 included in the rate, max ${u.max}`;
+  $('sumTitle').textContent = `${u.name}, ${u.view.toLowerCase()}`;
+  if (!q.ns.length) { $('sumLines').innerHTML = `<li><span class="muted">${BK.inD ? 'Now pick your check-out date.' : 'Pick your dates on the calendar.'}</span></li>`; }
+  else $('sumLines').innerHTML = [[`${fmt(BK.inD)} to ${fmt(BK.outD)}`, `${q.ns.length} night${q.ns.length > 1 ? 's' : ''}`], q.wd ? [`${q.wd} × weeknight`, peso(q.wd * u.wd)] : null, q.we ? [`${q.we} × weekend or holiday`, peso(q.we * u.we)] : null, q.extra ? [`${BK.guests - 2} extra guest${BK.guests > 3 ? 's' : ''}`, peso(q.extra)] : null, [`Check-in ${u.inT}, check-out ${u.outT}`, '']].filter(Boolean).map(([a, b]) => `<li><span>${a}</span><span>${b}</span></li>`).join('');
+  $('sumTot').textContent = peso(q.total); $('payHalfAmt').textContent = peso(q.half); $('payFullAmt').textContent = peso(q.total);
+  const pay = document.querySelector('[name=pay]:checked').value.startsWith('Full') ? q.total : q.half;
+  $('bkBtn').textContent = q.ns.length ? `Reserve for ${peso(pay)}` : 'Check dates first';
+}
+document.querySelectorAll('[name=pay]').forEach(r => r.addEventListener('change', renderSum));
+document.addEventListener('click', e => { const a = e.target.closest('[data-unit]'); if (a) setUnit(a.dataset.unit); });
+setUnit('play');
+
+$('bkForm').addEventListener('submit', async e => {
+  e.preventDefault(); const f = e.target, q = quote(), u = UNITS[BK.unit];
+  if (!q.ns.length) { toast('Pick your check-in and check-out dates first.'); $('calGrid').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); return; }
+  if (!f.reportValidity()) return;
+  const payNow = f.pay.value.startsWith('Full') ? q.total : q.half;
+  const fmt = d => d.toLocaleDateString('en-PH', { month: 'short', day: 'numeric', year: 'numeric' });
+  const summary = `${u.name} (${u.view}), ${fmt(BK.inD)} to ${fmt(BK.outD)}, ${q.ns.length} night(s), ${BK.guests} guest(s). Total ${peso(q.total)}. ${f.pay.value}: ${peso(payNow)}.`;
+  $('fSummary').value = summary;
+  if (!BOOKING_API_URL) return demoCheckout(u, q, payNow, summary, f);
+  /* live: an Apps Script + PayMongo checkout (same engine as our other client sites) goes here */
+});
+function demoCheckout(u, q, payNow, summary, f) {
+  const d = document.createElement('div'); d.className = 'pmdemo'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-modal', 'true'); d.setAttribute('aria-label', 'Demo payment page');
+  d.innerHTML = `<div class="box"><div class="url">${ic('lock')}checkout.paymongo.com <small style="margin-left:auto;color:#8a5a12">DEMO</small></div><div style="font-size:.85rem;color:#5b6472">Pop Haus ${u.name}, ${q.ns.length} night${q.ns.length > 1 ? 's' : ''}</div><div class="amt">${peso(payNow)}</div><div class="opts">${['GCash', 'Maya', 'Card'].map((m, i) => `<label><input type="radio" name="pmm" value="${m}" ${i ? '' : 'checked'}> ${m}</label>`).join('')}</div><button type="button" id="pmPay">Pay ${peso(payNow)}</button><button type="button" class="cancel" id="pmCancel">Cancel</button></div>`;
+  document.body.append(d); d.querySelector('#pmPay').focus();
+  d.querySelector('#pmCancel').onclick = () => { d.remove(); toast('Payment cancelled. Your dates are still selected.'); };
+  d.querySelector('#pmPay').onclick = () => {
+    const via = d.querySelector('input:checked').value; d.remove();
+    const ref = 'PH-DEMO-' + Math.random().toString(36).slice(2, 6).toUpperCase(), fmt = x => x.toLocaleDateString('en-PH', { weekday: 'short', month: 'short', day: 'numeric' });
+    $('bkDone').innerHTML = `<div class="tick">${ic('check')}</div><h3 style="font-size:1.8rem">You're booked. See you soon!</h3><span class="demo-tag">Preview only. No real payment was made.</span>
+      <div class="rcpt">${[['Booking no.', ref], ['Unit', `${u.name}, ${u.view.toLowerCase()}`], ['Check-in', `${fmt(BK.inD)}, ${u.inT}`], ['Check-out', `${fmt(BK.outD)}, ${u.outT}`], ['Guests', BK.guests], ['Paid now', `${peso(payNow)} via ${via}`], ['Balance at check-in', peso(q.total - payNow)], ['Security deposit', '₱1,000, refundable']].map(([a, b]) => `<div><span>${a}</span><span>${esc(b)}</span></div>`).join('')}</div>
+      <p class="muted mb-0">A confirmation goes to ${esc(f.email.value)}. Self check-in details arrive before your stay.</p>`;
+    f.hidden = true; $('bkDone').hidden = false; $('bkDone').focus();
+  };
+}
+</script>
+</body>
+</html>

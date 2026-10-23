@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en" data-demo>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eclipse Beauty Lounge Marikina | Hair, Nails &amp; Skin in Marikina Heights</title>
+<meta name="description" content="Eclipse Beauty Lounge: a beauty space in Marikina Heights for your hair, nails and skin glow-up era. Nanoplasty, Hair Botox, balayage, color, nails and waxing. Free consultation. 2nd Floor, 117 Gen. Ordoñez St.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Eclipse Beauty Lounge Marikina: your glow-up era starts here">
+<meta property="og:description" content="Hair, nails and skin in Marikina Heights. Thoughtfully curated services. Relaxing atmosphere. Beautiful results.">
+<meta name="theme-color" content="#1f0d18">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BeautySalon","name":"Eclipse Beauty Lounge Marikina","description":"A beauty space in Marikina Heights for hair, nails and skin: Nanoplasty, Hair Botox, stem cell treatment, balayage, hair color, haircuts, manicure, pedicure and waxing.","address":{"@type":"PostalAddress","streetAddress":"2nd Floor, 117 Gen. Ordoñez St., Marikina Heights","addressLocality":"Marikina","addressRegion":"Metro Manila","postalCode":"1800","addressCountry":"PH"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"19:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"3"},"sameAs":["https://www.facebook.com/profile.php?id=61593057140350"]}
+</script>
+<style>
+/* Eclipse: night-wine + rose gold + magenta script. The moon/eclipse is the motif. */
+:root{--night:#1f0d18;--wine:#3a1529;--plum:#5a2443;--blush:#fbeef1;--paper:#fdf7f8;--ink:#2e1424;--muted:#7a6470;--rose:#e6a9b6;--gold:#ecc9a0;--magenta:#c2569b;--line:#f0dde4;
+  --display:"Cormorant Garamond",Georgia,serif;--body:"Jost",system-ui,sans-serif;--script:"Great Vibes",cursive;
+  --rosegold:linear-gradient(100deg,#b77985,#f6d0d6 30%,#c98a92 55%,#f7dcc2 80%,#b77985)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--body)}
+[hidden]{display:none!important}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{max-width:1200px;--bs-gutter-x:3rem}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(2.4rem,5.4vw,4.4rem)}
+.script{font-family:var(--script);font-weight:400}
+.rg{background:var(--rosegold);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:-220% 0}}
+.eyebrow{display:inline-block;font-size:.76rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#b2447f;margin-bottom:14px}
+.dark .eyebrow{color:var(--rose)}
+.muted{color:var(--muted)}
+.dark{background:var(--night);color:#f7e6ec}
+.dark .muted{color:#cdb0bd}
+section{position:relative}
+.pad{padding:clamp(72px,11vw,140px) 0}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px;top:8px;z-index:200;background:#fff;padding:8px 14px;border-radius:8px}.skip:focus{left:16px}
+/* buttons */
+.btn-e{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;border:0;background:linear-gradient(120deg,#9c3a75,#b04886);color:#fff;font-weight:600;text-decoration:none;cursor:pointer;box-shadow:0 14px 30px -12px rgba(194,86,155,.7);transition:transform .25s,box-shadow .25s}
+.btn-e::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s}
+.btn-e:hover{color:#fff;transform:translateY(-2px);box-shadow:0 20px 36px -12px rgba(194,86,155,.8)}
+.btn-e:hover::after{transform:translateX(120%)}
+.btn-e.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn-e.gold{background:linear-gradient(120deg,#ecc9a0,#f7dcc2);color:var(--ink);box-shadow:0 14px 30px -12px rgba(236,201,160,.7)}
+.btn-e svg{width:18px;height:18px}
+/* loader: an eclipse */
+.loader{position:fixed;inset:0;z-index:300;background:var(--night);display:grid;place-items:center;transition:opacity .8s,visibility .8s}
+.loader.done{opacity:0;visibility:hidden}
+.loader{animation:loaderOff .6s 3s forwards} /* safety: never block the page, even if scripts fail */
+@keyframes loaderOff{to{opacity:0;visibility:hidden}}
+.ecl{position:relative;width:120px;height:120px}
+.ecl .sun{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,#ffe7ef,#e6a9b6 60%,transparent 72%);box-shadow:0 0 60px 20px rgba(230,169,182,.35)}
+.ecl .moon{position:absolute;inset:6px;border-radius:50%;background:var(--night);transform:translateX(130%);animation:eclipse 1.4s cubic-bezier(.7,0,.2,1) forwards}
+@keyframes eclipse{to{transform:translateX(0)}}
+.loader p{position:absolute;bottom:22%;left:0;right:0;text-align:center;font-family:var(--script);font-size:1.8rem;color:var(--rose);margin:0}
+/* header */
+.hdr{position:fixed;top:12px;left:12px;right:12px;z-index:100;border-radius:20px;transition:background .35s,box-shadow .35s,color .35s;color:#fbeef1}
+.hdr.solid,.hdr.open{background:rgba(31,13,24,.86);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);color:#fbeef1;box-shadow:0 14px 40px -20px rgba(0,0,0,.6),inset 0 0 0 1px rgba(230,169,182,.22)}
+.hdr .container{min-height:66px}
+.hdr .navbar-brand{color:inherit;padding:0}
+.hdr .nav-link{color:inherit;opacity:.82;font-weight:500;font-size:.95rem}
+.hdr .nav-link:hover{opacity:1;color:inherit}
+.hdr .navbar-toggler{border:0;color:inherit;padding:10px;box-shadow:none}
+.burger{display:block;width:22px}.burger i{display:block;height:2px;background:currentColor;margin:5px 0;border-radius:2px;transition:transform .3s,opacity .3s}
+.navbar-toggler[aria-expanded=true] .burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.navbar-toggler[aria-expanded=true] .burger i:nth-child(2){opacity:0}
+.navbar-toggler[aria-expanded=true] .burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:991.98px){.hdr .navbar-collapse{padding:4px 0 18px}.hdr .btn-e{width:100%;margin-top:8px}}
+@media (min-width:992px){.hdr .navbar-nav{gap:22px;align-items:center}}
+.wm{display:flex;flex-direction:column;line-height:1}
+.wm b{font-family:var(--display);font-weight:700;font-size:1.65rem;letter-spacing:.02em;line-height:1}
+.wm span{font-family:var(--script);font-size:1.05rem;margin:1px 0 0 30px;color:#e88bbd;line-height:1}
+.hdr.solid .wm span,.hdr.open .wm span{color:var(--magenta)}
+.hdr .logo{height:54px;width:auto;display:block;transition:filter .35s,height .35s}
+.hdr.solid .logo{height:48px}
+@media (max-width:575.98px){.hdr .logo{height:46px}}
+.logo-ftr{width:200px;height:auto;margin-bottom:6px}
+.logo-load{position:absolute;bottom:18%;left:50%;transform:translateX(-50%);width:min(220px,55vw);height:auto;opacity:0;animation:fadeLogo .8s .6s forwards}
+@keyframes fadeLogo{to{opacity:1}}
+.read{position:fixed;top:0;left:0;height:3px;width:100%;z-index:110;background:var(--rosegold);transform-origin:0 50%;transform:scaleX(0)}
+
+/* 1 · HERO: fat headline + CTA inside a 3D photo orbit */
+.hero{height:280vh;background:radial-gradient(ellipse at 50% 40%,#4d1c39 0%,var(--night) 60%,#120710 100%);color:#fbeef1}
+.hero .stage{position:sticky;top:0;height:100svh;overflow:hidden;perspective:1200px}
+.corona{position:absolute;left:50%;top:44%;width:min(62vmin,560px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none}
+.corona::before{content:"";position:absolute;inset:-14%;border-radius:50%;background:radial-gradient(circle,transparent 46%,rgba(246,208,214,.55) 50%,rgba(230,169,182,.18) 58%,transparent 70%);filter:blur(6px);animation:pulse 5s ease-in-out infinite}
+.corona::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 42% 40%,#2a0f20,#160810 70%);box-shadow:inset -12px -8px 40px rgba(246,208,214,.12)}
+@keyframes pulse{50%{transform:scale(1.05);opacity:.75}}
+.hero-copy{position:absolute;inset:0;z-index:250;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px;pointer-events:none}
+.hero-copy > *{pointer-events:auto}
+.hero h1{font-size:clamp(3rem,8.4vw,7.4rem);line-height:.92;text-shadow:0 10px 40px rgba(0,0,0,.45)}
+.hero h1 .script{display:block;font-size:1.08em;line-height:1.05;margin:.05em 0}
+.hero h1,.hero .sub{text-shadow:0 4px 24px rgba(20,6,14,.85)}
+.hero .sub{max-width:44ch;margin:20px auto 26px;color:#ecd3dc;font-size:clamp(1rem,1.5vw,1.15rem)}
+.live{display:inline-flex;align-items:center;gap:9px;padding:7px 14px 7px 10px;border-radius:999px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);font-size:.85rem;margin-bottom:18px}
+.live i{width:8px;height:8px;border-radius:50%;background:#3bb273;box-shadow:0 0 0 0 #3bb273;animation:ping 1.8s infinite}
+.live.closed i{background:#e07a95;animation:none}
+@keyframes ping{70%{box-shadow:0 0 0 9px transparent}}
+.orbit{position:absolute;inset:0}
+.oc{position:absolute;left:50%;top:50%;width:var(--w);height:var(--h);margin:calc(var(--h) / -2) 0 0 calc(var(--w) / -2);border-radius:20px;overflow:hidden;box-shadow:0 20px 34px -16px rgba(0,0,0,.65),0 0 0 1px rgba(246,208,214,.22)}
+.oc img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.oc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,13,24,.05),rgba(31,13,24,.55))}
+.oc span{position:absolute;left:12px;bottom:10px;z-index:1;font-size:.75rem;font-weight:600;letter-spacing:.06em;color:#fff}
+.scroll-cue{position:absolute;left:50%;bottom:22px;z-index:120;transform:translateX(-50%);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:#d9b9c6;display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-cue i{width:1px;height:38px;background:linear-gradient(#e6a9b6,transparent);animation:cue 1.8s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* 2 · BRAND MISSION */
+.mission{background:var(--night);color:#f7e6ec;padding:clamp(80px,12vw,150px) 0}
+.mission p{font-family:var(--display);font-size:clamp(1.9rem,4.6vw,3.9rem);line-height:1.15;font-weight:500;margin:0;max-width:20ch}
+.mission .w{opacity:.14;transition:opacity .2s}
+.mission .w.em{font-style:italic;color:var(--rose)}
+.moonline{display:flex;align-items:center;gap:14px;margin-bottom:26px;color:var(--rose);font-size:.78rem;letter-spacing:.26em;text-transform:uppercase}
+.moonline svg{width:26px;height:26px}
+
+/* 3 · YOUR MAGIC: 3D service cards */
+.magic{background:var(--paper)}
+.m3d{perspective:1100px;height:100%}
+.mcard{position:relative;height:100%;border-radius:28px;background:#fff;box-shadow:0 0 0 1px var(--line),0 40px 70px -46px rgba(58,21,41,.5);transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s;padding:14px 14px 26px;display:flex;flex-direction:column}
+.mcard .ph{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/3.3;transform:translateZ(20px)}
+.mcard .ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.mcard:hover .ph img{transform:scale(1.16)}
+.mcard .glare{position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(500px circle at var(--gx,50%) var(--gy,0%),rgba(255,255,255,.35),transparent 45%);opacity:0;transition:opacity .4s;z-index:3}
+.mcard:hover .glare{opacity:1}
+.ic3{position:relative;width:74px;height:74px;margin:-40px 0 14px 18px;transform:translateZ(70px);transform-style:preserve-3d;z-index:2}
+.ic3 .face{position:absolute;inset:0;border-radius:22px;display:grid;place-items:center;background:linear-gradient(145deg,#fff,#fbe6ef);box-shadow:0 18px 30px -12px rgba(194,86,155,.55),inset 0 -4px 0 rgba(194,86,155,.15)}
+.ic3 .back{position:absolute;inset:0;border-radius:22px;background:linear-gradient(145deg,#c2569b,#e6a9b6);transform:translateZ(-14px) translate(6px,6px);opacity:.9}
+.ic3 svg{width:34px;height:34px;color:#b2447f;transition:transform .8s cubic-bezier(.34,1.56,.64,1)}
+.mcard:hover .ic3 svg{transform:rotateY(360deg) scale(1.1)}
+.ic3{animation:float 5s ease-in-out infinite}
+@keyframes float{50%{translate:0 -6px}}
+.mcard h3{font-size:2.1rem;margin:0 18px 6px;transform:translateZ(40px)}
+.mcard p{margin:0 18px 14px;color:var(--muted);transform:translateZ(30px)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 18px 18px;transform:translateZ(30px)}
+.tags span{font-size:.78rem;font-weight:600;padding:5px 11px;border-radius:999px;background:#fbeef3;color:#9c3c74}
+.mcard .go{margin:auto 18px 0;align-self:flex-start;font-weight:600;color:var(--ink);text-decoration:none;display:inline-flex;gap:8px;align-items:center;transform:translateZ(36px)}
+.mcard .go svg{width:18px;height:18px;transition:transform .3s}
+.mcard .go:hover svg{transform:translateX(5px)}
+
+/* 4 · HAPPY CLIENTS */
+.clients{background:linear-gradient(180deg,var(--paper),#fbe9ef)}
+.rate{height:100%;border-radius:28px;background:var(--night);color:#fbeef1;padding:34px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.rate::before{content:"";position:absolute;width:260px;height:260px;right:-90px;top:-90px;border-radius:50%;box-shadow:0 0 0 1px rgba(230,169,182,.35),0 0 80px 10px rgba(230,169,182,.25)}
+.rate .big{font-family:var(--display);font-size:clamp(4.5rem,9vw,6.5rem);line-height:1;margin:6px 0 12px}
+.stars{color:#ecc06a;letter-spacing:3px;font-size:1.3rem}
+.quote-card{height:100%;border-radius:28px;background:#fff;box-shadow:0 0 0 1px var(--line),0 40px 70px -46px rgba(58,21,41,.45);padding:clamp(28px,4vw,48px);position:relative}
+.quote-card .qm{position:absolute;right:28px;top:6px;font-family:var(--display);font-size:9rem;line-height:1;color:#f6dbe5}
+.quote-card blockquote{font-family:var(--display);font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.2;margin:0 0 18px;position:relative}
+.quote-card blockquote .w{opacity:.12;transition:opacity .4s}
+.who{display:flex;align-items:center;gap:12px}
+.who .av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#c2569b,#e6a9b6);color:#fff;font-weight:700}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.pills span{padding:7px 14px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);font-size:.86rem;font-weight:500}
+
+/* 5 · YOUR WORK: 3D coverflow */
+.work{background:#120710;color:#fff;overflow:hidden}
+.work .amb{position:absolute;inset:0;z-index:0}
+.work .amb{overflow:hidden}
+.work .amb img{width:12.5%;height:12.5%;object-fit:cover;filter:brightness(.25) blur(4px);transform-origin:0 0;transform:scale(9.6) translate(-1%,-1%);transition:opacity .9s} /* small blurred copy scaled up = same soft glow, far cheaper to draw */
+.work .amb::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(18,7,16,.25),rgba(18,7,16,.92))}
+.work .container{position:relative;z-index:1}
+.cf{position:relative;height:min(560px,135vw);perspective:1400px;margin-top:30px;touch-action:pan-y}
+.cf-item{position:absolute;left:50%;top:50%;width:min(340px,70vw);aspect-ratio:3/4.6;margin-left:calc(min(340px,70vw) / -2);transform-origin:center;border-radius:20px;overflow:hidden;background:#1d0e18;border:1px solid rgba(255,255,255,.12);transition:transform .8s cubic-bezier(.25,1,.5,1),opacity .8s,filter .8s,box-shadow .8s;cursor:pointer}
+.cf-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cf-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.05) 30%,rgba(0,0,0,.7) 66%,rgba(0,0,0,.95))}
+.cf-item .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px 18px;text-align:center;opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
+.cf-item.center .cap{opacity:1;transform:none}
+.cf-item .tag{position:absolute;right:14px;top:12px;z-index:2;font-size:.76rem;font-weight:600;letter-spacing:.06em}
+.cf-item h3{font-size:2rem;color:#fff}
+.cf-item .bar{width:34px;height:2px;margin:8px auto;background:var(--gold);box-shadow:0 0 8px rgba(236,201,160,.7)}
+.cf-item p{font-size:.88rem;font-style:italic;color:rgba(255,255,255,.88);margin:0 auto 12px;max-width:28ch}
+.cf-item .btn-e{min-height:38px;padding:0 18px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+.cf-nav{position:absolute;top:50%;z-index:40;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(0,0,0,.5);backdrop-filter:blur(8px);color:#fff;display:grid;place-items:center;transform:translateY(-50%);cursor:pointer}
+.cf-nav.prev{left:0}.cf-nav.next{right:0}
+.cf-nav svg{width:20px;height:20px}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+.dots button{height:8px;width:8px;border-radius:999px;border:0;padding:0;background:rgba(255,255,255,.25);cursor:pointer;transition:all .3s}
+.dots button[aria-current=true]{width:28px;background:var(--gold);box-shadow:0 0 10px rgba(236,201,160,.7)}
+
+/* 6 · SAY HELLO */
+.hello{background:var(--paper)}
+.stack{position:relative;height:clamp(420px,52vw,600px)}
+.stack .p1,.stack .p2{position:absolute;border-radius:26px;overflow:hidden;box-shadow:0 40px 70px -36px rgba(58,21,41,.6)}
+.stack .p1{left:0;top:0;width:62%;height:78%}
+.stack .p2{right:0;bottom:0;width:52%;height:62%;border:8px solid var(--paper)}
+.stack img{width:100%;height:118%;object-fit:cover}
+.stack .badge{position:absolute;left:44%;top:60%;z-index:3;width:120px;height:120px;border-radius:50%;background:var(--night);color:var(--rose);display:grid;place-items:center;text-align:center;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 20px 40px -14px rgba(0,0,0,.6)}
+.stack .badge svg{position:absolute;inset:0;animation:spin 16s linear infinite}
+.stack .badge b{font-family:var(--script);font-size:2rem;letter-spacing:0;text-transform:none;color:#fbeef1}
+@keyframes spin{to{transform:rotate(360deg)}}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}
+.facts div{padding:14px 16px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+.facts b{display:block;font-family:var(--display);font-size:1.5rem;line-height:1.1}
+.facts small{color:var(--muted)}
+
+/* 7 · CTA */
+.cta{background:radial-gradient(ellipse at 50% 0%,#5a2443,var(--night) 70%);color:#fbeef1;overflow:hidden}
+.cta h2{font-size:clamp(2.6rem,6.6vw,5.4rem)}
+.bookcard{border-radius:28px;background:rgba(255,255,255,.96);color:var(--ink);padding:clamp(22px,3vw,32px);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.bookcard label{font-weight:600;font-size:.88rem;margin-bottom:4px}
+.bookcard .form-control,.bookcard .form-select{min-height:50px;border-radius:14px;border:1.5px solid var(--line);background:var(--paper)}
+.bookcard .form-control:focus,.bookcard .form-select:focus{border-color:var(--magenta);box-shadow:0 0 0 4px rgba(194,86,155,.15)}
+.hp{position:absolute;left:-9999px}
+.ok{text-align:center;padding:12px 0}
+/* booking calendar: shows how busy each day is */
+.cal{border-radius:18px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);padding:12px}
+.cal-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.cal-h b{font-family:var(--display);font-size:1.35rem}
+.cal-h button{width:40px;height:40px;border-radius:50%;border:0;background:var(--paper);color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.cal-h button:disabled{opacity:.3;cursor:default}
+.cal-h svg{width:18px;height:18px}
+.cal-w,.cal-g{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.cal-w span{text-align:center;font-size:.72rem;font-weight:600;letter-spacing:.04em;color:var(--muted);padding:2px 0 4px}
+.cal-g button,.cal-g span{min-height:54px;border-radius:12px;border:0;padding:4px 2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;background:none;font:inherit;color:var(--ink)}
+.cal-g button{background:#f2faf5;box-shadow:inset 0 0 0 1px #d6eedf;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.cal-g button:hover{transform:translateY(-1px);box-shadow:inset 0 0 0 1.5px #2f8f5b}
+.cal-g button b{font-size:1rem;line-height:1.1}
+.cal-g button small{font-size:.62rem;line-height:1.1;font-weight:600;color:#2f7a4e;white-space:nowrap}
+.cal-g button.busy{background:#fff6e6;box-shadow:inset 0 0 0 1px #f1dcae}.cal-g button.busy small{color:#9a6512}
+.cal-g button.full{background:#fbeeee;box-shadow:none;cursor:not-allowed;opacity:.75}.cal-g button.full small{color:#b42318}
+.cal-g button.closed,.cal-g button.past{background:none;box-shadow:none;color:#c9b6be;cursor:not-allowed}.cal-g button.closed small{color:#c9b6be}
+.cal-g button[aria-pressed=true]{background:var(--magenta);box-shadow:none;color:#fff}.cal-g button[aria-pressed=true] small{color:#fff}
+.cal-legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:.75rem;color:var(--muted)}
+.cal-legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.cal-legend .o{background:#cdebd8}.cal-legend .b{background:#f5dfae}.cal-legend .f{background:#f2c4c4}.cal-legend .c{background:#eee3e7}
+.cal-note{margin:8px 2px 0;font-size:.85rem;color:var(--muted)}
+.cal-note b{color:var(--ink)}
+@media (max-width:400px){.cal{padding:8px}.cal-g button,.cal-g span{min-height:48px}.cal-g button small{font-size:.56rem}}
+.dp-note{border-radius:16px;background:var(--blush);padding:14px 16px;font-size:.86rem;color:var(--ink)}
+.dp-note b{color:var(--plum)}
+.pay .step-k{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.pay h3{font-size:1.9rem;margin:0 0 6px}
+.qtabs{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 12px}
+.qtabs button{min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--paper);color:var(--ink);font-weight:600;cursor:pointer;box-shadow:inset 0 0 0 1.5px var(--line)}
+.qtabs button[aria-pressed=true]{background:var(--ink);color:#fff;box-shadow:none}
+.qr{margin:0 0 12px;display:grid;justify-items:center;gap:8px;padding:16px;border-radius:20px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line)}
+.qr img{width:min(240px,70vw);aspect-ratio:1;object-fit:contain;image-rendering:pixelated}
+.qr figcaption{font-size:.9rem;text-align:center}
+.howto{padding-left:1.2rem;margin:12px 0 16px;font-size:.9rem}
+.howto li{margin-bottom:6px}
+.rp-prev{max-height:220px;width:auto;margin:10px auto 0;border-radius:12px;box-shadow:0 10px 24px -14px rgba(0,0,0,.5)}
+.amt-big{font-family:var(--display,inherit);font-size:2.4rem;font-weight:700;line-height:1;margin:6px 0 2px;color:var(--plum)}
+.back{background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:3px;font-size:.86rem;margin-top:10px;cursor:pointer;width:100%}
+.rc-ic{width:58px;height:58px;margin:0 auto;border-radius:50%;display:grid;place-items:center;background:#e8f6ee;color:#2f8f5b}
+.rc-ic svg{width:30px;height:30px}
+.rc-ic.wait{background:#fbeef3;color:var(--magenta)}.rc-ic.wait svg{animation:spin 1.4s linear infinite}@media (prefers-reduced-motion:reduce){.rc-ic.wait svg{animation:none}}
+.rc-ic.warn{background:#fdecec;color:#b42318}
+.rcpt{text-align:left;background:var(--paper);border-radius:16px;padding:6px 16px;margin:16px 0;font-size:.9rem}
+.rcpt div{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line)}
+.rcpt div:last-child{border-bottom:0}
+.rcpt span:first-child{color:var(--muted)}
+.rcpt span:last-child{font-weight:600;text-align:right;white-space:pre-line}
+.paid{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;background:#e8f6ee;color:#1f6b45;font-weight:700;font-size:.8rem}
+.demo-tag{display:inline-block;margin-top:8px;padding:3px 10px;border-radius:999px;background:#fdf3e2;color:#8a5a12;font-size:.75rem;font-weight:700;letter-spacing:.06em}
+.safe-note{font-size:.76rem;color:var(--muted);margin:10px 0 0}
+@media print{body *{visibility:hidden!important}#bookOk,#bookOk *{visibility:visible!important}#bookOk{position:absolute;left:0;top:0;width:100%;box-shadow:none}#rcBtns,.toast-e{display:none!important}}
+.ok svg{width:54px;height:54px;color:#2f8f5b}
+.ftr{background:#120710;color:#cdb0bd;padding:56px 0 110px;font-size:.95rem}
+.ftr h4,.ftr .fh{font-family:var(--display);color:#fbeef1;font-size:1.4rem;margin-bottom:.5rem}
+.ftr a{text-decoration:none}.ftr a:hover{color:#fff}
+.legal{display:flex;flex-wrap:wrap;gap:6px 16px;margin:22px 0 0;padding:0;list-style:none;font-size:.88rem}.legal a{text-decoration:underline;text-underline-offset:3px}
+.note{margin-top:28px;font-size:.78rem;opacity:.75}
+.sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:90;display:none}
+@media (max-width:767.98px){.sticky-cta{display:block}.sticky-cta .btn-e{width:100%}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.toast-e{position:fixed;left:50%;bottom:86px;z-index:150;transform:translate(-50%,160%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;font-weight:500;font-size:.92rem;transition:transform .5s cubic-bezier(.16,1,.3,1);max-width:calc(100vw - 32px)}
+.toast-e.show{transform:translate(-50%,0);visibility:visible}
+.toast-e{visibility:hidden}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.mission .w,.quote-card blockquote .w{opacity:1}.loader{display:none}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}.loader{display:none!important}</style></noscript>
+</head>
+<body>
+<div class="loader" id="loader" aria-hidden="true"><div class="ecl"><div class="sun"></div><div class="moon"></div></div><img class="logo-load" src="img/eclipse-logo.webp" width="900" height="510" alt=""></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="read" id="read"></div>
+
+<header class="hdr navbar navbar-expand-lg" id="hdr"><div class="container">
+  <a class="navbar-brand" href="#top"><img class="logo" src="img/eclipse-logo.webp" width="900" height="510" alt="Eclipse Beauty Lounge"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
+  <div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a class="nav-link" href="#magic">Services</a></li>
+    <li class="nav-item"><a class="nav-link" href="#clients">Reviews</a></li>
+    <li class="nav-item"><a class="nav-link" href="#work">Looks</a></li>
+    <li class="nav-item"><a class="nav-link" href="#hello">About</a></li>
+    <li class="nav-item"><a class="btn-e" href="#book" style="min-height:44px;padding:0 22px">Book now</a></li>
+  </ul></div>
+</div></header>
+
+<main id="main">
+<!-- 1 · FAT HEADLINE + CTA -->
+<section class="hero" id="top" aria-label="Eclipse Beauty Lounge">
+  <div class="stage" id="stage">
+    <div class="corona" aria-hidden="true"></div>
+    <div class="orbit" id="orbit" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <span class="live" id="live"><i></i><span>Checking hours…</span></span>
+      <h1>Your<span class="script rg">glow-up era</span>starts here.</h1>
+      <p class="sub">Hair, nails and skin in Marikina Heights. Thoughtfully curated services. Relaxing atmosphere. Beautiful results.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-2"><a class="btn-e" href="#book">Book a free consultation</a><a class="btn-e ghost" href="#magic">See our services</a></div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">Scroll<i></i></div>
+  </div>
+</section>
+
+<!-- 2 · BRAND MISSION -->
+<section class="mission" id="mission">
+  <div class="container">
+    <div class="moonline"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>Our promise</div>
+    <p id="missionText">A beauty space in Marikina Heights for your *hair,* *nails* and *skin* glow-up era. Every visit starts with a free consultation, because your hair isn't like anyone else's.</p>
+  </div>
+</section>
+
+<!-- 3 · YOUR MAGIC -->
+<section class="magic pad" id="magic">
+  <div class="container">
+    <div class="row align-items-end g-3 mb-4 mb-lg-5">
+      <div class="col-lg-7"><span class="eyebrow">Our services</span><h2>Hair. Nails.<br><i>Skin.</i></h2></div>
+      <div class="col-lg-5"><p class="muted mb-0">Three ways to glow. Prices depend on your hair and goals, so we confirm everything at your free consultation, before we start.</p></div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="magicGrid"></div>
+  </div>
+</section>
+
+<!-- 4 · HAPPY CLIENTS -->
+<section class="clients pad" id="clients">
+  <div class="container">
+    <span class="eyebrow">Happy clients</span>
+    <h2 class="mb-4 mb-lg-5">Lovely people.<br><i>Lovely hair.</i></h2>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-4 rv"><div class="rate"><span class="stars">★★★★★</span><span class="big"><span id="rateNum">0.0</span></span><p class="mb-0" style="color:#e3c6d1">Google rating, based on our reviews as of October 2026</p></div></div>
+      <div class="col-lg-8 rv" style="--d:.1s"><div class="quote-card">
+        <span class="qm" aria-hidden="true">”</span>
+        <blockquote id="quoteText">This new salon was a great experience. I'm really happy with my cut. And the people in there are really lovely and super professional.</blockquote>
+        <div class="who"><span class="av">M</span><div><b>Mark P.</b><br><small class="muted">Google Local Guide · Hairstyling</small></div></div>
+      </div></div>
+    </div>
+    <div class="pills rv"><span>Atmosphere: relaxing</span><span>Maintenance: pristine</span></div>
+  </div>
+</section>
+
+<!-- 5 · YOUR WORK -->
+<section class="work pad" id="work">
+  <div class="amb" aria-hidden="true"><img id="amb" src="img/flat-iron.webp" alt=""></div>
+  <div class="container text-center">
+    <span class="eyebrow">Signature looks</span>
+    <h2 style="color:#fff">Find your look.</h2>
+    <p class="mx-auto mt-3 mb-0" style="max-width:52ch;color:#d9bfca">Swipe through the looks we love creating. Tap "Book this look" and we'll add it to your consultation.</p>
+    <p class="mx-auto mt-2 mb-0" style="max-width:52ch;color:#cfb3c0;font-size:.82rem">Inspiration photos (stock images), not photos of our clients.</p>
+    <div class="cf" id="cf" aria-roledescription="carousel" aria-label="Signature looks">
+      <button class="cf-nav prev" type="button" id="cfPrev" aria-label="Previous look"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 19l-7-7 7-7"/></svg></button>
+      <button class="cf-nav next" type="button" id="cfNext" aria-label="Next look"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <div class="dots" id="dots" role="group" aria-label="Choose a look"></div>
+  </div>
+</section>
+
+<!-- 6 · SAY HELLO -->
+<section class="hello pad" id="hello">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <span class="eyebrow">Say hello</span>
+        <h2>Hi, we're<br><span class="script rg" style="font-size:1.15em">Eclipse.</span></h2>
+        <p class="mt-3">We're a home-grown Marikenyo salon that officially opened its doors on September 18, 2026, and we've been welcoming the community ever since. <i>Ang sarap maging Marikenyo.</i></p>
+        <p class="muted">We believe great hair starts with listening. So before any treatment, we sit down with you: your hair history, its current condition, and the result you're dreaming of. Then we make it happen, with a little chika on the side.</p>
+        <div class="facts">
+          <div><b>Tue–Sat</b><small>10:00 AM – 7:00 PM</small></div>
+          <div><b>2nd Floor</b><small>117 Gen. Ordoñez St., Marikina Heights</small></div>
+          <div><b>Free</b><small>consultation, every visit</small></div>
+          <div><b>Messenger</b><small>Eclipse Beauty Lounge Marikina</small></div>
+        </div>
+        <div class="d-flex flex-wrap gap-2 mt-4"><a class="btn-e" href="https://m.me/61593057140350" target="_blank" rel="noopener">Message us</a><a class="btn-e ghost" href="https://maps.google.com/?q=117+Gen.+Ordo%C3%B1ez+St,+Marikina+Heights,+Marikina" target="_blank" rel="noopener">Get directions</a></div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="stack">
+          <div class="p1"><img src="img/salon-pink.webp" alt="Bright, pink-toned salon interior" loading="lazy" data-par="-8"></div>
+          <div class="p2"><img src="img/curl-styling.webp" alt="Stylist creating soft curls" loading="lazy" data-par="8"></div>
+          <div class="badge" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60 m-46 0 a46 46 0 1 1 92 0 a46 46 0 1 1 -92 0"/></defs><text font-size="10" letter-spacing="3" fill="#e6a9b6"><textPath href="#circ">PROUDLY MARIKENYO · SINCE 2026 · </textPath></text></svg><b>Hello</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · CTA -->
+<section class="cta pad" id="book">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <span class="eyebrow">Book your visit</span>
+        <h2>Ready for your<br><span class="script rg">glow-up era?</span></h2>
+        <p class="mt-3" style="color:#e3c6d1;max-width:44ch">Pick your service and a day, then secure your slot with a <b class="feeTxt">₱200</b> down payment by GCash, Maya or bank QR. It's deducted from your bill, and your consultation is still free.</p>
+        <a class="btn-e gold mt-2" href="https://m.me/61593057140350" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.4 2 2 6.1 2 11.4c0 2.9 1.3 5.4 3.5 7.2V22l3.2-1.8c1 .3 2.1.4 3.3.4 5.6 0 10-4.1 10-9.4S17.6 2 12 2zm1 12.6-2.6-2.7-5 2.7 5.5-5.8 2.6 2.7 4.9-2.7-5.4 5.8z"/></svg>Chat on Messenger</a>
+      </div>
+      <div class="col-lg-6">
+        <form class="bookcard" id="bookForm" novalidate>
+          <p class="step-k" style="font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px">Step 1 of 2 · Your details</p>
+          <p class="hp"><label>Leave empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
+          <div class="row g-3">
+            <div class="col-sm-6"><label for="bn" class="form-label">Name</label><input class="form-control" id="bn" name="name" required autocomplete="name"></div>
+            <div class="col-sm-6"><label for="bp" class="form-label">Mobile number</label><input class="form-control" id="bp" name="phone" type="tel" required pattern="[0-9+ ]{10,15}" placeholder="0917 123 4567" autocomplete="tel"></div>
+            <div class="col-sm-6"><label for="bs" class="form-label">Service</label><select class="form-select" id="bs" name="service" required></select></div>
+            <div class="col-sm-6"><label for="bti" class="form-label">Preferred time</label><select class="form-select" id="bti" name="time"><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option></select></div>
+            <div class="col-12"><span class="form-label d-block" id="calLbl">Preferred day <small class="muted fw-normal">(see how busy each day is)</small></span>
+              <div class="cal" id="cal" aria-labelledby="calLbl">
+                <div class="cal-h"><button type="button" id="calPrev" aria-label="Previous month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 19l-7-7 7-7"/></svg></button><b id="calMonth" aria-live="polite"></b><button type="button" id="calNext" aria-label="Next month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg></button></div>
+                <div class="cal-w" aria-hidden="true"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+                <div class="cal-g" id="calGrid"></div>
+                <div class="cal-legend"><span><i class="o"></i>Open</span><span><i class="b"></i>Filling up</span><span><i class="f"></i>Fully booked</span><span><i class="c"></i>Closed</span></div>
+                <p class="cal-note" id="calNote">Tap a day to see how many are already booked.</p>
+              </div>
+              <input type="hidden" name="day" id="bd"><input type="hidden" name="date" id="bdate">
+            </div>
+            <div class="col-12"><label for="bfb" class="form-label">Facebook name (optional)</label><input class="form-control" id="bfb" name="facebook" placeholder="So we can message you"></div>
+            <div class="col-12"><label for="bt" class="form-label">Notes (optional)</label><textarea class="form-control" id="bt" name="notes" rows="2" placeholder="Hair history, length, last rebond or color…"></textarea></div>
+            <div class="col-12"><label for="bem" class="form-label" id="bemLbl">Email (for your confirmation)</label><input class="form-control" id="bem" name="email" type="email" required autocomplete="email" placeholder="you@email.com"></div>
+            <div class="col-12"><div class="dp-note"><b>Next: your <span class="feeTxt">₱200</span> down payment.</b> We'll show our GCash, Maya and bank QR. Pay, then upload a screenshot of your receipt. Your booking is confirmed once your payment is checked, and we email you right away.</div></div>
+            <div class="col-12"><label class="d-flex gap-2 align-items-start" style="font-size:.88rem;font-weight:500"><input type="checkbox" name="consent" value="Yes" required style="width:20px;height:20px;margin-top:2px;flex:none;accent-color:#9c3a75"> <span>I agree to the <a href="privacy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="terms/" target="_blank" rel="noopener">Terms</a>, and allow Eclipse Beauty Lounge to use my details to manage my booking.</span></label></div>
+            <div class="col-12"><button class="btn-e w-100" type="submit" id="bBtn">Continue to down payment</button></div>
+          </div>
+        </form>
+        <div class="bookcard pay" id="payBox" hidden tabindex="-1" aria-labelledby="payH">
+          <p class="step-k">Step 2 of 2 · Booking <b id="payRef"></b></p>
+          <h3 id="payH">Pay your down payment</h3>
+          <p class="amt-big" id="payAmt">₱200</p>
+          <p class="muted" style="font-size:.9rem">Deducted from your bill. Your slot is held until <b id="payBy"></b>. Not confirmed until we've checked your receipt.</p>
+          <div class="qtabs" role="group" aria-label="Pay with" id="qTabs"></div>
+          <figure class="qr"><img id="qrImg" alt=""><figcaption>Account name: <b id="qrName"></b><br><small class="muted">Check this name in your app before you pay.</small></figcaption></figure>
+          <a class="btn-e ghost w-100" style="color:var(--ink)" id="qrSave" download="eclipse-qr.png">Save QR to my phone</a>
+          <ol class="howto"><li>Open GCash, Maya or your bank app and scan the QR. On a phone, save the QR first, then use "Upload QR" in your app.</li><li>Send exactly <b class="amtTxt">₱200</b>. If your app has a message box, type <b class="refTxt"></b>.</li><li>Screenshot the receipt and upload it here.</li></ol>
+          <form id="rcForm" novalidate>
+            <label for="rpName" class="form-label">Name on the account you paid from</label><input class="form-control" id="rpName" required autocomplete="name">
+            <label for="rpFile" class="form-label mt-3">Your payment receipt (screenshot)</label><input class="form-control" id="rpFile" type="file" accept="image/png,image/jpeg,image/heic,image/webp" required>
+            <img class="rp-prev" id="rpPrev" alt="Preview of the receipt you picked" hidden>
+            <button class="btn-e w-100 mt-3" type="submit" id="rpBtn">Send my receipt</button>
+          </form>
+          <button type="button" class="back" id="payBack">Change my booking details</button>
+          <p class="safe-note">Pay only to the account names shown here. We will never ask for your OTP, MPIN or password.</p>
+        </div>
+        <div class="bookcard ok" id="bookOk" hidden tabindex="-1" aria-live="polite">
+          <div class="rc-ic" id="rcIc"></div>
+          <h3 class="mt-3" style="font-size:2rem" id="rcTitle"></h3>
+          <p class="muted mb-0" id="rcMsg"></p>
+          <div id="rcDemo"></div>
+          <div class="rcpt" id="rcpt"></div>
+          <div class="d-grid gap-2" id="rcBtns"><button class="btn-e" type="button" id="rcPrint">Save or print confirmation</button><a class="btn-e ghost" style="color:var(--ink)" href="https://m.me/61593057140350" target="_blank" rel="noopener">Message us on Messenger</a><button class="btn-e ghost" style="color:var(--ink)" type="button" id="rcNew">Book another visit</button></div>
+          <p class="safe-note">Stay safe: we will never ask for your OTP, MPIN or card details by chat, text or call.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr"><div class="container">
+  <div class="row g-4">
+    <div class="col-md-6"><img class="logo-ftr" src="img/eclipse-logo.webp" width="900" height="510" alt="Eclipse Beauty Lounge" loading="lazy"><p class="mt-2 mb-0">A beauty space in Marikina Heights for your hair, nails and skin glow-up era.</p></div>
+    <div class="col-6 col-md-3"><h2 class="fh">Visit</h2>2nd Floor, 117 Gen. Ordoñez St.<br>Marikina Heights, Marikina City<br>Tue–Sat, 10 AM – 7 PM</div>
+    <div class="col-6 col-md-3"><h2 class="fh">Explore</h2><a href="#magic">Services</a><br><a href="#work">Looks</a><br><a href="https://m.me/61593057140350" target="_blank" rel="noopener">Messenger</a></div>
+  </div>
+  <ul class="legal" aria-label="Policies"><li><a href="privacy/">Privacy Policy</a></li><li><a href="terms/">Terms</a></li><li><a href="cookies/">Cookie Policy</a></li><li><a href="refunds/">Refund Policy</a></li></ul>
+  <p class="note">Website mock-up for Eclipse Beauty Lounge by Waypoints Web Design. Not the official site yet. Photos: Unsplash &amp; Pexels (free license), for preview only.</p>
+</div></footer>
+<aside class="sticky-cta" aria-label="Quick action"><a class="btn-e" href="#book">Book a free consultation</a></aside>
+<div class="toast-e" id="toast" role="status"></div>
+
+<script src="assets/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script>
+/* Google Apps Script web app URL (booking-sheet/SETUP.txt). Bookings, QR codes and receipt checks all run there. */
+const DOWN_PAYMENT = 200; // display only; the real amount and the QR codes come from Code.gs
+const BOOKING_API_URL = 'https://script.google.com/macros/s/AKfycbwxToIJCBsqTrvkVi8vH8HZlPbjvO1HpVeihOcW-F_RVUEnLj2JDbnfDADaXqRCC4q4/exec';
+const $ = id => document.getElementById(id);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(pointer: fine)').matches;
+gsap.registerPlugin(ScrollTrigger);
+const toast = m => { const t = $('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2600); };
+
+/* Smooth scroll (desktop) */
+let lenis = null;
+if (!reduce && fine && window.Lenis) {
+  lenis = new Lenis({ lerp: .1 }); lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
+}
+const jump = sel => { const el = document.querySelector(sel); if (!el) return; lenis ? lenis.scrollTo(el, { offset: -80 }) : el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); };
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => { const h = a.getAttribute('href'); if (h.length > 1) { e.preventDefault(); jump(h); const col = $('nav'); if (col.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(col).hide(); } }));
+
+/* Loader: the eclipse completes, then the page reveals */
+(() => { const l = $('loader'); let seen = false; try { seen = sessionStorage.getItem('ecl-seen') === '1'; } catch {}
+  if (reduce || seen || navigator.webdriver) { l.remove(); return; }
+  setTimeout(() => { l.classList.add('done'); try { sessionStorage.setItem('ecl-seen', '1'); } catch {} setTimeout(() => l.remove(), 900); }, 1700); })();
+
+/* Header + reading progress */
+const hdr = $('hdr');
+$('nav').addEventListener('show.bs.collapse', () => hdr.classList.add('open'));
+$('nav').addEventListener('hidden.bs.collapse', () => hdr.classList.remove('open'));
+const onScroll = () => { const y = scrollY, max = document.documentElement.scrollHeight - innerHeight; hdr.classList.toggle('solid', y > innerHeight * 1.6); $('read').style.transform = `scaleX(${max > 0 ? y / max : 0})`; };
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+/* Open now (Mon & Sun closed, Tue–Sat 10–7) */
+(() => { const n = new Date(), d = n.getDay(), h = n.getHours() + n.getMinutes() / 60, open = d >= 2 && d <= 6 && h >= 10 && h < 19;
+  const next = (d === 0 || d === 1 || (d === 6 && h >= 19)) ? 'opens Tuesday, 10 AM' : h < 10 ? 'opens today at 10 AM' : 'opens tomorrow, 10 AM';
+  $('live').classList.toggle('closed', !open); $('live').querySelector('span').textContent = open ? 'Open now · until 7 PM' : `Closed now · ${next}`; })();
+
+/* ---------- 1 · HERO: 3D photo orbit (adapted from 21st.dev "Cinematic Orbit Hero") ---------- */
+const ORBIT = [['hero-pink-hair', 'Glossy waves'], ['lavender-hair', 'Balayage'], ['flat-iron', 'Nanoplasty'], ['nails-soft', 'Nails'], ['copper-waves', 'Color'], ['hair-wash', 'Hair Botox'], ['curly-pink', 'Healthy curls'], ['facial', 'Skin']];
+(() => {
+  const wrap = $('orbit'), mobile = innerWidth < 768;
+  const W = mobile ? 30 : 13, H = mobile ? 15 : 24; // card size: vw, vh
+  const cards = ORBIT.map(([src, label], i) => { const d = document.createElement('div'); d.className = 'oc'; d.style.setProperty('--w', W + 'vw'); d.style.setProperty('--h', H + 'vh'); d.innerHTML = `<img src="img/${src}.webp" alt="" decoding="async"><span>${label}</span>`; wrap.append(d); return d; });
+  const n = cards.length, RX = mobile ? 38 : 41, RY = mobile ? 33 : 31, CY = mobile ? 2 : 4;
+  let p = reduce ? 1 : 0, px = 0, py = 0, tx = 0, ty = 0, spin = 0;
+  const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  if (!reduce) ScrollTrigger.create({ trigger: '.hero', start: 'top top', end: 'bottom bottom', scrub: 1.2, onUpdate: s => { p = Math.min(1, s.progress / .7); spin = s.progress * 1.2; } });
+  if (fine && !reduce) addEventListener('pointermove', e => { tx = (e.clientX / innerWidth - .5) * 2; ty = (e.clientY / innerHeight - .5) * 2; }, { passive: true });
+  const t0 = performance.now();
+  function frame(now) {
+    px += (tx - px) * .06; py += (ty - py) * .06;
+    const e = ease(p), drift = reduce ? 0 : (now - t0) / 1000 * .04;
+    cards.forEach((c, i) => {
+      const a = i / n * Math.PI * 2 - Math.PI / 2 + spin + drift * (1 - e * .3);
+      const depth = Math.sin(a);                // -1 back … 1 front
+      const ox = (i - n / 2) * 3, oy = 62 + (i - n / 2) * 1.5;  // stacked start, rising from below the fold
+      const x = ox + (Math.cos(a) * RX - ox) * e - px * 3 * (depth + 1.2) * e;
+      const y = oy + ((depth * RY + CY) - oy) * e - py * 2 * (depth + 1.2) * e;
+      const s = (.55 + .2 * e) * (1 + depth * .22 * e);
+      const ry = Math.cos(a) * -28 * e, rz = (i - n / 2) * 4 * (1 - e) + Math.cos(a) * 6 * e;
+      c.style.transform = `translate3d(${x}vw, ${y}vh, ${depth * 160 * e}px) rotateY(${ry}deg) rotateZ(${rz}deg) scale(${s})`;
+      // z-index and filter change stacking/painting, so only write them when the rounded value really changes
+      const z = Math.round(depth * 20 + 20); if (c._z !== z) { c._z = z; c.style.zIndex = z; }
+      const dim = depth < 0 ? .75 + .25 * (1 + depth) : 1;
+      c.style.opacity = (.35 + .65 * Math.min(1, e * 1.4)) * (mobile && depth < -.3 ? dim * (1 + depth * .35 * e) : dim);
+      const f = mobile || depth >= -.3 ? 'none' : `blur(${Math.round((-depth - .3) * 3 * e * 2) / 2}px) brightness(${Math.round((1 + depth * .35 * e) * 20) / 20})`; // phones: no blur, just a little darker
+      if (c._f !== f) { c._f = f; c.style.filter = f; }
+    });
+    if (!reduce && heroOn) requestAnimationFrame(frame); else running = false;
+  }
+  // the orbit only animates while the hero is on screen
+  let heroOn = true, running = true;
+  new IntersectionObserver(es => { heroOn = es[0].isIntersecting; if (heroOn && !running && !reduce) { running = true; requestAnimationFrame(frame); } }).observe(document.querySelector('.hero'));
+  requestAnimationFrame(frame);
+})();
+
+/* ---------- 2 · Mission: words light up as you scroll ---------- */
+(() => {
+  const p = $('missionText'); p.innerHTML = p.textContent.split(/\s+/).map(w => { const em = /^\*.*\*/.test(w); return `<span class="w${em ? ' em' : ''}">${w.replace(/\*/g, '')}</span>`; }).join(' ');
+  const words = p.querySelectorAll('.w');
+  if (reduce) return;
+  ScrollTrigger.create({ trigger: '#mission', start: 'top 75%', end: 'bottom 55%', scrub: true, onUpdate: s => { const k = Math.round(s.progress * words.length); words.forEach((w, i) => w.style.opacity = i < k ? 1 : .14); } });
+})();
+
+/* ---------- 3 · Your magic: 3D cards ---------- */
+const I = p => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+const MAGIC = [
+  { id: 'hair', title: 'Hair', img: 'flat-iron', icon: I('<path d="M7 3c0 6 2 9 2 18M12 3c0 6 1 10 0 18M17 3c0 6-2 9-2 18"/>'), text: 'Our signature Nanoplasty for no frizz and no buhaghag, plus Hair Botox, stem cell treatment, balayage, color and cuts.', tags: ['Nanoplasty', 'Hair Botox', 'Stem Cell', 'Balayage', 'Hair Color', 'Cut & Style', 'Blowout'] },
+  { id: 'nails', title: 'Nails', img: 'nails-soft', icon: I('<path d="M8 13V5a1.5 1.5 0 0 1 3 0v6M11 11V4a1.5 1.5 0 0 1 3 0v7M14 11V6a1.5 1.5 0 0 1 3 0v7c0 4-2.5 7-6 7s-6-3-6-6v-2a1.5 1.5 0 0 1 3 0"/>'), text: 'Clean, shaped and polished. Manicure and pedicure to finish your pampering day.', tags: ['Manicure', 'Pedicure'] },
+  { id: 'skin', title: 'Skin', img: 'facial', icon: I('<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17l.7 1.6L21 19l-1.3.5L19 21l-.6-1.5L17 19l1.4-.4z"/>'), text: 'Smooth and confident. Brazilian waxing done privately, gently and professionally.', tags: ['Brazilian Waxing'] }
+];
+$('magicGrid').innerHTML = MAGIC.map((m, i) => `<div class="col"><div class="m3d"><article class="mcard" style="--i:${i}"><span class="glare"></span><div class="ph"><img src="img/${m.img}.webp" alt="" loading="lazy" decoding="async"></div><div class="ic3"><span class="back"></span><span class="face">${m.icon}</span></div><h3>${m.title}</h3><p>${m.text}</p><div class="tags">${m.tags.map(t => `<span>${t}</span>`).join('')}</div><a class="go" href="#book" data-svc="${m.tags[0]}">Book ${m.title.toLowerCase()} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article></div></div>`).join('');
+document.querySelectorAll('.mcard').forEach((c, i) => {
+  if (!reduce) gsap.fromTo(c, { rotateX: 28, y: 90, opacity: 0, z: -120 }, { rotateX: 0, y: 0, opacity: 1, z: 0, ease: 'power3.out', duration: 1.2, delay: i * .12, scrollTrigger: { trigger: '#magicGrid', start: 'top 82%' } });
+  if (!fine || reduce) return;
+  c.addEventListener('pointermove', e => { const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height; c.style.transform = `rotateY(${(x - .5) * 16}deg) rotateX(${(.5 - y) * 14}deg) translateZ(10px)`; c.style.setProperty('--gx', x * 100 + '%'); c.style.setProperty('--gy', y * 100 + '%'); });
+  c.addEventListener('pointerleave', () => c.style.transform = '');
+});
+
+/* ---------- 4 · Happy clients ---------- */
+(() => {
+  const q = $('quoteText'); q.innerHTML = '“' + q.textContent.split(' ').map(w => `<span class="w">${w}</span>`).join(' ') + '”';
+  const ws = q.querySelectorAll('.w');
+  const run = () => { ws.forEach((w, i) => setTimeout(() => w.style.opacity = 1, i * 70)); const o = { v: 0 }; gsap.to(o, { v: 5, duration: 1.6, ease: 'power2.out', onUpdate: () => $('rateNum').textContent = o.v.toFixed(1) }); };
+  if (reduce) { ws.forEach(w => w.style.opacity = 1); $('rateNum').textContent = '5.0'; return; }
+  ScrollTrigger.create({ trigger: '#clients', start: 'top 65%', once: true, onEnter: run });
+})();
+
+/* ---------- 5 · Your work: 3D coverflow (adapted from 21st.dev "3D Coverflow Carousel") ---------- */
+const LOOKS = [
+  { tag: '#Signature', t: 'Nanoplasty', d: 'No frizz, no buhaghag. Straight, soft, glossy hair.', img: 'flat-iron', svc: 'Nanoplasty' },
+  { tag: '#Color', t: 'Balayage', d: 'Hand-painted dimension, from soft honey to rich copper.', img: 'lavender-hair', svc: 'Balayage' },
+  { tag: '#Treatment', t: 'Hair Botox', d: 'Deep conditioning for dry, tired hair. Softness and shine.', img: 'hair-wash', svc: 'Hair Botox' },
+  { tag: '#Color', t: 'Rich Brunette', d: 'A warm, glossy shade that feels naturally you.', img: 'copper-waves', svc: 'Hair Color' },
+  { tag: '#Style', t: 'Soft Glam Curls', d: 'Cut and style for your special day, or just because.', img: 'curl-styling', svc: 'Cut & Style' },
+  { tag: '#Care', t: 'Healthy Curls', d: 'Stem cell treatment to bring stressed hair back to life.', img: 'curly-pink', svc: 'Stem Cell' },
+  { tag: '#Nails', t: 'Mani + Pedi', d: 'Clean, shaped and polished to finish your glow-up.', img: 'nails-soft', svc: 'Manicure' }
+];
+(() => {
+  const cf = $('cf'), dots = $('dots'), n = LOOKS.length; let cur = 0, timer;
+  LOOKS.forEach((l, i) => {
+    const el = document.createElement('div'); el.className = 'cf-item'; el.setAttribute('role', 'group'); el.setAttribute('aria-label', `${i + 1} of ${n}: ${l.t}`);
+    el.innerHTML = `<img src="img/${l.img}.webp" alt="${l.t}" loading="lazy" decoding="async"><span class="tag">${l.tag}</span><div class="cap"><h3>${l.t}</h3><div class="bar"></div><p>${l.d}</p><a class="btn-e gold" href="#book" data-svc="${l.svc}">Book this look</a></div>`;
+    el.addEventListener('click', e => { if (i !== cur && !e.target.closest('a')) go(i); });
+    cf.append(el);
+    const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', `Show ${l.t}`); b.onclick = () => go(i); dots.append(b);
+  });
+  const items = cf.querySelectorAll('.cf-item');
+  function layout() {
+    const w = Math.min(340, innerWidth * .7), s1 = innerWidth < 768 ? w * .62 : w * .86, s2 = innerWidth < 768 ? w * 1.05 : w * 1.55;
+    items.forEach((el, i) => {
+      const o = (i - cur + n) % n; let t = 'translateX(0) scale(.4)', op = 0, z = 0, f = 'brightness(.4)';
+      if (o === 0) { t = 'translateX(0) translateZ(60px) scale(1)'; op = 1; z = 30; f = 'none'; }
+      else if (o === 1) { t = `translateX(${s1}px) scale(.84) rotateY(-26deg)`; op = .7; z = 20; f = 'brightness(.7)'; }
+      else if (o === n - 1) { t = `translateX(${-s1}px) scale(.84) rotateY(26deg)`; op = .7; z = 20; f = 'brightness(.7)'; }
+      else if (o === 2) { t = `translateX(${s2}px) scale(.68) rotateY(-40deg)`; op = .35; z = 10; f = 'brightness(.5) blur(1px)'; }
+      else if (o === n - 2) { t = `translateX(${-s2}px) scale(.68) rotateY(40deg)`; op = .35; z = 10; f = 'brightness(.5) blur(1px)'; }
+      el.style.transform = `translateY(-50%) ${t}`; el.style.opacity = op; el.style.zIndex = z; el.style.filter = f;
+      el.classList.toggle('center', o === 0); el.style.boxShadow = o === 0 ? '0 30px 70px rgba(0,0,0,.85),0 0 40px rgba(230,169,182,.3)' : '0 15px 35px rgba(0,0,0,.5)';
+      el.querySelector('a').tabIndex = o === 0 ? 0 : -1;
+    });
+    dots.querySelectorAll('button').forEach((b, i) => b.setAttribute('aria-current', i === cur));
+    const amb = $('amb'); amb.style.opacity = 0; setTimeout(() => { amb.src = `img/${LOOKS[cur].img}.webp`; amb.style.opacity = 1; }, 300);
+  }
+  const go = i => { cur = (i + n) % n; layout(); restart(); };
+  const restart = () => { clearInterval(timer); if (!reduce) timer = setInterval(() => { cur = (cur + 1) % n; layout(); }, 5000); };
+  $('cfPrev').onclick = () => go(cur - 1); $('cfNext').onclick = () => go(cur + 1);
+  let sx = 0; cf.addEventListener('touchstart', e => sx = e.touches[0].clientX, { passive: true });
+  cf.addEventListener('touchend', e => { const d = e.changedTouches[0].clientX - sx; if (Math.abs(d) > 45) go(cur + (d < 0 ? 1 : -1)); });
+  cf.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') go(cur - 1); if (e.key === 'ArrowRight') go(cur + 1); });
+  cf.addEventListener('pointerenter', () => clearInterval(timer)); cf.addEventListener('pointerleave', restart);
+  addEventListener('resize', layout); layout(); restart();
+})();
+
+/* ---------- 6 · Say hello: parallax depth ---------- */
+if (!reduce) document.querySelectorAll('[data-par]').forEach(img => gsap.fromTo(img, { yPercent: -+img.dataset.par }, { yPercent: +img.dataset.par, ease: 'none', scrollTrigger: { trigger: '.stack', start: 'top bottom', end: 'bottom top', scrub: true } }));
+
+/* ---------- Reveal ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+document.querySelectorAll('.rv').forEach(el => reduce ? el.classList.add('in') : io.observe(el));
+if (!reduce) gsap.utils.toArray('section h2').forEach(h => gsap.from(h, { y: 50, opacity: 0, filter: 'blur(8px)', duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: h, start: 'top 85%' } }));
+
+/* ---------- 7 · Booking ---------- */
+const SERVICES = ['Nanoplasty', 'Hair Botox', 'Stem Cell', 'Balayage', 'Hair Color', 'Cut & Style', 'Blowout', 'Manicure', 'Pedicure', 'Brazilian Waxing', 'Not sure yet (consultation)'];
+$('bs').innerHTML = SERVICES.map(s => `<option>${s}</option>`).join('');
+/* Booking calendar: open days, and how many bookings each day already has (live from the bookings Sheet) */
+const CAL = { capacity: 8, open: [2, 3, 4, 5, 6], counts: {}, live: false, sample: false, view: null, days: 45 };
+const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const first = new Date(); first.setHours(0, 0, 0, 0); first.setDate(first.getDate() + 1);
+const last = new Date(first); last.setDate(last.getDate() + CAL.days);
+CAL.view = new Date(first.getFullYear(), first.getMonth(), 1);
+function dayInfo(d) {
+  const k = iso(d), n = CAL.counts[k] || 0;
+  if (d < first || d > last) return { k, n, cls: 'past', label: '' };
+  if (!CAL.open.includes(d.getDay())) return { k, n, cls: 'closed', label: 'Closed' };
+  if (!CAL.live && !CAL.sample) return { k, n, cls: '', label: 'Open' };
+  if (n >= CAL.capacity) return { k, n, cls: 'full', label: 'Full' };
+  return { k, n, cls: n >= CAL.capacity * .6 ? 'busy' : '', label: n ? `${n} booked` : 'Open' };
+}
+function renderCal() {
+  const y = CAL.view.getFullYear(), m = CAL.view.getMonth(), start = new Date(y, m, 1).getDay(), dim = new Date(y, m + 1, 0).getDate();
+  $('calMonth').textContent = CAL.view.toLocaleDateString('en-PH', { month: 'long', year: 'numeric' });
+  $('calPrev').disabled = y === first.getFullYear() && m === first.getMonth();
+  $('calNext').disabled = new Date(y, m + 1, 1) > last;
+  let html = '<span></span>'.repeat(start);
+  for (let day = 1; day <= dim; day++) {
+    const d = new Date(y, m, day), x = dayInfo(d), off = ['past', 'closed', 'full'].includes(x.cls);
+    const long = d.toLocaleDateString('en-PH', { weekday: 'long', month: 'long', day: 'numeric' });
+    const aria = x.cls === 'past' ? `${long}: not available` : x.cls === 'closed' ? `${long}: closed` : x.cls === 'full' ? `${long}: fully booked` : `${long}: ${x.n} booked${CAL.live || CAL.sample ? `, ${CAL.capacity - x.n} slots left` : ''}`;
+    html += `<button type="button" class="${x.cls}" data-k="${x.k}" aria-pressed="${$('bdate').value === x.k}" aria-label="${aria}" ${off ? 'aria-disabled="true"' : ''}><b>${day}</b><small>${x.label}</small></button>`;
+  }
+  $('calGrid').innerHTML = html;
+}
+$('calGrid').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b || b.getAttribute('aria-disabled')) { if (b && b.classList.contains('full')) toast('That day is fully booked. Please pick another day.'); return; }
+  const [y, mo, da] = b.dataset.k.split('-').map(Number), d = new Date(y, mo - 1, da), x = dayInfo(d);
+  $('bdate').value = x.k; $('bd').value = d.toLocaleDateString('en-PH', { weekday: 'long', month: 'short', day: 'numeric' });
+  const left = CAL.capacity - x.n;
+  $('calNote').innerHTML = `<b>${$('bd').value}</b>${CAL.live || CAL.sample ? ` · ${x.n ? `${x.n} already booked, ${left} slot${left === 1 ? '' : 's'} left` : 'nobody booked yet, all slots open'}${CAL.sample ? ' (sample numbers)' : ''}` : ''}. We'll confirm your exact time.`;
+  renderCal();
+});
+$('calPrev').onclick = () => { CAL.view = new Date(CAL.view.getFullYear(), CAL.view.getMonth() - 1, 1); renderCal(); };
+$('calNext').onclick = () => { CAL.view = new Date(CAL.view.getFullYear(), CAL.view.getMonth() + 1, 1); renderCal(); };
+async function loadAvailability() {
+  try {
+    if (!BOOKING_API_URL) throw 0;
+    const r = await (await fetch(BOOKING_API_URL + '?action=availability')).json();
+    if (!r || !r.ok) throw 0;
+    Object.assign(CAL, { capacity: r.capacity || CAL.capacity, open: r.openDays || CAL.open, counts: r.counts || {}, live: true });
+  } catch {
+    if (document.documentElement.hasAttribute('data-demo')) { // preview only: believable sample numbers
+      CAL.sample = true;
+      for (let d = new Date(first); d <= last; d.setDate(d.getDate() + 1)) { const s = (d.getDate() * 7 + d.getMonth() * 3) % 11; CAL.counts[iso(d)] = d.getDay() === 6 ? Math.min(CAL.capacity, 5 + s % 4) : s % 6; }
+    }
+  }
+  renderCal();
+}
+renderCal(); loadAvailability();
+document.addEventListener('click', e => { const a = e.target.closest('[data-svc]'); if (!a) return; const v = a.dataset.svc, opt = [...$('bs').options].find(o => o.value === v); if (opt) $('bs').value = v; toast(`${v} added to your booking.`); });
+/* ---------- Booking + down payment by QR (no payment company: money goes straight to Eclipse's own accounts) ----------
+   1) details -> Code.gs holds the slot and returns the QR codes
+   2) customer pays in their own app, uploads the receipt -> Code.gs reads it and checks amount, names and reference number
+   3) only a passed check (or the owner's approval) marks the booking Paid and sends the confirmation emails */
+const DEMO = document.documentElement.hasAttribute('data-demo');
+const LIVE = !!BOOKING_API_URL && !DEMO;
+const peso = n => '₱' + Number(n).toLocaleString('en-PH');
+const setAmt = n => document.querySelectorAll('.feeTxt,.amtTxt').forEach(el => el.textContent = peso(n));
+setAmt(DOWN_PAYMENT);
+const ICONS = { ok: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>', wait: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 3a9 9 0 1 0 9 9"/></svg>', warn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 8v5M12 16.5v.5"/><circle cx="12" cy="12" r="9.5"/></svg>' };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const api = async (data, qs = '') => { const r = await fetch(BOOKING_API_URL + qs, data ? { method: 'POST', body: JSON.stringify(data) } : {}); return r.json(); };
+const card = id => { ['bookForm', 'payBox', 'bookOk'].forEach(x => $(x).hidden = x !== id); $(id).focus({ preventScroll: true }); jump('#book'); };
+let PAY = null; // { ref, k, amount, payBy, accounts, service, day, time }
+/* The QR pictures live on this website (payment-qr folder -> pay-accounts.json, made by build-eclipse.js). */
+let LOCAL_QR = null;
+const localQR = async () => { if (!LOCAL_QR) { try { LOCAL_QR = (await (await fetch('pay-accounts.json', { cache: 'no-store' })).json()).accounts || []; } catch { LOCAL_QR = []; } } return LOCAL_QR; };
+const withQR = async list => { const loc = await localQR(); return (list || []).map(a => Object.assign({}, a, { qr: a.qr || (loc.find(l => l.label === a.label) || {}).qr || '' })).filter(a => a.qr); };
+/* Remember an unpaid booking on this phone, so the customer can come back to the QR and upload later */
+const SAVE = 'ecl-booking';
+const remember = p => { try { localStorage.setItem(SAVE, JSON.stringify({ ref: p.ref, k: p.k, t: Date.now() })); } catch { } };
+const forget = () => { try { localStorage.removeItem(SAVE); } catch { } };
+
+function showPay(p) {
+  PAY = p; setAmt(p.amount);
+  $('payRef').textContent = p.ref; $('payAmt').textContent = peso(p.amount); $('payBy').textContent = p.payBy || 'later today';
+  document.querySelectorAll('.refTxt').forEach(el => el.textContent = p.ref);
+  $('qTabs').innerHTML = p.accounts.map((a, i) => `<button type="button" data-i="${i}" aria-pressed="${!i}">${esc(a.label)}</button>`).join('');
+  pickAcct(0); if (!$('rpName').value) $('rpName').value = $('bn').value;
+  card('payBox');
+}
+function pickAcct(i) {
+  const a = PAY.accounts[i];
+  $('qTabs').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', +b.dataset.i === i));
+  $('qrImg').src = a.qr; $('qrImg').alt = `${a.label} QR code for ${a.name}`; $('qrName').textContent = a.name;
+  $('qrSave').href = a.qr; $('qrSave').download = `eclipse-${a.label.toLowerCase().replace(/[^a-z]+/g, '-')}-qr.${/png/.test(a.qr.slice(0, 30)) ? 'png' : 'jpg'}`;
+}
+$('qTabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) pickAcct(+b.dataset.i); });
+$('payBack').onclick = () => card('bookForm');
+
+function showResult(r) {
+  const T = {
+    Paid: ['ok', "You're booked. Salamat!", `We checked your ${peso(r.amount)} down payment. Your confirmation is in your email. We may message you to confirm your exact time.`],
+    'Receipt check needed': ['wait', 'Receipt received. We\'re checking it.', 'Your slot stays held while we check your payment. You\'ll get a confirmation email as soon as it\'s done, usually within a few hours (Tue to Sat, 10 AM to 7 PM).'],
+    Expired: ['warn', 'Your slot hold has ended', 'If you already paid, upload your receipt anyway and we\'ll check if your day still has room. Or message us on Messenger.'],
+    Demo: ['wait', 'Receipt received (demo)', 'This is a preview, so nothing was sent or checked. On the real website, our system reads your receipt, checks the amount and names against your booking, then emails you and Eclipse. Your booking is only confirmed after that check.']
+  };
+  const [ic, title, msg] = T[r.status] || ['warn', 'Booking not confirmed yet', 'Please message us on Messenger with your booking number.'];
+  $('rcIc').className = 'rc-ic' + (ic === 'ok' ? '' : ' ' + ic); $('rcIc').innerHTML = ICONS[ic];
+  $('rcTitle').textContent = title; $('rcMsg').textContent = msg;
+  $('rcDemo').innerHTML = r.status === 'Demo' ? '<span class="demo-tag">DEMO ONLY · no payment was made or checked</span>' : '';
+  const paid = r.status === 'Paid';
+  const rows = [['Booking no.', r.ref], ['Status', paid ? '<span class="paid">✓ Paid, confirmed</span>' : esc(r.status === 'Demo' ? 'Preview' : r.status === 'Receipt check needed' ? 'Checking your payment' : r.status)], ['Service', r.service], ['Requested slot', r.day ? `${r.day}, ${r.time}` : ''], [paid ? 'Down payment received' : 'Down payment', peso(r.amount)], ['Paid to', paid ? r.paidTo : ''], ['Reference no.', paid ? r.refNo : '']];
+  $('rcpt').innerHTML = rows.filter(x => x[0] && x[1]).map(([k, v]) => `<div><span>${k}</span><span>${k === 'Status' ? v : esc(v)}</span></div>`).join('');
+  $('rcPrint').hidden = !paid; $('rcNew').hidden = !paid && r.status !== 'Demo';
+  card('bookOk');
+}
+$('rcPrint').onclick = () => print();
+$('rcNew').onclick = () => { PAY = null; forget(); $('rcForm').reset(); $('rpPrev').hidden = true; card('bookForm'); };
+
+/* Step 1: details -> hold the slot, get the QR codes */
+$('bookForm').addEventListener('submit', async e => {
+  e.preventDefault(); const f = $('bookForm');
+  if (!f.reportValidity()) return;
+  if (!$('bdate').value) { toast('Please pick a day on the calendar.'); $('cal').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); return; }
+  const data = { action: 'hold', name: f.name.value.trim(), phone: f.phone.value, email: f.email.value.trim(), service: f.service.value, day: f.day.value, date: f.date.value, time: f.time.value, facebook: f.facebook.value, notes: f.notes.value, consent: f.consent.checked, company: f.company.value };
+  const btn = $('bBtn'), label = btn.textContent; btn.disabled = true; btn.textContent = 'Holding your slot…';
+  try {
+    let r;
+    if (DEMO || !BOOKING_API_URL) r = { ok: true, ref: 'ECL-DEMO-' + Math.random().toString(36).slice(2, 6).toUpperCase(), k: 'demo', amount: DOWN_PAYMENT, payBy: 'one hour from now', accounts: [{ label: 'GCash (sample)', name: 'Eclipse Beauty Lounge', qr: sampleQR() }, { label: 'Bank (sample)', name: 'Eclipse Beauty Lounge', qr: sampleQR(1) }], demo: 1 };
+    else r = await api(data);
+    if (!r.ok) throw new Error(r.error || 'Could not hold your slot. Please try again.');
+    if (!r.demo) r.accounts = await withQR(r.accounts);
+    if (!r.ref || !r.accounts || !r.accounts.length) throw new Error('Online down payment isn\'t ready yet. Please message us on Messenger to book.');
+    Object.assign(r, { service: data.service, day: data.day, time: data.time });
+    if (!r.demo) remember(r);
+    if (CAL.live || CAL.sample) { CAL.counts[data.date] = (CAL.counts[data.date] || 0) + 1; renderCal(); }
+    showPay(r);
+  } catch (err) { toast(err.message || 'Something went wrong. Please try again.'); }
+  btn.disabled = false; btn.textContent = label;
+});
+
+/* Step 2: the receipt. Shrunk on the phone first (keeps text sharp, uploads fast) */
+async function shrink(file) {
+  const url = URL.createObjectURL(file);
+  try {
+    const img = await new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => no(new Error('That file isn\'t a picture we can read. Please upload a screenshot (JPG or PNG).')); i.src = url; });
+    const s = Math.min(1, 2000 / Math.max(img.naturalWidth, img.naturalHeight)), c = document.createElement('canvas');
+    c.width = Math.round(img.naturalWidth * s); c.height = Math.round(img.naturalHeight * s);
+    const g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height); g.drawImage(img, 0, 0, c.width, c.height);
+    return c.toDataURL('image/jpeg', .88);
+  } finally { URL.revokeObjectURL(url); }
+}
+$('rpFile').addEventListener('change', () => {
+  const file = $('rpFile').files[0], p = $('rpPrev');
+  if (!file) { p.hidden = true; return; }
+  if (file.size > 20 * 1024 * 1024) { toast('That file is too big. Please upload a screenshot.'); $('rpFile').value = ''; p.hidden = true; return; }
+  p.src = URL.createObjectURL(file); p.hidden = false;
+});
+$('rcForm').addEventListener('submit', async e => {
+  e.preventDefault(); const f = $('rcForm');
+  if (!f.reportValidity()) return;
+  const btn = $('rpBtn'), label = btn.textContent; btn.disabled = true; btn.textContent = 'Checking your receipt…';
+  try {
+    const image = await shrink($('rpFile').files[0]);
+    let r;
+    if (PAY.demo) { await new Promise(s => setTimeout(s, 900)); r = { ok: true, status: 'Demo' }; }
+    else r = await api({ action: 'receipt', ref: PAY.ref, k: PAY.k, payer: $('rpName').value.trim(), image });
+    if (!r.ok) throw new Error(r.error || 'We couldn\'t send your receipt. Please try again.');
+    if (r.status !== 'Awaiting down payment') forget();
+    showResult(Object.assign({}, PAY, r));
+  } catch (err) { toast(err.message || 'Something went wrong. Please try again.'); }
+  btn.disabled = false; btn.textContent = label;
+});
+
+/* Preview only: a placeholder QR (not scannable to any account) */
+function sampleQR(v) {
+  const n = 25, c = document.createElement('canvas'); c.width = c.height = n * 8; const g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height); g.fillStyle = '#2e1424';
+  let s = 7 + (v || 0) * 13; const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  const finder = (x, y) => { g.fillRect(x * 8, y * 8, 56, 56); g.fillStyle = '#fff'; g.fillRect(x * 8 + 8, y * 8 + 8, 40, 40); g.fillStyle = '#2e1424'; g.fillRect(x * 8 + 16, y * 8 + 16, 24, 24); };
+  for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) if (!((x < 8 && y < 8) || (x > n - 9 && y < 8) || (x < 8 && y > n - 9)) && rnd() > .52) g.fillRect(x * 8, y * 8, 8, 8);
+  finder(0, 0); finder(n - 7, 0); finder(0, n - 7);
+  g.fillStyle = 'rgba(255,255,255,.88)'; g.fillRect(36, 84, 128, 32); g.fillStyle = '#9c3a75'; g.font = 'bold 18px sans-serif'; g.textAlign = 'center'; g.fillText('SAMPLE QR', 100, 106);
+  return c.toDataURL('image/png');
+}
+
+/* Coming back: from the email link, or on the same phone (the booking is remembered until it's paid) */
+(async () => {
+  if (!LIVE) return;
+  const q = new URLSearchParams(location.search); let ref = q.get('pay'), k = q.get('k'), fromLink = !!(ref && k);
+  if (fromLink) history.replaceState(null, '', location.pathname + '#book'); // removes the private link from the address bar
+  else { try { const s = JSON.parse(localStorage.getItem(SAVE) || 'null'); if (s && Date.now() - s.t < 3 * 864e5) ({ ref, k } = s); else forget(); } catch { } }
+  if (!ref || !k) return;
+  try {
+    const r = await api(null, `?action=pay&ref=${encodeURIComponent(ref)}&k=${encodeURIComponent(k)}`);
+    if (!r.ok) { forget(); if (fromLink) throw new Error(r.error); return; }
+    const p = Object.assign(r, { k }); p.accounts = await withQR(r.accounts);
+    if (r.status === 'Awaiting down payment' && p.accounts.length) { remember(p); showPay(p); toast(`Welcome back. Booking ${r.ref} is waiting for your down payment.`); }
+    else if (fromLink && r.status === 'Expired' && p.accounts.length) showPay(p);
+    else { forget(); if (fromLink) showResult(p); }
+  } catch (err) { toast((err && err.message) || 'We couldn\'t open your booking. Please message us.'); }
+})();
+</script>
+</body>
+</html>

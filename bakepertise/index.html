@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en" data-demo>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bakepertise Pastry Cafe | Cookie Gift Boxes, Cake in Jars &amp; Giveaways in Quezon City</title>
+<meta name="description" content="Bakepertise Pastry Cafe: artisanal cookies, cake in jars, banana bread and truffles, gift-wrapped with ribbon and a personalized card. Gift boxes, event giveaways and corporate gifts from ₱75. Project 6, Quezon City. Pre-order online.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Bakepertise Pastry Cafe: baked with love, wrapped to impress">
+<meta property="og:description" content="Cookie gift boxes, cake in jars, banana truffles and corporate giveaways from ₱75. Quezon City. Pre-order online.">
+<meta name="theme-color" content="#21120d">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Bakery","name":"Bakepertise Pastry Cafe","description":"Artisanal bakery in Quezon City: cookie gift boxes, cake in jars, soft-baked cookie bites, banana bread, banana truffles, event giveaways and customized corporate gifts.","foundingDate":"2018","telephone":"+639951809682","email":"bakepertise@gmail.com","priceRange":"₱75–₱949","address":{"@type":"PostalAddress","streetAddress":"58 Road 3, Project 6","addressLocality":"Quezon City","addressRegion":"Metro Manila","postalCode":"1100","addressCountry":"PH"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:30","closes":"18:30"}],"sameAs":["https://www.instagram.com/bakepertise/","https://www.facebook.com/bakepertise"]}
+</script>
+<style>
+/* Bakepertise: cocoa dark + cream paper + maroon ribbon + kraft. The gift box is the motif. */
+:root{--cocoa:#21120d;--choc:#3a2119;--bark:#5a3527;--cream:#f3eee7;--paper:#faf6f0;--ink:#2b1a14;--muted:#6b574c;--ribbon:#7d1015;--ribbon2:#a3191f;--plum:#7a2c55;--gold:#c9a24a;--kraft:#c79f72;--kraft2:#a97f55;--line:#e7dccf;
+  --display:"Libre Caslon Display",Georgia,serif;--serif:"Libre Caslon Text",Georgia,serif;--body:"Outfit",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--body)}
+[hidden]{display:none!important}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{max-width:1200px;--bs-gutter-x:3rem}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(2.4rem,5.4vw,4.4rem)}
+h2 i,h1 i{font-family:var(--serif);font-style:italic;color:var(--ribbon2)}
+.dark h2 i,.hero h1 i,.cta h2 i,.work h2 i{color:#e7b98a}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--ribbon);margin-bottom:14px}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor}
+.dark .eyebrow,.cta .eyebrow,.work .eyebrow{color:#e7b98a}
+.muted{color:var(--muted)}
+.dark{background:var(--cocoa);color:#f3e6da}
+.dark .muted{color:#cbb3a3}
+section{position:relative}
+.pad{padding:clamp(72px,11vw,140px) 0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px;top:8px;z-index:400;background:#fff;padding:8px 14px;border-radius:8px}.skip:focus{left:16px}
+/* buttons */
+.btn-b{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;border:0;background:linear-gradient(120deg,var(--ribbon),var(--ribbon2));color:#fff;font-weight:600;text-decoration:none;cursor:pointer;box-shadow:0 14px 30px -12px rgba(125,16,21,.7);transition:transform .25s,box-shadow .25s}
+.btn-b::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s}
+.btn-b:hover{color:#fff;transform:translateY(-2px);box-shadow:0 20px 36px -12px rgba(125,16,21,.8)}
+.btn-b:hover::after{transform:translateX(120%)}
+.btn-b.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn-b.gold{background:linear-gradient(120deg,#d9b462,#f0d79b);color:var(--ink);box-shadow:0 14px 30px -12px rgba(201,162,74,.7)}
+.btn-b.light{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-b svg{width:18px;height:18px;flex:none}
+.btn-b:disabled{opacity:.6;cursor:wait}
+
+/* brand mark (line-art loaf + wheat, after their stamp logo) */
+.bmark{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
+.bmark .logo{height:64px;width:auto;display:block}
+.logo-ftr{width:190px;height:auto}
+.bmark b{display:block;font-family:var(--display);font-weight:400;font-size:1.3rem;letter-spacing:.14em;line-height:1}
+.bmark small{display:block;font-size:.62rem;letter-spacing:.42em;margin-top:5px;opacity:.8}
+
+/* loader: the ribbon is tied */
+.loader{position:fixed;inset:0;z-index:300;background:var(--cocoa);color:#f3e6da;display:grid;place-items:center;transition:opacity .8s,visibility .8s}
+.loader.done{opacity:0;visibility:hidden}
+.loader{animation:loaderOff .6s 3s forwards} /* safety: never block the page, even if scripts fail */
+@keyframes loaderOff{to{opacity:0;visibility:hidden}}
+.loader .stamp{width:min(260px,60vw);height:auto;opacity:0;clip-path:inset(0 100% 0 0);animation:reveal 1.3s .15s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes reveal{to{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes fadeIn{to{opacity:1}}
+
+/* header */
+.hdr{position:fixed;top:12px;left:12px;right:12px;z-index:100;border-radius:20px;transition:background .35s,box-shadow .35s;color:#f6ebe0}
+.hdr.solid,.hdr.open{background:rgba(33,18,13,.88);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);box-shadow:0 14px 40px -20px rgba(0,0,0,.6),inset 0 0 0 1px rgba(231,185,138,.2)}
+.hdr .container{min-height:68px}
+.hdr .navbar-brand{color:inherit;padding:0}
+.hdr .nav-link{color:inherit;opacity:.84;font-weight:500;font-size:.95rem}
+.hdr .nav-link:hover{opacity:1;color:inherit}
+.hdr .navbar-toggler{border:0;color:inherit;padding:10px;box-shadow:none}
+.burger{display:block;width:22px}.burger i{display:block;height:2px;background:currentColor;margin:5px 0;border-radius:2px;transition:transform .3s,opacity .3s}
+.navbar-toggler[aria-expanded=true] .burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.navbar-toggler[aria-expanded=true] .burger i:nth-child(2){opacity:0}
+.navbar-toggler[aria-expanded=true] .burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:991.98px){.hdr .navbar-collapse{padding:4px 0 18px}.hdr .btn-b{width:100%;margin-top:8px}}
+@media (min-width:992px){.hdr .navbar-nav{gap:22px;align-items:center}}
+.cart-n{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:#fff;color:var(--ribbon);font-size:.75rem;font-weight:700}
+.read{position:fixed;top:0;left:0;height:3px;width:100%;z-index:110;background:linear-gradient(90deg,var(--ribbon),var(--gold));transform-origin:0 50%;transform:scaleX(0)}
+
+/* 1 · HERO: fat headline + CTA, and a gift box that unwraps as you scroll */
+.hero{height:270vh;background:radial-gradient(ellipse at 72% 55%,#5b3222 0%,#2c1710 45%,#160b07 100%);color:#f6ebe0}
+.hero .stage{position:sticky;top:0;height:100svh;overflow:hidden;perspective:1300px}
+#dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.spot{position:absolute;left:var(--bx);top:var(--by);width:min(90vmin,820px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,196,128,.28),rgba(255,170,100,.08) 40%,transparent 66%);pointer-events:none}
+.hero-copy{position:absolute;z-index:250;left:0;right:0;top:0;bottom:0;display:flex;align-items:center;pointer-events:none}
+.hero-copy .inner{pointer-events:auto;max-width:600px}
+.hero h1{font-size:clamp(2.9rem,6.6vw,6.2rem);line-height:.98;text-shadow:0 6px 30px rgba(14,6,3,.75)}
+.hero h1 i{display:block}
+.hero .sub{max-width:46ch;margin:22px 0 26px;color:#e6d3c4;font-size:clamp(1rem,1.4vw,1.12rem);text-shadow:0 4px 20px rgba(14,6,3,.9)}
+.live{display:inline-flex;align-items:center;gap:9px;padding:7px 14px 7px 10px;border-radius:999px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);font-size:.85rem;margin-bottom:20px}
+.live i{width:8px;height:8px;border-radius:50%;background:#4cc27f;box-shadow:0 0 0 0 #4cc27f;animation:ping 1.8s infinite}
+.live.closed i{background:#e7b98a;animation:none}
+@keyframes ping{70%{box-shadow:0 0 0 9px transparent}}
+.from{display:flex;align-items:center;gap:12px;margin-top:22px;font-size:.88rem;color:#d9c2b1}
+.from b{font-family:var(--display);font-weight:400;font-size:1.6rem;color:#fff}
+/* the 3D box */
+.giftwrap{position:absolute;left:var(--bx);top:var(--by);width:0;height:0;transform-style:preserve-3d;z-index:120}
+.gift{position:absolute;left:0;top:0;transform-style:preserve-3d;--s:min(30vmin,270px);--h:calc(var(--s)*.62);--l:calc(var(--s)*.2);--ls:calc(var(--s)*1.06);--rb:calc(var(--s)*.055)}
+.gift .body,.gift .lid{position:absolute;left:calc(var(--s)/-2);top:calc(var(--h)/-2);width:var(--s);height:var(--h);transform-style:preserve-3d}
+.gift .f{position:absolute;left:0;top:0;width:var(--s);height:var(--h);background:
+  linear-gradient(90deg,transparent calc(50% - var(--rb)),var(--ribbon) calc(50% - var(--rb)),var(--ribbon2) 50%,var(--ribbon) calc(50% + var(--rb)),transparent calc(50% + var(--rb))),
+  linear-gradient(160deg,#d8b388,var(--kraft) 45%,var(--kraft2));box-shadow:inset 0 0 40px rgba(80,45,20,.35)}
+.gift .f.front{transform:translateZ(calc(var(--s)/2))}
+.gift .f.back{transform:rotateY(180deg) translateZ(calc(var(--s)/2))}
+.gift .f.right{transform:rotateY(90deg) translateZ(calc(var(--s)/2));filter:brightness(.82)}
+.gift .f.left{transform:rotateY(-90deg) translateZ(calc(var(--s)/2));filter:brightness(.9)}
+.gift .f.bottom{height:var(--s);top:calc((var(--h) - var(--s))/2);transform:rotateX(-90deg) translateZ(calc(var(--h)/2));background:#7a5434}
+.gift .f.inside{height:var(--s);top:calc((var(--h) - var(--s))/2);transform:rotateX(90deg) translateZ(calc(var(--h)/-2 + 6px));background:radial-gradient(circle,#ffe2b0 0%,#f2c98f 30%,#a77a4d 75%);opacity:0;transition:opacity .4s}
+.gift .f.front .stampf{position:absolute;left:6%;top:50%;width:34%;transform:translateY(-50%);opacity:.75}
+.gift .lid{top:calc(var(--h)/-2 - var(--l));left:calc(var(--ls)/-2);width:var(--ls);height:var(--l)}
+.gift .lid .f{width:var(--ls);height:var(--l);box-shadow:inset 0 0 16px rgba(80,45,20,.35)}
+.gift .lid .f.front{transform:translateZ(calc(var(--ls)/2))}
+.gift .lid .f.back{transform:rotateY(180deg) translateZ(calc(var(--ls)/2))}
+.gift .lid .f.right{transform:rotateY(90deg) translateZ(calc(var(--ls)/2))}
+.gift .lid .f.left{transform:rotateY(-90deg) translateZ(calc(var(--ls)/2))}
+.gift .lid .f.top{height:var(--ls);top:calc((var(--l) - var(--ls))/2);transform:rotateX(90deg) translateZ(calc(var(--l)/2));background:
+  linear-gradient(90deg,transparent calc(50% - var(--rb)),var(--ribbon) calc(50% - var(--rb)),var(--ribbon2) 50%,var(--ribbon) calc(50% + var(--rb)),transparent calc(50% + var(--rb))),
+  linear-gradient(0deg,transparent calc(50% - var(--rb)),var(--ribbon) calc(50% - var(--rb)),var(--ribbon2) 50%,var(--ribbon) calc(50% + var(--rb)),transparent calc(50% + var(--rb))),
+  linear-gradient(135deg,#e2c096,var(--kraft) 50%,var(--kraft2))}
+.gift .lid .f.under{height:var(--ls);top:calc((var(--l) - var(--ls))/2);transform:rotateX(-90deg) translateZ(calc(var(--l)/2));background:#8c6440}
+.gift .bow{position:absolute;left:calc(var(--s)*-.3);top:calc(var(--h)/-2 - var(--l) - var(--s)*.34);width:calc(var(--s)*.6);height:calc(var(--s)*.38);transform-style:preserve-3d}
+.gift .bow svg{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 8px 10px rgba(0,0,0,.35))}
+.gift .bow svg+svg{transform:rotateY(90deg)}
+.gift .tag{position:absolute;left:calc(var(--s)*.3);top:calc(var(--h)*-.1);width:calc(var(--s)*.34);transform:translateZ(calc(var(--s)/2 + 2px)) rotate(-8deg);transform-origin:0 0;background:#fffaf2;border-radius:6px;padding:6px 8px 8px;font:italic 400 calc(var(--s)*.05)/1.2 var(--serif);color:var(--ribbon);box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.gift .tag::before{content:"";position:absolute;left:8px;top:-12px;width:1px;height:14px;background:#3a2119}
+.glow{position:absolute;left:0;top:0;width:calc(var(--gs,260px)*1.8);aspect-ratio:1;transform:translate(-50%,-62%);border-radius:50%;background:radial-gradient(circle,rgba(255,214,150,.75),rgba(255,180,100,.18) 40%,transparent 68%);opacity:0;pointer-events:none;filter:blur(4px)}
+.burst{position:absolute;left:var(--bx);top:var(--by);width:0;height:0;transform-style:preserve-3d;z-index:110}
+.bc{position:absolute;left:0;top:0;width:var(--w);height:calc(var(--w)*1.25);margin:calc(var(--w)*-.625) 0 0 calc(var(--w)/-2);border-radius:16px;overflow:hidden;box-shadow:0 18px 30px -14px rgba(0,0,0,.7),0 0 0 1px rgba(255,236,210,.25);opacity:0;background:#3a2119}
+.bc img{width:100%;height:100%;object-fit:cover}
+.bc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(25,12,8,.8))}
+.bc span{position:absolute;left:10px;right:10px;bottom:8px;z-index:1;font-size:.72rem;font-weight:600;letter-spacing:.04em;color:#fff;line-height:1.25}
+.bc span em{display:block;font-style:normal;color:#f0d79b;font-weight:500}
+.scroll-cue{position:absolute;left:50%;bottom:22px;z-index:260;transform:translateX(-50%);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:#d9c2b1;display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-cue i{width:1px;height:38px;background:linear-gradient(#e7b98a,transparent);animation:cue 1.8s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.hero-end{position:absolute;left:0;right:0;bottom:70px;z-index:255;text-align:center;opacity:0;font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,2vw,1.4rem);color:#f0d79b;pointer-events:none}
+@media (max-width:767.98px){
+  .hero-copy{align-items:flex-start;padding-top:108px}
+  .hero-copy .inner{text-align:center;margin:0 auto}
+  .hero-copy .d-flex{justify-content:center}
+  .from{justify-content:center}
+  .hero .sub{margin-left:auto;margin-right:auto}
+  .from{display:none}
+  .hero-end{bottom:auto;top:96px}
+  .gift{--s:min(36vmin,170px)}
+}
+@media (max-width:575.98px){.hero-copy .btn-b.ghost{display:none}}
+
+/* 2 · BRAND MISSION */
+.mission{background:var(--cocoa);color:#f3e6da;padding:clamp(80px,12vw,150px) 0}
+.mission p{font-family:var(--display);font-size:clamp(1.9rem,4.6vw,3.9rem);line-height:1.15;margin:0;max-width:21ch}
+.mission .w{opacity:.14;transition:opacity .2s}
+.mission .w.em{font-family:var(--serif);font-style:italic;color:#e7b98a}
+.wheatline{display:flex;align-items:center;gap:14px;margin-bottom:26px;color:#e7b98a;font-size:.78rem;letter-spacing:.26em;text-transform:uppercase}
+.wheatline svg{width:28px;height:28px}
+
+/* 3 · YOUR MAGIC: 3D offer cards */
+.magic{background:var(--paper)}
+.m3d{perspective:1100px;height:100%}
+.mcard{position:relative;height:100%;border-radius:28px;background:#fff;box-shadow:0 0 0 1px var(--line),0 40px 70px -46px rgba(58,33,25,.55);transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.7,.2,1);padding:14px 14px 26px;display:flex;flex-direction:column}
+.mcard .ph{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/3.2;transform:translateZ(20px)}
+.mcard .ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.mcard:hover .ph img{transform:scale(1.16)}
+.mcard .ph .price{position:absolute;right:12px;top:12px;padding:6px 12px;border-radius:999px;background:rgba(255,250,242,.94);font-weight:600;font-size:.82rem;color:var(--ribbon)}
+.mcard .glare{position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(500px circle at var(--gx,50%) var(--gy,0%),rgba(255,255,255,.35),transparent 45%);opacity:0;transition:opacity .4s;z-index:3}
+.mcard:hover .glare{opacity:1}
+.ic3{position:relative;width:74px;height:74px;margin:-40px 0 14px 18px;transform:translateZ(70px);transform-style:preserve-3d;z-index:2;animation:float 5s ease-in-out infinite}
+.ic3 .face{position:absolute;inset:0;border-radius:22px;display:grid;place-items:center;background:linear-gradient(145deg,#fffaf2,#f3e3cf);box-shadow:0 18px 30px -12px rgba(125,16,21,.5),inset 0 -4px 0 rgba(125,16,21,.12)}
+.ic3 .back{position:absolute;inset:0;border-radius:22px;background:linear-gradient(145deg,var(--ribbon),var(--ribbon2));transform:translateZ(-14px) translate(6px,6px);opacity:.92}
+.ic3 svg{width:34px;height:34px;color:var(--ribbon);transition:transform .8s cubic-bezier(.34,1.56,.64,1)}
+.mcard:hover .ic3 svg{transform:rotateY(360deg) scale(1.1)}
+@keyframes float{50%{translate:0 -6px}}
+.mcard h3{font-size:2rem;margin:0 18px 6px;transform:translateZ(40px)}
+.mcard p{margin:0 18px 14px;color:var(--muted);transform:translateZ(30px)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 18px 18px;transform:translateZ(30px)}
+.tags span{font-size:.78rem;font-weight:600;padding:5px 11px;border-radius:999px;background:#f6ece0;color:#6d3a22}
+.mcard .go{margin:auto 18px 0;align-self:flex-start;font-weight:600;color:var(--ribbon);text-decoration:none;display:inline-flex;gap:8px;align-items:center;transform:translateZ(36px);cursor:pointer}
+.mcard .go svg{width:18px;height:18px;transition:transform .3s}
+.mcard .go:hover svg{transform:translateX(5px)}
+
+/* 4 · HAPPY CLIENTS */
+.clients{background:linear-gradient(180deg,var(--paper),var(--cream))}
+.rate{height:100%;border-radius:28px;background:var(--cocoa);color:#f3e6da;padding:34px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.rate::before{content:"";position:absolute;width:260px;height:260px;right:-90px;top:-90px;border-radius:50%;box-shadow:0 0 0 1px rgba(231,185,138,.35),0 0 80px 10px rgba(231,185,138,.2)}
+.rate .big{font-family:var(--display);font-size:clamp(4rem,8vw,5.8rem);line-height:1;margin:6px 0 10px}
+.stars{color:#e9c15e;letter-spacing:3px;font-size:1.3rem}
+.quote-card{height:100%;border-radius:28px;background:#fff;box-shadow:0 0 0 1px var(--line),0 40px 70px -46px rgba(58,33,25,.5);padding:clamp(28px,4vw,48px);position:relative;display:flex;flex-direction:column}
+.quote-card .qm{position:absolute;right:28px;top:6px;font-family:var(--display);font-size:9rem;line-height:1;color:#f1e3d3}
+.quote-card blockquote{font-family:var(--serif);font-size:clamp(1.35rem,2.6vw,2rem);line-height:1.3;margin:0 0 18px;position:relative;min-height:3.9em}
+.quote-card blockquote .w{opacity:.12;transition:opacity .4s}
+.qfoot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;flex-wrap:wrap}
+.who{display:flex;align-items:center;gap:12px}
+.who .av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--ribbon),var(--plum));color:#fff}
+.who .av svg{width:22px;height:22px}
+.qnav{display:flex;gap:8px}
+.qnav button{width:44px;height:44px;border-radius:50%;border:0;background:#f6ece0;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s}
+.qnav button:hover{background:#ecdcc8}
+.qnav svg{width:18px;height:18px}
+.trusted{margin-top:46px;text-align:center}
+.trusted small{display:block;letter-spacing:.24em;text-transform:uppercase;font-size:.72rem;font-weight:600;color:var(--muted);margin-bottom:16px}
+.marq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marq-t{display:flex;width:max-content;gap:54px;animation:marq 30s linear infinite}
+.marq-t span{font-family:var(--display);font-size:clamp(1.3rem,2.4vw,1.8rem);color:#8a7466;white-space:nowrap}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* 5 · YOUR WORK: 3D coverflow of gifts */
+.work{background:#140a06;color:#fff;overflow:hidden}
+.work .amb{position:absolute;inset:0;z-index:0}
+.work .amb{overflow:hidden}
+.work .amb img{width:12.5%;height:12.5%;object-fit:cover;filter:brightness(.28) blur(4px);transform-origin:0 0;transform:scale(9.6) translate(-1%,-1%);transition:opacity .9s} /* small blurred copy scaled up = same soft glow, far cheaper to draw */
+.work .amb::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(20,10,6,.2),rgba(20,10,6,.92))}
+.work .container{position:relative;z-index:1}
+.cf{position:relative;height:min(560px,135vw);perspective:1400px;margin-top:30px;touch-action:pan-y}
+.cf-item{position:absolute;left:50%;top:50%;width:min(340px,70vw);aspect-ratio:3/3.9;margin-left:calc(min(340px,70vw) / -2);border-radius:20px;overflow:hidden;background:#2a160f;border:1px solid rgba(255,255,255,.12);transition:transform .8s cubic-bezier(.25,1,.5,1),opacity .8s,filter .8s,box-shadow .8s;cursor:pointer}
+.cf-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cf-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.02) 30%,rgba(0,0,0,.72) 64%,rgba(0,0,0,.95))}
+.cf-item .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px 18px;text-align:center;opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
+.cf-item.center .cap{opacity:1;transform:none}
+.cf-item .tagc{position:absolute;left:14px;top:12px;z-index:2;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(0,0,0,.45);backdrop-filter:blur(6px)}
+.cf-item .tagc.best{background:linear-gradient(120deg,#c9a24a,#efd593);color:#2b1a14}
+.cf-item h3{font-size:1.9rem;color:#fff}
+.cf-item .bar{width:34px;height:2px;margin:8px auto;background:var(--gold)}
+.cf-item p{font-size:.86rem;color:rgba(255,255,255,.86);margin:0 auto 6px;max-width:30ch}
+.cf-item .pr{font-family:var(--display);font-size:1.5rem;color:#f0d79b;margin-bottom:10px}
+.cf-item .pr small{font-family:var(--body);font-size:.75rem;color:#d9c2b1}
+.cf-item .btn-b{min-height:40px;padding:0 18px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+.cf-nav{position:absolute;top:50%;z-index:40;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(0,0,0,.5);backdrop-filter:blur(8px);color:#fff;display:grid;place-items:center;transform:translateY(-50%);cursor:pointer}
+.cf-nav.prev{left:0}.cf-nav.next{right:0}
+.cf-nav svg{width:20px;height:20px}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+.dots button{height:8px;width:8px;border-radius:999px;border:0;padding:0;background:rgba(255,255,255,.25);cursor:pointer;transition:all .3s}
+.dots button[aria-current=true]{width:28px;background:var(--gold)}
+
+/* 6 · SAY HELLO */
+.hello{background:var(--paper)}
+.stack{position:relative;height:clamp(420px,52vw,600px)}
+.stack .p1,.stack .p2{position:absolute;border-radius:26px;overflow:hidden;box-shadow:0 40px 70px -36px rgba(58,33,25,.6)}
+.stack .p1{left:0;top:0;width:62%;height:78%}
+.stack .p2{right:0;bottom:0;width:52%;height:62%;border:8px solid var(--paper)}
+.stack img{width:100%;height:118%;object-fit:cover}
+.stack .badge{position:absolute;left:44%;top:58%;z-index:3;width:124px;height:124px;border-radius:50%;background:var(--ribbon);color:#fff;display:grid;place-items:center;text-align:center;box-shadow:0 20px 40px -14px rgba(0,0,0,.6)}
+.stack .badge svg.ring{position:absolute;inset:0;animation:spin 16s linear infinite}
+.stack .badge b{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.6rem;color:#fff}
+@keyframes spin{to{transform:rotate(360deg)}}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}
+.facts div{padding:14px 16px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+.facts b{display:block;font-family:var(--display);font-weight:400;font-size:1.35rem;line-height:1.15}
+.facts small{color:var(--muted);overflow-wrap:anywhere}
+.joke{margin-top:18px;padding:14px 18px;border-left:3px solid var(--ribbon);background:#f6ece0;border-radius:0 14px 14px 0;font-family:var(--serif);font-style:italic}
+
+/* 7 · CTA: build your gift order */
+.cta{background:radial-gradient(ellipse at 50% 0%,#4a2a1d,var(--cocoa) 70%);color:#f3e6da}
+.cta h2{font-size:clamp(2.6rem,6.2vw,5rem)}
+.shop{border-radius:28px;background:var(--paper);color:var(--ink);padding:clamp(16px,2.6vw,28px);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.tiers{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:12px;scrollbar-width:none}
+.tiers::-webkit-scrollbar{display:none}
+.tiers button{flex:none;min-height:42px;padding:0 16px;border-radius:999px;border:0;background:#fff;box-shadow:inset 0 0 0 1px var(--line);font-weight:600;font-size:.88rem;color:var(--ink);cursor:pointer;transition:background .2s,color .2s}
+.tiers button[aria-pressed=true]{background:var(--ribbon);color:#fff;box-shadow:none}
+.plist{display:grid;gap:10px;max-height:620px;overflow:auto;padding-right:4px;overscroll-behavior:contain}
+.pi{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:14px;align-items:center;padding:10px;border-radius:18px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .25s}
+.pi.on{box-shadow:inset 0 0 0 2px var(--ribbon)}
+.pi img{width:72px;height:72px;border-radius:12px;object-fit:cover}
+.pi h4,.pi .pn{font-family:var(--serif);font-weight:700;font-size:1.02rem;line-height:1.3;margin:0;color:var(--plum)}
+.pi p{margin:2px 0 0;font-size:.82rem;line-height:1.4;color:var(--muted)}
+.pi .pp{font-weight:600;font-size:.86rem;color:var(--ink);margin-top:3px}
+.pi .best{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:999px;background:linear-gradient(120deg,#c9a24a,#efd593);color:#2b1a14;margin-left:4px;vertical-align:2px}
+.step{display:flex;align-items:center;gap:2px;background:#f6ece0;border-radius:999px;padding:3px}
+.step button{width:40px;height:40px;border-radius:50%;border:0;background:#fff;color:var(--ink);font-size:1.2rem;font-weight:600;line-height:1;cursor:pointer;display:grid;place-items:center}
+.step button:disabled{opacity:.35;cursor:default}
+.step output{min-width:34px;text-align:center;font-weight:700}
+.step.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.addb{min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--ink);color:#fff;font-weight:600;font-size:.86rem;cursor:pointer;white-space:nowrap}
+@media (max-width:575.98px){.pi{grid-template-columns:60px minmax(0,1fr)}.pi img{width:60px;height:60px}.pi .act{grid-column:1/-1;justify-self:end}}
+.cart{border-radius:28px;background:#fff;color:var(--ink);padding:clamp(20px,2.6vw,28px);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.cart h3{font-size:1.9rem}
+.lines{list-style:none;margin:14px 0;padding:0;display:grid;gap:8px}
+.lines li{display:flex;justify-content:space-between;gap:12px;font-size:.92rem;padding-bottom:8px;border-bottom:1px dashed var(--line)}
+.lines li span:last-child{font-weight:600;white-space:nowrap}
+.lines .empty{color:var(--muted);border:0;justify-content:center;text-align:center;padding:18px 0}
+.total{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--display);font-size:1.8rem;margin-bottom:4px}
+.cart label{font-weight:600;font-size:.86rem;margin-bottom:4px}
+.cart .form-control,.cart .form-select{min-height:48px;border-radius:14px;border:1.5px solid var(--line);background:var(--paper)}
+.cart .form-control:focus,.cart .form-select:focus{border-color:var(--ribbon);box-shadow:0 0 0 4px rgba(125,16,21,.12)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--paper);border-radius:14px;padding:4px;box-shadow:inset 0 0 0 1.5px var(--line)}
+.seg input{position:absolute;opacity:0}
+.seg label{margin:0;min-height:40px;border-radius:10px;display:grid;place-items:center;cursor:pointer;font-weight:600;font-size:.88rem}
+.seg input:checked+label{background:var(--ink);color:#fff}
+.seg input:focus-visible+label{outline:3px solid var(--gold)}
+.hp{position:absolute;left:-9999px}
+.ok{text-align:center;padding:12px 0}
+.pay-only{display:none}.pay-on .pay-only{display:block}.pay-on .nopay-only{display:none}
+.secure{border-radius:16px;background:#f4faf6;box-shadow:inset 0 0 0 1.5px #cfe7d8;padding:14px 16px;font-size:.85rem;color:#33503f}
+.secure-h{display:flex;align-items:center;gap:8px;font-weight:700;color:#1f6b45;font-size:.92rem;margin-bottom:8px}
+.secure-h svg{width:18px;height:18px;flex:none}
+.pm{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.pm span{padding:4px 10px;border-radius:8px;background:#fff;box-shadow:inset 0 0 0 1px #d7e6dc;font-weight:600;font-size:.78rem;color:#2b1a14}
+.later{display:none;width:100%;margin-top:10px;background:none;border:0;color:var(--muted);font-size:.86rem;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.later:hover{color:var(--ink)}
+.pay-on .later{display:block}
+.rc-ic{width:58px;height:58px;margin:0 auto;border-radius:50%;display:grid;place-items:center;background:#e8f6ee;color:#2f8f5b}
+.rc-ic svg{width:30px;height:30px}
+.rc-ic.wait{background:#fdf3e2;color:#b7791f}.rc-ic.wait svg{animation:spin 1.4s linear infinite}
+.rc-ic.warn{background:#fdecec;color:#b42318}
+.rcpt{text-align:left;background:var(--paper);border-radius:16px;padding:6px 16px;margin:16px 0;font-size:.9rem}
+.rcpt div{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line)}
+.rcpt div:last-child{border-bottom:0}
+.rcpt span:first-child{color:var(--muted)}
+.rcpt span:last-child{font-weight:600;text-align:right;white-space:pre-line}
+.paid{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;background:#e8f6ee;color:#1f6b45;font-weight:700;font-size:.8rem}
+.demo-tag{display:inline-block;margin-top:8px;padding:3px 10px;border-radius:999px;background:#fdf3e2;color:#8a5a12;font-size:.75rem;font-weight:700;letter-spacing:.06em}
+.safe-note{font-size:.76rem;color:var(--muted);margin:10px 0 0}
+.pmdemo{position:fixed;inset:0;z-index:500;background:rgba(15,8,5,.7);backdrop-filter:blur(6px);display:grid;place-items:center;padding:16px}
+.pmdemo .box{width:min(420px,100%);border-radius:22px;background:#fff;color:#1d2433;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.5);font-family:system-ui,sans-serif}
+.pmdemo .url{display:flex;align-items:center;gap:6px;font-size:.8rem;color:#1f6b45;background:#f1f5f3;border-radius:10px;padding:7px 10px;margin-bottom:14px}
+.pmdemo .url svg{width:14px;height:14px}
+.pmdemo .amt{font-size:1.8rem;font-weight:700;margin:4px 0 12px}
+.pmdemo .opts{display:grid;gap:8px;margin-bottom:14px}
+.pmdemo .opts label{display:flex;align-items:center;gap:10px;padding:12px;border-radius:12px;border:1.5px solid #e3e8ee;font-weight:600;cursor:pointer}
+.pmdemo .opts input:checked+span{color:#0b6e4f}
+.pmdemo button{width:100%;min-height:48px;border-radius:12px;border:0;background:#0b6e4f;color:#fff;font-weight:700;font-size:1rem;cursor:pointer}
+.pmdemo .cancel{background:none;color:#5b6472;font-weight:500;margin-top:6px}
+@media print{body *{visibility:hidden!important}#orderOk,#orderOk *{visibility:visible!important}#orderOk{position:absolute;left:0;top:0;width:100%;box-shadow:none}#rcBtns,.toast-b{display:none!important}}
+.ok svg.tick{width:54px;height:54px;color:#2f8f5b;margin:0 auto}
+.ok .sum{text-align:left;background:var(--paper);border-radius:14px;padding:12px 16px;font-size:.88rem;white-space:pre-line;margin:14px 0}
+.ftr{background:#140a06;color:#cbb3a3;padding:56px 0 110px;font-size:.95rem}
+.ftr h4,.ftr .fh{font-family:var(--display);font-weight:400;color:#f3e6da;font-size:1.35rem;margin-bottom:.5rem}
+.ftr a{text-decoration:none}.ftr a:hover{color:#fff}
+.legal{display:flex;flex-wrap:wrap;gap:6px 16px;margin:22px 0 0;padding:0;list-style:none;font-size:.88rem}.legal a{text-decoration:underline;text-underline-offset:3px}
+.note{margin-top:28px;font-size:.78rem;opacity:.75}
+.sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:90;display:none}
+.sticky-cta .btn-b{width:100%;justify-content:space-between}
+@media (max-width:767.98px){.sticky-cta{display:block}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.toast-b{position:fixed;left:50%;bottom:86px;z-index:150;transform:translate(-50%,160%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;font-weight:500;font-size:.92rem;transition:transform .5s cubic-bezier(.16,1,.3,1);max-width:calc(100vw - 32px);visibility:hidden}
+.toast-b.show{transform:translate(-50%,0);visibility:visible}
+.fly{position:fixed;z-index:160;width:54px;height:54px;border-radius:12px;object-fit:cover;pointer-events:none;box-shadow:0 10px 24px rgba(0,0,0,.4)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.mission .w,.quote-card blockquote .w{opacity:1}.loader{display:none}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}.loader{display:none!important}.bc{opacity:1}</style></noscript>
+</head>
+<body>
+<div class="loader" id="loader" aria-hidden="true">
+  <img class="stamp" src="img/logo-light.png" width="240" height="144" alt="">
+</div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="read" id="read"></div>
+
+<header class="hdr navbar navbar-expand-lg" id="hdr"><div class="container">
+  <a class="navbar-brand bmark" href="#top"><img class="logo" src="img/logo-light.png" width="240" height="144" alt="Bakepertise Pastry Cafe"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
+  <div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a class="nav-link" href="#magic">Gifts</a></li>
+    <li class="nav-item"><a class="nav-link" href="#clients">Reviews</a></li>
+    <li class="nav-item"><a class="nav-link" href="#work">Best sellers</a></li>
+    <li class="nav-item"><a class="nav-link" href="#hello">About</a></li>
+    <li class="nav-item"><a class="btn-b" href="#order" style="min-height:44px;padding:0 20px">Pre-order <span class="cart-n" id="hdrN">0</span></a></li>
+  </ul></div>
+</div></header>
+
+<main id="main">
+<!-- 1 · FAT HEADLINE + CTA -->
+<section class="hero" id="top" aria-label="Bakepertise Pastry Cafe">
+  <div class="stage" id="stage">
+    <canvas id="dust" aria-hidden="true"></canvas>
+    <div class="spot" aria-hidden="true"></div>
+    <div class="burst" id="burst" aria-hidden="true"></div>
+    <div class="giftwrap" aria-hidden="true">
+      <div class="glow" id="glow"></div>
+      <div class="gift" id="gift">
+        <div class="body">
+          <div class="f back"></div><div class="f left"></div><div class="f right"></div><div class="f bottom"></div><div class="f inside" id="inside"></div>
+          <div class="f front"><img class="stampf" src="img/logo-dark.png" alt=""></div>
+        </div>
+        <div class="lid" id="lid">
+          <div class="f under"></div><div class="f back"></div><div class="f left"></div><div class="f right"></div><div class="f front"></div><div class="f top"></div>
+          <div class="bow" id="bow">
+            <svg viewBox="0 0 160 100"><path d="M80 62C58 30 18 18 14 40s34 30 66 22z" fill="#a3191f"/><path d="M80 62C102 30 142 18 146 40s-34 30-66 22z" fill="#8f1419"/><path d="M76 60l-22 40 12-4 6 10 10-44zM84 60l22 40-12-4-6 10-10-44z" fill="#7d1015"/><ellipse cx="80" cy="60" rx="11" ry="9" fill="#b3232a"/></svg>
+            <svg viewBox="0 0 160 100"><path d="M80 62C58 30 18 18 14 40s34 30 66 22z" fill="#93161c"/><path d="M80 62C102 30 142 18 146 40s-34 30-66 22z" fill="#7d1015"/></svg>
+          </div>
+        </div>
+        <div class="tag" id="tag">For you, with love. ♡</div>
+      </div>
+    </div>
+    <div class="hero-copy" id="heroCopy"><div class="container"><div class="inner">
+      <span class="live" id="live"><i></i><span>Checking order hours…</span></span>
+      <h1>Baked with love.<i>Wrapped to impress.</i></h1>
+      <p class="sub">Artisanal cookies, cake in jars, banana bread and truffles, tied with ribbon and a personalized card. For birthdays, weddings, holidays and corporate giveaways, from Quezon City.</p>
+      <div class="d-flex flex-wrap gap-2"><a class="btn-b" href="#order">Build your gift order</a><a class="btn-b ghost" href="#magic">See the gift collection</a></div>
+      <div class="from"><b>₱75</b><span>Gifts start at ₱75 each.<br>Ready-made boxes, no minimum order.</span></div>
+    </div></div></div>
+    <p class="hero-end" id="heroEnd">Every box, tied by hand.</p>
+    <div class="scroll-cue" id="cue" aria-hidden="true">Scroll to unwrap<i></i></div>
+  </div>
+</section>
+
+<!-- 2 · BRAND MISSION -->
+<section class="mission" id="mission">
+  <div class="container">
+    <div class="wheatline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 22V9M12 9c-2-1-3-3-3-5 2 0 3 1.5 3 3.5M12 9c2-1 3-3 3-5-2 0-3 1.5-3 3.5M12 14c-2-1-3.5-2.5-4-4.5 2 0 3.5 1.5 4 3.5M12 14c2-1 3.5-2.5 4-4.5-2 0-3.5 1.5-4 3.5M12 19c-2-1-3.5-2.5-4-4.5 2 0 3.5 1.5 4 3.5M12 19c2-1 3.5-2.5 4-4.5-2 0-3.5 1.5-4 3.5"/></svg>Since 2018</div>
+    <p id="missionText">We bake everything by hand, in small batches, in Project 6, Quezon City. Then we wrap each one with *ribbon,* a *personalized* *card* and a lot of *care.* Because a gift should taste as good as it looks.</p>
+  </div>
+</section>
+
+<!-- 3 · YOUR MAGIC -->
+<section class="magic pad" id="magic">
+  <div class="container">
+    <div class="row align-items-end g-3 mb-4 mb-lg-5">
+      <div class="col-lg-7"><span class="eyebrow">What we bake for you</span><h2>Gifts, giveaways<br><i>&amp; the custom kind.</i></h2></div>
+      <div class="col-lg-5"><p class="muted mb-0">Every order comes with ribbon and a personalized card. Pick a ready-made box, order giveaways for your event, or let us design something just for your brand.</p></div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="magicGrid"></div>
+  </div>
+</section>
+
+<!-- 4 · HAPPY CLIENTS -->
+<section class="clients pad" id="clients">
+  <div class="container">
+    <span class="eyebrow">Happy clients</span>
+    <h2 class="mb-4 mb-lg-5">Loved once.<br><i>Ordered again.</i></h2>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-4 rv"><div class="rate"><span class="stars" aria-label="5 stars">★★★★★</span><span class="big"><span id="rateNum">0</span>+</span><p class="mb-0" style="color:#dcc3b2">people follow our bakes on Instagram, and a lot of them order again.</p></div></div>
+      <div class="col-lg-8 rv" style="--d:.1s"><div class="quote-card" aria-live="polite">
+        <span class="qm" aria-hidden="true">”</span>
+        <blockquote id="quoteText"></blockquote>
+        <div class="qfoot">
+          <div class="who"><span class="av"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.4 2 2 6.1 2 11.4c0 2.9 1.3 5.4 3.5 7.2V22l3.2-1.8c1 .3 2.1.4 3.3.4 5.6 0 10-4.1 10-9.4S17.6 2 12 2z"/></svg></span><div><b id="quoteWho">A happy customer</b><br><small class="muted" id="quoteAbout">Message to Bakepertise</small></div></div>
+          <div class="qnav"><button type="button" id="qPrev" aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 19l-7-7 7-7"/></svg></button><button type="button" id="qNext" aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg></button></div>
+        </div>
+      </div></div>
+    </div>
+    <div class="trusted rv"><small>Trusted by clients &amp; partners</small>
+      <div class="marq"><div class="marq-t" id="marq"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · YOUR WORK -->
+<section class="work pad" id="work">
+  <div class="amb" aria-hidden="true"><img id="amb" src="img/jar.webp" alt=""></div>
+  <div class="container text-center">
+    <span class="eyebrow">Best sellers</span>
+    <h2 style="color:#fff">Our most-gifted <i>treats.</i></h2>
+    <p class="mx-auto mt-3 mb-0" style="max-width:52ch;color:#dcc6b6">Swipe through the gifts people order again and again. Tap "Add to order" and it goes straight into your gift order below.</p>
+    <div class="cf" id="cf" aria-roledescription="carousel" aria-label="Best sellers">
+      <button class="cf-nav prev" type="button" id="cfPrev" aria-label="Previous gift"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 19l-7-7 7-7"/></svg></button>
+      <button class="cf-nav next" type="button" id="cfNext" aria-label="Next gift"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <div class="dots" id="dots" role="group" aria-label="Choose a gift"></div>
+  </div>
+</section>
+
+<!-- 6 · SAY HELLO -->
+<section class="hello pad" id="hello">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <span class="eyebrow">Say hello</span>
+        <h2>Hi, we're<br><i>Bakepertise.</i></h2>
+        <p class="mt-3">We're a small artisanal bakery in Project 6, Quezon City, baking since 2018. Every cookie is soft-baked in small batches, every box is tied by hand, and every card is written for the person you love (or the client you want to impress).</p>
+        <p class="muted">We're also the bakers behind <b>Hello Nana</b>, home of our banana truffles and classic banana bread.</p>
+        <p class="joke">Fair warning: some customers say the cookies never make it to the person they were meant for. We can't fix that. We can only bake more.</p>
+        <div class="facts">
+          <div><b>Mon–Fri</b><small>9:30 AM – 6:30 PM, online orders</small></div>
+          <div><b>Project 6</b><small>58 Road 3, Quezon City</small></div>
+          <div><b>Viber</b><small>0995 180 9682</small></div>
+          <div><b>Email</b><small>bakepertise@gmail.com</small></div>
+        </div>
+        <div class="d-flex flex-wrap gap-2 mt-4"><a class="btn-b" href="viber://chat?number=%2B639951809682">Message us on Viber</a><a class="btn-b ghost" href="https://www.instagram.com/bakepertise/" target="_blank" rel="noopener">@bakepertise</a></div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="stack">
+          <div class="p1"><img src="img/custom-red.webp" alt="Bakepertise gift boxes in red with black ribbons, ready for a client event" loading="lazy" data-par="-8"></div>
+          <div class="p2"><img src="img/custom-tins.webp" alt="Copper cookie tins with a custom monogram label" loading="lazy" data-par="8"></div>
+          <div class="badge" aria-hidden="true"><svg class="ring" viewBox="0 0 124 124"><defs><path id="circ" d="M62 62 m-48 0 a48 48 0 1 1 96 0 a48 48 0 1 1 -96 0"/></defs><text font-size="9.5" letter-spacing="3" fill="#f0d79b"><textPath href="#circ">BAKED IN QUEZON CITY · EST. 2018 · </textPath></text></svg><b>Hello!</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · CTA: pre-order -->
+<section class="cta pad" id="order">
+  <div class="container">
+    <div class="row g-4 align-items-end mb-4 mb-lg-5">
+      <div class="col-lg-7"><span class="eyebrow">Pre-order</span><h2>Build your<br><i>gift order.</i></h2></div>
+      <div class="col-lg-5"><p class="mb-0" style="color:#dcc3b2">Add your treats, tell us the date, and send. We'll confirm availability, flavors and delivery on Viber or email. Payment only after we confirm.</p></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="shop">
+          <div class="tiers" id="tiers" role="group" aria-label="Filter by price"></div>
+          <div class="plist" id="plist"></div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <form class="cart" id="orderForm" name="bakepertise-order" method="POST" data-netlify="true" netlify-honeypot="company" novalidate>
+          <input type="hidden" name="form-name" value="bakepertise-order">
+          <input type="hidden" name="subject" id="oSubject" value="New pre-order - Bakepertise">
+          <input type="hidden" name="order" id="oOrder">
+          <input type="hidden" name="total" id="oTotal">
+          <p class="hp"><label>Leave empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
+          <h3>Your gift order</h3>
+          <ul class="lines" id="lines"><li class="empty">No treats yet. Add something from the collection.</li></ul>
+          <div class="total"><span>Total</span><span id="tot">₱0</span></div>
+          <p class="muted small mb-3">Delivery fee, if any, is quoted when we confirm.</p>
+          <div class="row g-3">
+            <div class="col-sm-6"><label for="on" class="form-label">Name</label><input class="form-control" id="on" name="name" required autocomplete="name"></div>
+            <div class="col-sm-6"><label for="op" class="form-label">Mobile / Viber</label><input class="form-control" id="op" name="phone" type="tel" required pattern="[0-9+ ]{10,15}" placeholder="0917 123 4567" autocomplete="tel"></div>
+            <div class="col-sm-6"><label for="od" class="form-label">Date needed</label><input class="form-control" id="od" name="date" type="date" required></div>
+            <div class="col-sm-6"><label class="form-label" id="ofLbl">Pickup or delivery</label><div class="seg" role="radiogroup" aria-labelledby="ofLbl"><input type="radio" name="fulfillment" id="f1" value="Delivery" checked><label for="f1">Delivery</label><input type="radio" name="fulfillment" id="f2" value="Pickup (Project 6, QC)"><label for="f2">Pickup</label></div></div>
+            <div class="col-12" id="addrWrap"><label for="oa" class="form-label">Delivery address</label><input class="form-control" id="oa" name="address" autocomplete="street-address" placeholder="House no., street, barangay, city"></div>
+            <div class="col-12"><label for="ot" class="form-label">Flavors, card message &amp; notes (optional)</label><textarea class="form-control" id="ot" name="notes" rows="3" placeholder="e.g. Cake in jars: 10 Ube, 10 Red Velvet. Card: Happy 7th birthday, Mia!"></textarea></div>
+            <div class="col-12"><label for="oe" class="form-label" id="oeLbl">Email (optional)</label><input class="form-control" id="oe" name="email" type="email" autocomplete="email" placeholder="you@email.com"></div>
+            <div class="col-12 pay-only"><div class="secure">
+              <div class="secure-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secure checkout by PayMongo</div>
+              <div class="pm" aria-label="Payment options"><span>GCash</span><span>Maya</span><span>Visa / Mastercard</span><span>GrabPay</span></div>
+              You'll pay on <b>checkout.paymongo.com</b>, PayMongo's own secure page. We never see your card, GCash or Maya details, and you get an emailed receipt right after.
+            </div></div>
+            <div class="col-12"><label class="d-flex gap-2 align-items-start" style="font-size:.88rem;font-weight:500"><input type="checkbox" name="consent" value="Yes" required style="width:20px;height:20px;margin-top:2px;flex:none;accent-color:#7d1015"> <span>I agree to the <a href="privacy/" target="_blank" rel="noopener">Privacy Policy</a>, <a href="terms/" target="_blank" rel="noopener">Terms</a> and <a href="refunds/" target="_blank" rel="noopener">Refund Policy</a>, and allow the bakery to use my details to handle my order.</span></label></div>
+            <div class="col-12"><button class="btn-b w-100" type="submit" id="oBtn">Send my pre-order</button><button type="button" class="later pay-only" id="oLater">Custom or corporate order? Send it without paying, we'll quote you first</button></div>
+          </div>
+        </form>
+        <div class="cart ok" id="orderOk" hidden tabindex="-1" aria-live="polite">
+          <div class="rc-ic" id="rcIc"></div>
+          <h3 class="mt-3" id="rcTitle"></h3>
+          <p class="muted mb-0" id="rcMsg"></p>
+          <div id="rcDemo"></div>
+          <div class="rcpt" id="rcpt"></div>
+          <div class="d-grid gap-2" id="rcBtns"><button class="btn-b" type="button" id="rcPrint">Save or print receipt</button><a class="btn-b light" id="okViber" href="viber://chat?number=%2B639951809682">Message us on Viber</a><button class="btn-b light" type="button" id="rcNew">Start a new order</button></div>
+          <p class="safe-note">Stay safe: we will never ask for your OTP, MPIN or card details by chat, text or call.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr"><div class="container">
+  <div class="row g-4">
+    <div class="col-md-5"><a class="bmark" href="#top"><img class="logo-ftr" src="img/logo-light.png" width="240" height="144" alt="Bakepertise Pastry Cafe" loading="lazy"></a><p class="mt-3 mb-0">Artisanal bakery in Quezon City. Cookie gift boxes, cake in jars, banana truffles and customized giveaways. Let's FLOURish together.</p></div>
+    <div class="col-6 col-md-4"><h2 class="fh">Order</h2>58 Road 3, Project 6<br>Quezon City 1100<br>Mon–Fri, 9:30 AM – 6:30 PM (online)<br><a href="tel:+639951809682">0995 180 9682</a> (Viber)<br><a href="mailto:bakepertise@gmail.com">bakepertise@gmail.com</a></div>
+    <div class="col-6 col-md-3"><h2 class="fh">Follow</h2><a href="https://www.instagram.com/bakepertise/" target="_blank" rel="noopener">Instagram</a><br><a href="https://www.facebook.com/bakepertise" target="_blank" rel="noopener">Facebook</a><br><a href="https://www.instagram.com/hellonanaph/" target="_blank" rel="noopener">Hello Nana</a></div>
+  </div>
+  <ul class="legal" aria-label="Policies"><li><a href="privacy/">Privacy Policy</a></li><li><a href="terms/">Terms</a></li><li><a href="cookies/">Cookie Policy</a></li><li><a href="refunds/">Refund Policy</a></li></ul>
+  <p class="note">Website mock-up for Bakepertise Pastry Cafe by Waypoints Web Design. Not the official site yet. All photos are Bakepertise's own.</p>
+</div></footer>
+<aside class="sticky-cta" aria-label="Quick action"><a class="btn-b" href="#order"><span>Build your gift order</span><span id="stickyTot">Start →</span></a></aside>
+<div class="toast-b" id="toast" role="status"></div>
+
+<script src="assets/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script>
+/* Payments: paste the Google Apps Script web app URL here (payments/SETUP.txt). Empty = no online payment yet (orders go by email/Netlify). */
+const ORDER_API_URL = '';
+const DEMO = document.documentElement.hasAttribute('data-demo'), PAY = !!ORDER_API_URL || DEMO;
+document.documentElement.classList.toggle('pay-on', PAY);
+if (PAY) document.getElementById('oeLbl').textContent = 'Email (for your receipt)';
+const $ = id => document.getElementById(id);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(pointer: fine)').matches;
+gsap.registerPlugin(ScrollTrigger);
+const peso = n => '₱' + n.toLocaleString('en-PH');
+const toast = m => { const t = $('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2600); };
+
+/* Smooth scroll (desktop) */
+let lenis = null;
+if (!reduce && fine && window.Lenis) {
+  lenis = new Lenis({ lerp: .1 }); lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0);
+}
+const jump = sel => { const el = document.querySelector(sel); if (!el) return; lenis ? lenis.scrollTo(el, { offset: -80 }) : el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); };
+document.addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); if (!a) return; const h = a.getAttribute('href'); if (h.length > 1) { e.preventDefault(); jump(h); const col = $('nav'); if (col.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(col).hide(); } });
+
+/* Loader: the stamp draws itself, then the page reveals */
+(() => { const l = $('loader'); let seen = false; try { seen = sessionStorage.getItem('bk-seen') === '1'; } catch {}
+  if (reduce || seen || navigator.webdriver) { l.remove(); return; }
+  setTimeout(() => { l.classList.add('done'); try { sessionStorage.setItem('bk-seen', '1'); } catch {} setTimeout(() => l.remove(), 900); }, 1700); })();
+
+/* Header + reading progress */
+const hdr = $('hdr');
+$('nav').addEventListener('show.bs.collapse', () => hdr.classList.add('open'));
+$('nav').addEventListener('hidden.bs.collapse', () => hdr.classList.remove('open'));
+const onScroll = () => { const y = scrollY, max = document.documentElement.scrollHeight - innerHeight; hdr.classList.toggle('solid', y > 40); $('read').style.transform = `scaleX(${max > 0 ? y / max : 0})`; };
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+/* Taking orders now? (Manila time, Mon–Fri 9:30–6:30) */
+(() => { const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Manila', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false }).formatToParts(new Date()).map(x => [x.type, x.value]));
+  const d = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday), h = (+p.hour % 24) + +p.minute / 60, wk = d >= 1 && d <= 5, open = wk && h >= 9.5 && h < 18.5;
+  const next = (!wk || (d === 5 && h >= 18.5)) ? 'replies Monday, 9:30 AM' : h < 9.5 ? 'replies today from 9:30 AM' : 'replies tomorrow, 9:30 AM';
+  $('live').classList.toggle('closed', !open); $('live').querySelector('span').textContent = open ? 'Taking orders now · until 6:30 PM' : `Pre-order anytime · ${next}`; })();
+
+/* ---------- CATALOG (from the Bakepertise gift collection) ---------- */
+const P = [
+  { id: 'solo', n: 'Chocolate Chip Cookie-Solo', d: 'Medium cookie (50g) in a clear pouch, with ribbon & personalized gift card.', p: 75, u: 'piece', min: 10, img: 'solo', t: 100 },
+  { id: 'jar', n: 'Cake in Jars', d: 'Chocolate, Red Velvet, Vanilla or Ube (10 pcs per flavor), with ribbon & personalized sticker.', p: 99, u: 'jar', min: 10, img: 'jar', t: 100, best: 1 },
+  { id: 'bites', n: 'Soft-Baked Cookie Bites', d: '8 mini cookies per pouch, with ribbon & customized gift card.', p: 99, u: 'pouch', min: 10, img: 'bites', t: 100, best: 1 },
+  { id: 'cup', n: 'Cookie Sampler Cup', d: '8 assorted soft-baked cookies per cup, with ribbon & personalized gift card.', p: 99, u: 'cup', min: 10, img: 'cup', t: 100 },
+  { id: 'mini', n: 'Mini Cookie Box', d: 'Ten choco chip cookies, with personalized gift card & ribbon.', p: 150, u: 'box', min: 5, img: 'mini', t: 200 },
+  { id: 'truf3', n: 'Banana Truffles (Box of 3)', d: 'Dark chocolate, cookie butter & choco hazelnut. By Hello Nana.', p: 120, u: 'box', min: 5, img: 'truf3', t: 200 },
+  { id: 'cupcake', n: 'Cupcakes in Solo Boxes', d: '3 oz cupcake: Chocolate, Red Velvet, Vanilla or Ube, with gift card & ribbon.', p: 150, u: 'box', min: 10, img: 'cupcake', t: 200 },
+  { id: 'basket', n: 'Cookie Sampler Basket', d: '16 assorted cookie bites, choose 4 flavors, with gift card & ribbon.', p: 200, u: 'basket', min: 5, img: 'basket', t: 300 },
+  { id: 'bento', n: 'Cookie Bento Box', d: '16 assorted cookie bites, choose 4 flavors, with ribbon & gift card.', p: 200, u: 'box', min: 5, img: 'bento', t: 300 },
+  { id: 'can', n: 'Cookie Sampler Can', d: '16 cookie bites in a keepsake can, choose 4 flavors, with gift card & ribbon.', p: 249, u: 'can', min: 5, img: 'can', t: 300 },
+  { id: 'joy', n: 'Simple Joy Gift Box', d: '1 classic banana bread loaf, 4 soft-baked cookies, 4 tea bags.', p: 429, u: 'box', min: 1, img: 'joy', t: 500 },
+  { id: 'nana', n: "Nana's Little Treat Box", d: 'Banana Truffles box of 12 and 1 cafe latte bottle.', p: 449, u: 'box', min: 1, img: 'nana', t: 500 },
+  { id: 'epic', n: 'Epic Surprise Gift Box', d: '1 banana truffle box of 3, 2 cake in jars, 4 choco chip cookies.', p: 480, u: 'box', min: 1, img: 'epic', t: 500 },
+  { id: 'comfort', n: "Nana's Comfort Box", d: 'Banana Truffles box of 12, 10 cookie bites, 1 cafe latte bottle.', p: 549, u: 'box', min: 1, img: 'comfort', t: 1000 },
+  { id: 'morning', n: 'Morning Treat Gift Box', d: '1 classic banana bread, 4 soft-baked cookies, 1 classic latte.', p: 549, u: 'box', min: 1, img: 'morning', t: 1000 },
+  { id: 'tea', n: 'Tea Time Delights Gift Box', d: '12 soft-baked cookies and 10 tea bags.', p: 699, u: 'box', min: 1, img: 'tea', t: 1000 },
+  { id: 'party', n: 'Cookie Party Gift Box', d: '18 assorted soft-baked cookies, choose 3 flavors.', p: 949, u: 'box', min: 1, img: 'party', t: 1000 }
+];
+const byId = Object.fromEntries(P.map(x => [x.id, x]));
+const cart = {};
+let pending = null; try { pending = JSON.parse(localStorage.getItem('bk-cart') || 'null'); } catch {}
+if (pending) Object.entries(pending).forEach(([k, v]) => { if (byId[k] && v >= byId[k].min) cart[k] = v; });
+
+/* ---------- 1 · HERO: the gift box unwraps on scroll ---------- */
+const BURST = [['solo', 'Cookie-Solo', 'from ₱75'], ['jar', 'Cake in Jars', '₱99'], ['truf3', 'Banana Truffles', '₱120'], ['morning', 'Morning Treat Box', '₱549'], ['cupcake', 'Cupcakes', '₱150'], ['bento', 'Cookie Bento', '₱200'], ['custom-tins', 'Custom Tins', 'made for you'], ['basket', 'Sampler Basket', '₱200']];
+(() => {
+  const stage = $('stage'), burst = $('burst'), gift = $('gift'), lid = $('lid'), bow = $('bow'), glow = $('glow'), tag = $('tag'), inside = $('inside'), copy = $('heroCopy'), end = $('heroEnd'), cue = $('cue');
+  let mobile, BX, BY, S, W, cards = [];
+  const build = () => {
+    mobile = innerWidth < 768;
+    const cnt = mobile ? 6 : 8;
+    BX = mobile ? 50 : 72; BY = mobile ? 77 : 60;
+    stage.style.setProperty('--bx', BX + '%'); stage.style.setProperty('--by', BY + '%');
+    S = parseFloat(getComputedStyle(gift).getPropertyValue('--s')) || 0;
+    S = gift.querySelector('.body').offsetWidth || 240;
+    glow.style.setProperty('--gs', S + 'px');
+    W = mobile ? Math.min(innerWidth * .27, 120) : Math.min(innerWidth * .1, 150);
+    burst.innerHTML = ''; cards = BURST.slice(0, cnt).map(([src, label, pr]) => { const d = document.createElement('div'); d.className = 'bc'; d.style.setProperty('--w', W + 'px'); d.innerHTML = `<img src="img/${src}.webp" alt="" decoding="async"><span>${label}<em>${pr}</em></span>`; burst.append(d); return d; });
+  };
+  build(); addEventListener('resize', () => { build(); render(performance.now(), true); });
+  let p = reduce ? 1 : 0, px = 0, py = 0, tx = 0, ty = 0;
+  const cl = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const ease = t => 1 - Math.pow(1 - t, 3), inout = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  if (!reduce) ScrollTrigger.create({ trigger: '.hero', start: 'top top', end: 'bottom bottom', scrub: 1, onUpdate: s => p = s.progress });
+  if (fine && !reduce) addEventListener('pointermove', e => { tx = (e.clientX / innerWidth - .5) * 2; ty = (e.clientY / innerHeight - .5) * 2; }, { passive: true });
+  const t0 = performance.now();
+  function render(now, once) {
+    px += (tx - px) * .06; py += (ty - py) * .06;
+    const t = (now - t0) / 1000;
+    const untie = ease(cl(p / .22)), open = inout(cl((p - .12) / .3)), out = cl((p - .3) / .55);
+    // the box: idles in a slow turn, then squares up to the camera as it opens
+    const idle = reduce ? 0 : Math.sin(t * .5) * 18;
+    const ry = (-28 + idle) * (1 - open) + (-14 + px * 10) * open + px * 8 * (1 - open);
+    const rx = -18 - py * 6 - open * 10;
+    const bob = reduce ? 0 : Math.sin(t * 1.2) * 6 * (1 - open);
+    gift.style.transform = `translateY(${bob + open * S * .25}px) rotateX(${rx}deg) rotateY(${ry}deg) scale(${1 - out * .12})`;
+    // ribbon bow lifts away, the gift tag drops, the lid floats up and back
+    bow.style.transform = `translate3d(0,${-untie * S * 1.1}px,${untie * 40}px) rotateZ(${untie * -30}deg) scale(${1 + untie * .3})`;
+    bow.style.opacity = 1 - untie;
+    tag.style.opacity = 1 - untie;
+    lid.style.transform = `translate3d(0,${-open * S * 1.15}px,${-open * S * .5}px) rotateX(${open * 58}deg) rotateZ(${open * -10}deg)`;
+    lid.style.opacity = 1 - cl((p - .38) / .2);
+    inside.style.opacity = open;
+    glow.style.opacity = open * (1 - out * .4);
+    // treats rise out of the box and fan into an arc
+    const n = cards.length, Rx = mobile ? innerWidth * .33 : Math.min(innerWidth * .18, S * 1.4), Ry = mobile ? innerHeight * .28 : S * .95;
+    cards.forEach((c, i) => {
+      const e = ease(cl((out - i * .045) / .6));
+      const a = Math.PI + (i + .5) / n * Math.PI;               // upper half-ellipse, left to right
+      const fl = reduce ? 0 : Math.sin(t * 1.1 + i) * 6 * e;
+      const x = Math.cos(a) * Rx * e - px * 14 * e;
+      const y = -S * .15 + (Math.sin(a) * Ry - S * .15) * e + fl - py * 10 * e;
+      const z = -60 + 60 * e + Math.sin(a + Math.PI) * 40 * e;
+      const s = .2 + .8 * e;
+      c.style.transform = `translate3d(${x}px,${y}px,${z}px) rotateY(${Math.cos(a) * -22 * e}deg) rotateZ(${Math.cos(a) * 8 * e}deg) scale(${s})`;
+      c.style.opacity = cl(e * 2.2);
+      c.style.zIndex = Math.round(50 + Math.sin(a + Math.PI) * 10);
+    });
+    // on phones the headline steps aside so the unboxing gets the stage
+    const fade = mobile ? cl((p - .32) / .2) : cl((p - .82) / .15) * .0;
+    copy.style.opacity = 1 - fade; copy.style.transform = `translateY(${-fade * 40}px)`; copy.style.pointerEvents = fade > .6 ? 'none' : '';
+    end.style.opacity = cl((p - .72) / .15); cue.style.opacity = 1 - cl(p / .1);
+    if (!reduce && !once && heroOn) requestAnimationFrame(render); else running = false;
+  }
+  // only animate while the hero is on screen (the loop used to run forever and kept the CPU + memory busy)
+  let heroOn = true, running = true;
+  new IntersectionObserver(es => { heroOn = es[0].isIntersecting; if (heroOn && !running && !reduce) { running = true; requestAnimationFrame(render); } }).observe(document.querySelector('.hero'));
+  requestAnimationFrame(render);
+})();
+
+/* Hero ambience: warm flour dust drifting in the spotlight */
+(() => {
+  const c = $('dust'), x = c.getContext('2d'); if (reduce) return;
+  let w, h, dpr, parts = [], vis = true;
+  const size = () => { dpr = Math.min(devicePixelRatio || 1, 2); w = c.width = c.offsetWidth * dpr; h = c.height = c.offsetHeight * dpr; parts = [...Array(innerWidth < 768 ? 40 : 80)].map(() => ({ x: Math.random() * w, y: Math.random() * h, r: (Math.random() * 1.6 + .4) * dpr, v: (Math.random() * .25 + .08) * dpr, o: Math.random() * .5 + .15, ph: Math.random() * 6 })); };
+  size(); addEventListener('resize', size);
+  new IntersectionObserver(es => vis = es[0].isIntersecting).observe(c);
+  (function loop(t) { if (vis) { x.clearRect(0, 0, w, h); parts.forEach(p => { p.y -= p.v; p.x += Math.sin(t / 1500 + p.ph) * .25 * dpr; if (p.y < -5) { p.y = h + 5; p.x = Math.random() * w; } x.globalAlpha = p.o; x.fillStyle = '#ffdcae'; x.beginPath(); x.arc(p.x, p.y, p.r, 0, 7); x.fill(); }); } requestAnimationFrame(loop); })(0);
+})();
+
+/* ---------- 2 · Mission: words light up as you scroll ---------- */
+(() => {
+  const p = $('missionText'); p.innerHTML = p.textContent.split(/\s+/).map(w => { const em = /^\*.*\*/.test(w); return `<span class="w${em ? ' em' : ''}">${w.replace(/\*/g, '')}</span>`; }).join(' ');
+  const words = p.querySelectorAll('.w');
+  if (reduce) return;
+  ScrollTrigger.create({ trigger: '#mission', start: 'top 75%', end: 'bottom 55%', scrub: true, onUpdate: s => { const k = Math.round(s.progress * words.length); words.forEach((w, i) => w.style.opacity = i < k ? 1 : .14); } });
+})();
+
+/* ---------- 3 · Your magic: 3D offer cards ---------- */
+const I = p => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+const MAGIC = [
+  { title: 'Gift Boxes', img: 'comfort', price: '₱429 – ₱949', icon: I('<rect x="3" y="8" width="18" height="13" rx="1.5"/><path d="M2 8h20M12 8v13M12 8c-1.5-3-5-4.5-6-2.5S8.5 8 12 8zM12 8c1.5-3 5-4.5 6-2.5S15.5 8 12 8z"/>'), text: 'Ready-made boxes of cookies, banana bread, truffles and lattes. Tied with ribbon, a gift card included. No minimum order.', tags: ['Simple Joy', 'Morning Treat', 'Tea Time', 'Cookie Party'], tier: 1000, go: 'Shop gift boxes' },
+  { title: 'Giveaways', img: 'cup', price: 'from ₱75 each', icon: I('<path d="M12 21s-7-4.4-9.2-9C1.4 9 3 5.5 6.5 5.5c2 0 3.5 1.3 5.5 3.5 2-2.2 3.5-3.5 5.5-3.5C21 5.5 22.6 9 21.2 12 19 16.6 12 21 12 21z"/>'), text: 'Cookie solos, cake in jars, cookie bites and sampler cups for weddings, birthdays, baptisms and office events.', tags: ['Cake in Jars', 'Cookie Bites', 'Cookie-Solo', 'Min. 5–10 pcs'], tier: 100, go: 'Shop giveaways' },
+  { title: 'Custom & Corporate', img: 'custom-purple', price: 'quoted per order', icon: I('<path d="M12 3l2.2 5.4L20 9l-4.4 3.8L17 18.5 12 15.6 7 18.5l1.4-5.7L4 9l5.8-.6z"/>'), text: 'Your logo, monogram or theme on tins, boxes, stickers and ribbons. For brands, holidays and client gifts. Let\'s FLOURish together.', tags: ['Logo stickers', 'Monogram tins', 'Holiday gifting', 'Bulk orders'], tier: 0, go: 'Ask for a quote' }
+];
+$('magicGrid').innerHTML = MAGIC.map((m, i) => `<div class="col"><div class="m3d"><article class="mcard"><span class="glare"></span><div class="ph"><img src="img/${m.img}.webp" alt="" loading="lazy" decoding="async"><span class="price">${m.price}</span></div><div class="ic3"><span class="back"></span><span class="face">${m.icon}</span></div><h3>${m.title}</h3><p>${m.text}</p><div class="tags">${m.tags.map(t => `<span>${t}</span>`).join('')}</div><a class="go" href="#order" data-tier="${m.tier}" ${m.tier ? '' : 'data-custom="1"'}>${m.go} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article></div></div>`).join('');
+document.querySelectorAll('.mcard').forEach((c, i) => {
+  if (!reduce) gsap.fromTo(c, { rotateX: 28, y: 90, opacity: 0, z: -120 }, { rotateX: 0, y: 0, opacity: 1, z: 0, ease: 'power3.out', duration: 1.2, delay: i * .12, scrollTrigger: { trigger: '#magicGrid', start: 'top 82%' } });
+  if (!fine || reduce) return;
+  c.addEventListener('pointermove', e => { const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height; c.style.transform = `rotateY(${(x - .5) * 16}deg) rotateX(${(.5 - y) * 14}deg) translateZ(10px)`; c.style.setProperty('--gx', x * 100 + '%'); c.style.setProperty('--gy', y * 100 + '%'); });
+  c.addEventListener('pointerleave', () => c.style.transform = '');
+});
+
+/* ---------- 4 · Happy clients: real messages from customers ---------- */
+const QUOTES = [
+  { q: 'Apaka sarap nmn pala. Grabe!', a: 'Message to Bakepertise' },
+  { q: 'Masarap po yung cake in a jar niyo so magoorder po uli ako.', a: 'Asked for the menu to order again' },
+  { q: 'Yes ma\'am, super nagustuhan ko ung cookies. If need namin for events, will let you know po. Thank you!', a: 'After an event order' },
+  { q: 'Hi po, magoorder po uli ako by January. Masarap po ung cookie!', a: 'Repeat customer' },
+  { q: 'Ang sarap po ng cookies!', a: 'Message to Bakepertise' }
+];
+(() => {
+  let qi = 0, started = false, timer;
+  const show = i => { qi = (i + QUOTES.length) % QUOTES.length; const q = $('quoteText'); q.innerHTML = '“' + QUOTES[qi].q.split(' ').map(w => `<span class="w">${w}</span>`).join(' ') + '”'; $('quoteAbout').textContent = QUOTES[qi].a; const ws = q.querySelectorAll('.w'); ws.forEach((w, k) => reduce ? w.style.opacity = 1 : setTimeout(() => w.style.opacity = 1, k * 60)); };
+  const auto = () => { clearInterval(timer); if (!reduce) timer = setInterval(() => show(qi + 1), 7000); };
+  $('qPrev').onclick = () => { show(qi - 1); auto(); }; $('qNext').onclick = () => { show(qi + 1); auto(); };
+  const run = () => { if (started) return; started = true; show(0); auto(); const o = { v: 0 }; gsap.to(o, { v: 5000, duration: reduce ? 0 : 1.8, ease: 'power2.out', onUpdate: () => $('rateNum').textContent = Math.round(o.v).toLocaleString('en-PH') }); };
+  if (reduce) run(); else ScrollTrigger.create({ trigger: '#clients', start: 'top 65%', once: true, onEnter: run });
+  const names = ['FlowerStore.ph', 'Flower Chimp', 'UNOPS', 'Thome Group', 'Via Appia', 'CakeRush', '24/7'];
+  $('marq').innerHTML = [...names, ...names].map(n => `<span>${n}</span>`).join('<span aria-hidden="true">·</span>');
+})();
+
+/* ---------- 5 · Your work: 3D coverflow (adapted from 21st.dev "3D Coverflow Carousel") ---------- */
+const LOOKS = ['jar', 'bites', 'truf3', 'bento', 'joy', 'epic', 'morning', 'party'].map(id => byId[id]);
+(() => {
+  const cf = $('cf'), dots = $('dots'), n = LOOKS.length; let cur = 0, timer;
+  LOOKS.forEach((l, i) => {
+    const el = document.createElement('div'); el.className = 'cf-item'; el.setAttribute('role', 'group'); el.setAttribute('aria-label', `${i + 1} of ${n}: ${l.n}`);
+    el.innerHTML = `<img src="img/${l.img}.webp" alt="${l.n}" loading="lazy" decoding="async"><span class="tagc${l.best ? ' best' : ''}">${l.best ? 'Best seller' : l.min > 1 ? 'Min. ' + l.min : 'No minimum'}</span><div class="cap"><h3>${l.n}</h3><div class="bar"></div><p>${l.d}</p><div class="pr">${peso(l.p)} <small>/ ${l.u}</small></div><button type="button" class="btn-b gold" data-add="${l.id}">Add to order</button></div>`;
+    el.addEventListener('click', e => { if (i !== cur && !e.target.closest('button')) go(i); });
+    cf.append(el);
+    const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', `Show ${l.n}`); b.onclick = () => go(i); dots.append(b);
+  });
+  const items = cf.querySelectorAll('.cf-item');
+  function layout() {
+    const w = Math.min(340, innerWidth * .7), s1 = innerWidth < 768 ? w * .62 : w * .86, s2 = innerWidth < 768 ? w * 1.05 : w * 1.55;
+    items.forEach((el, i) => {
+      const o = (i - cur + n) % n; let t = 'translateX(0) scale(.4)', op = 0, z = 0, f = 'brightness(.4)';
+      if (o === 0) { t = 'translateX(0) translateZ(60px) scale(1)'; op = 1; z = 30; f = 'none'; }
+      else if (o === 1) { t = `translateX(${s1}px) scale(.84) rotateY(-26deg)`; op = .7; z = 20; f = 'brightness(.7)'; }
+      else if (o === n - 1) { t = `translateX(${-s1}px) scale(.84) rotateY(26deg)`; op = .7; z = 20; f = 'brightness(.7)'; }
+      else if (o === 2) { t = `translateX(${s2}px) scale(.68) rotateY(-40deg)`; op = .35; z = 10; f = 'brightness(.5) blur(1px)'; }
+      else if (o === n - 2) { t = `translateX(${-s2}px) scale(.68) rotateY(40deg)`; op = .35; z = 10; f = 'brightness(.5) blur(1px)'; }
+      el.style.transform = `translateY(-50%) ${t}`; el.style.opacity = op; el.style.zIndex = z; el.style.filter = f;
+      el.classList.toggle('center', o === 0); el.style.boxShadow = o === 0 ? '0 30px 70px rgba(0,0,0,.85),0 0 40px rgba(231,185,138,.25)' : '0 15px 35px rgba(0,0,0,.5)';
+      el.querySelector('button').tabIndex = o === 0 ? 0 : -1;
+    });
+    dots.querySelectorAll('button').forEach((b, i) => b.setAttribute('aria-current', i === cur));
+    const amb = $('amb'); amb.style.opacity = 0; setTimeout(() => { amb.src = `img/${LOOKS[cur].img}.webp`; amb.style.opacity = 1; }, 300);
+  }
+  const go = i => { cur = (i + n) % n; layout(); restart(); };
+  const restart = () => { clearInterval(timer); if (!reduce) timer = setInterval(() => { cur = (cur + 1) % n; layout(); }, 5000); };
+  $('cfPrev').onclick = () => go(cur - 1); $('cfNext').onclick = () => go(cur + 1);
+  let sx = 0; cf.addEventListener('touchstart', e => sx = e.touches[0].clientX, { passive: true });
+  cf.addEventListener('touchend', e => { const d = e.changedTouches[0].clientX - sx; if (Math.abs(d) > 45) go(cur + (d < 0 ? 1 : -1)); });
+  cf.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') go(cur - 1); if (e.key === 'ArrowRight') go(cur + 1); });
+  cf.addEventListener('pointerenter', () => clearInterval(timer)); cf.addEventListener('pointerleave', restart);
+  addEventListener('resize', layout); layout(); restart();
+})();
+
+/* ---------- 6 · Say hello: parallax depth ---------- */
+if (!reduce) document.querySelectorAll('[data-par]').forEach(img => gsap.fromTo(img, { yPercent: -+img.dataset.par }, { yPercent: +img.dataset.par, ease: 'none', scrollTrigger: { trigger: '.stack', start: 'top bottom', end: 'bottom top', scrub: true } }));
+
+/* ---------- Reveal ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+document.querySelectorAll('.rv').forEach(el => reduce ? el.classList.add('in') : io.observe(el));
+if (!reduce) gsap.utils.toArray('section:not(.hero) h2').forEach(h => gsap.from(h, { y: 50, opacity: 0, filter: 'blur(8px)', duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: h, start: 'top 85%' } }));
+
+/* ---------- 7 · Pre-order builder (minimum orders enforced) ---------- */
+const TIERS = [[0, 'All gifts'], [100, 'Below ₱100'], [200, 'Below ₱200'], [300, 'Below ₱300'], [500, 'Below ₱500'], [1000, 'Below ₱1,000']];
+let tier = 0;
+$('tiers').innerHTML = TIERS.map(([v, l]) => `<button type="button" data-t="${v}" aria-pressed="${v === tier}">${l}</button>`).join('');
+$('tiers').addEventListener('click', e => { const b = e.target.closest('button'); if (b) setTier(+b.dataset.t); });
+function setTier(v) { tier = v; $('tiers').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', +b.dataset.t === v)); renderList(); }
+function renderList() {
+  $('plist').innerHTML = P.filter(x => !tier || x.t === tier).map(x => {
+    const q = cart[x.id] || 0;
+    return `<div class="pi${q ? ' on' : ''}" data-id="${x.id}"><img src="img/${x.img}.webp" alt="" loading="lazy" decoding="async"><div><h3 class="pn">${x.n}${x.best ? '<span class="best">Best seller</span>' : ''}</h3><p>${x.d}</p><div class="pp">${peso(x.p)} / ${x.u} · ${x.min > 1 ? 'min. ' + x.min : 'no minimum'}</div></div><div class="act">${q ? `<div class="step"><button type="button" data-dec aria-label="Fewer ${x.n}">−</button><output aria-live="polite">${q}</output><button type="button" data-inc aria-label="More ${x.n}">+</button></div>` : `<button type="button" class="addb" data-add="${x.id}">Add${x.min > 1 ? ' ' + x.min : ''}</button>`}</div></div>`;
+  }).join('');
+}
+function setQty(id, q, from) {
+  const x = byId[id]; if (q > 0 && q < x.min) q = 0;
+  if (q > 999) q = 999;
+  if (q) cart[id] = q; else delete cart[id];
+  try { localStorage.setItem('bk-cart', JSON.stringify(cart)); } catch {}
+  renderList(); renderCart();
+}
+$('plist').addEventListener('click', e => {
+  const row = e.target.closest('.pi'); if (!row) return; const id = row.dataset.id, x = byId[id], q = cart[id] || 0;
+  if (e.target.closest('[data-inc]')) setQty(id, q + 1);
+  if (e.target.closest('[data-dec]')) { if (q - 1 < x.min && q - 1 > 0) toast(`Minimum order for ${x.n} is ${x.min}. Removed.`); setQty(id, q - 1 < x.min ? 0 : q - 1); }
+});
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-add]'); if (b) { const x = byId[b.dataset.add]; flyToCart(b, x); setQty(x.id, Math.max(cart[x.id] || 0, x.min)); toast(`${x.min > 1 ? x.min + ' × ' : ''}${x.n} added to your order.`); return; }
+  const g = e.target.closest('[data-tier]'); if (g) { if (g.dataset.custom) { $('ot').value = 'Custom / corporate order: (logo, quantity, theme, budget) '; setTimeout(() => $('ot').focus({ preventScroll: true }), 900); } setTier(+g.dataset.tier); }
+});
+function flyToCart(from, x) {
+  if (reduce) return; const r = from.getBoundingClientRect(), to = $('hdrN').getBoundingClientRect(), dest = innerWidth < 992 ? $('stickyTot').getBoundingClientRect() : to;
+  if (!dest.width) return;
+  const im = document.createElement('img'); im.className = 'fly'; im.src = `img/${x.img}.webp`; im.alt = ''; im.style.left = r.left + r.width / 2 - 27 + 'px'; im.style.top = r.top + r.height / 2 - 27 + 'px'; document.body.append(im);
+  gsap.to(im, { x: dest.left + dest.width / 2 - (r.left + r.width / 2), y: dest.top + dest.height / 2 - (r.top + r.height / 2), scale: .3, rotate: 25, duration: .8, ease: 'power2.in', onComplete: () => im.remove() });
+}
+function renderCart() {
+  const ids = Object.keys(cart), total = ids.reduce((s, id) => s + cart[id] * byId[id].p, 0), count = ids.reduce((s, id) => s + cart[id], 0);
+  $('lines').innerHTML = ids.length ? ids.map(id => `<li><span>${cart[id]} × ${byId[id].n}</span><span>${peso(cart[id] * byId[id].p)}</span></li>`).join('') : '<li class="empty">No treats yet. Add something from the collection.</li>';
+  $('tot').textContent = peso(total); $('stickyTot').textContent = count ? `${count} items · ${peso(total)}` : 'Start →'; $('hdrN').textContent = ids.length;
+  if (!$('oBtn').disabled) $('oBtn').textContent = PAY ? (total ? `Pay securely · ${peso(total)}` : 'Pay securely') : 'Send my pre-order';
+  return { ids, total };
+}
+renderList(); renderCart();
+const minDate = new Date(); minDate.setDate(minDate.getDate() + 2); $('od').min = minDate.toISOString().slice(0, 10);
+document.querySelectorAll('[name=fulfillment]').forEach(r => r.addEventListener('change', () => { const del = $('f1').checked; $('addrWrap').hidden = !del; $('oa').required = del; }));
+$('oa').required = true;
+/* ---------- Checkout: PayMongo hosted page (secure), receipts, pay-later requests ---------- */
+const ICONS = { ok: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>', wait: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 3a9 9 0 1 0 9 9"/></svg>', warn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 8v5M12 16.5v.5"/><circle cx="12" cy="12" r="9.5"/></svg>' };
+const api = async (data, qs = '') => { const r = await fetch(ORDER_API_URL + qs, data ? { method: 'POST', body: JSON.stringify(data) } : {}); return r.json(); };
+const netlify = () => fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData($('orderForm'))).toString() }).then(r => r.ok, () => false);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+function showReceipt(r) {
+  const s = r.status, paid = s === 'Paid', wait = s === 'Checking', req = s === 'Request';
+  const T = { Paid: ['ok', 'Payment received. Salamat!', 'Your receipt is in your email. We\'ll message you about pickup or delivery.'], Checking: ['wait', 'Confirming your payment…', 'We\'re checking with PayMongo. This takes a few seconds.'], Request: ['ok', 'Request sent. Salamat!', 'We\'ll message you with a quote and payment options.'], 'Check payment': ['warn', 'We\'re reviewing your payment', 'Something about the amount needs a quick check. We\'ll message you shortly.'] };
+  const [ic, title, msg] = T[s] || ['warn', 'Payment not confirmed yet', 'If you finished paying, it can take a minute. Your receipt is emailed as soon as PayMongo confirms. Questions? Message us with your order number.'];
+  $('rcIc').className = 'rc-ic' + (ic === 'ok' ? '' : ' ' + ic); $('rcIc').innerHTML = ICONS[ic];
+  $('rcTitle').textContent = title; $('rcMsg').textContent = msg;
+  $('rcDemo').innerHTML = r.demo ? '<span class="demo-tag">DEMO ONLY · no real payment was made</span>' : '';
+  const rows = [['Order no.', r.ref], ['Status', paid ? '<span class="paid">✓ Paid</span>' : esc(s === 'Checking' ? 'Checking…' : s)], ['Items', r.items], [paid ? 'Total paid' : 'Total', r.total ? peso(r.total) : ''], ['Paid via', r.paidVia], ['Paid on', r.paidAt]];
+  $('rcpt').innerHTML = rows.filter(x => x[1]).map(([k, v]) => `<div><span>${k}</span><span>${k === 'Status' ? v : esc(v)}</span></div>`).join('');
+  $('rcPrint').hidden = !(paid || req); $('rcNew').hidden = wait;
+  $('orderForm').hidden = true; $('orderOk').hidden = false;
+}
+$('rcPrint').onclick = () => print();
+$('rcNew').onclick = () => { $('orderOk').hidden = true; $('orderForm').hidden = false; jump('#order'); };
+async function placeOrder(mode) {
+  const f = $('orderForm'), { ids, total } = renderCart();
+  if (!ids.length && (mode === 'checkout' || !f.notes.value.trim())) { toast(mode === 'checkout' ? 'Add at least one treat to your order first.' : 'Add treats or describe your custom order in the notes.'); $('plist').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' }); return; }
+  $('oe').required = mode === 'checkout';
+  if (!f.reportValidity()) return;
+  const data = { action: mode, name: f.name.value.trim(), phone: f.phone.value, email: f.email.value.trim(), date: f.date.value, fulfillment: f.fulfillment.value === 'Delivery' ? 'Delivery' : 'Pickup', address: f.address.value, notes: f.notes.value, company: f.company.value, items: Object.assign({}, cart) };
+  const summary = ids.map(id => `${cart[id]} × ${byId[id].n} (${peso(cart[id] * byId[id].p)})`).join('\n');
+  $('oOrder').value = summary; $('oTotal').value = peso(total); $('oSubject').value = `New ${mode === 'checkout' ? 'order' : 'request'}: ${peso(total)} - ${data.name} (needed ${data.date})`;
+  const btn = mode === 'checkout' ? $('oBtn') : $('oLater'), label = btn.textContent; btn.disabled = true; btn.textContent = mode === 'checkout' ? 'Opening secure checkout…' : 'Sending…';
+  const done = () => { btn.disabled = false; btn.textContent = label; renderCart(); };
+  try {
+    if (mode === 'checkout') {
+      if (!ORDER_API_URL) { done(); return demoCheckout(data, total, summary); }
+      const r = await api(data);
+      if (!r.ok) throw new Error(r.error || 'Could not start the payment.');
+      const u = new URL(r.checkout_url);   // only ever send customers to PayMongo's own HTTPS page
+      if (u.protocol !== 'https:' || !/(^|\.)paymongo\.com$/.test(u.hostname)) throw new Error('Unexpected payment page. Please message us instead.');
+      location.assign(u.href); return;
+    }
+    const [a, b] = await Promise.all([ORDER_API_URL ? api(data).then(r => r.ok ? r : false, () => false) : false, netlify()]);
+    if (!a && !b && !DEMO) throw new Error('Hindi na-send. Please message us on Viber: 0995 180 9682.');
+    done(); clearCart();
+    showReceipt({ status: 'Request', ref: a && a.ref, items: summary || 'Custom order (see notes)', total }); jump('#order');
+  } catch (err) { done(); toast(err.message || 'Something went wrong. Please try again.'); }
+}
+function clearCart() { Object.keys(cart).forEach(k => delete cart[k]); try { localStorage.removeItem('bk-cart'); } catch {} renderList(); renderCart(); }
+$('orderForm').addEventListener('submit', e => { e.preventDefault(); placeOrder(PAY ? 'checkout' : 'request'); });
+$('oLater').onclick = () => placeOrder('request');
+
+/* Demo only: what the PayMongo page feels like (the live site opens the real checkout.paymongo.com) */
+function demoCheckout(data, total, summary) {
+  const d = document.createElement('div'); d.className = 'pmdemo'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-modal', 'true'); d.setAttribute('aria-label', 'Demo payment page');
+  d.innerHTML = `<div class="box"><div class="url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>checkout.paymongo.com <small style="color:#8a5a12;margin-left:auto">DEMO</small></div><div style="font-size:.85rem;color:#5b6472">Bakepertise Pastry Cafe</div><div class="amt">${peso(total)}</div><div class="opts">${['GCash', 'Maya', 'Card', 'GrabPay'].map((m, i) => `<label><input type="radio" name="pmm" value="${m}" ${i ? '' : 'checked'}><span>${m}</span></label>`).join('')}</div><button type="button" id="pmPay">Pay ${peso(total)}</button><button type="button" class="cancel" id="pmCancel">Cancel</button></div>`;
+  document.body.append(d); d.querySelector('#pmPay').focus();
+  d.querySelector('#pmCancel').onclick = () => { d.remove(); toast('Payment cancelled. Your treats are still in your order.'); };
+  d.querySelector('#pmPay').onclick = () => {
+    const via = d.querySelector('input:checked').value; d.remove();
+    const ref = 'BKP-DEMO-' + Math.random().toString(36).slice(2, 6).toUpperCase();
+    showReceipt({ status: 'Checking', ref, demo: 1 }); jump('#order');
+    setTimeout(() => { showReceipt({ status: 'Paid', ref, items: summary, total, paidVia: via, paidAt: new Date().toLocaleString('en-PH', { dateStyle: 'medium', timeStyle: 'short' }), demo: 1 }); clearCart(); }, 1600);
+  };
+}
+
+/* Coming back from PayMongo: confirm the payment with our server (never trust the URL alone) */
+(async () => {
+  const q = new URLSearchParams(location.search), ref = q.get('order'), k = q.get('k');
+  if (!ref || !k || !ORDER_API_URL) return;
+  history.replaceState(null, '', location.pathname + '#order'); // removes the private link from the address bar
+  setTimeout(() => jump('#order'), 400);
+  if (q.get('cancelled')) { toast('Payment cancelled. Your treats are still in your order. Try again anytime.'); return; }
+  showReceipt({ status: 'Checking', ref });
+  for (let i = 0; i < 10; i++) {
+    let r = null; try { r = await api(null, `?action=status&ref=${encodeURIComponent(ref)}&k=${encodeURIComponent(k)}`); } catch {}
+    if (r && r.ok && r.status !== 'Awaiting payment') { showReceipt(r); if (r.status === 'Paid') clearCart(); return; }
+    await new Promise(s => setTimeout(s, 3000));
+  }
+  showReceipt({ status: 'Pending', ref });
+})();
+</script>
+</body>
+</html>

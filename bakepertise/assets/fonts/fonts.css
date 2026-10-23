@@ -1,0 +1,6 @@
+/* Self-hosted Google Fonts (SIL Open Font License) so the site works offline */
+@font-face{font-family:"Libre Caslon Display";font-style:normal;font-weight:400;font-display:swap;src:url(caslon-display.woff2) format("woff2")}
+@font-face{font-family:"Libre Caslon Text";font-style:normal;font-weight:400;font-display:swap;src:url(caslon-regular.woff2) format("woff2")}
+@font-face{font-family:"Libre Caslon Text";font-style:italic;font-weight:400;font-display:swap;src:url(caslon-italic.woff2) format("woff2")}
+@font-face{font-family:"Libre Caslon Text";font-style:normal;font-weight:700;font-display:swap;src:url(caslon-bold.woff2) format("woff2")}
+@font-face{font-family:"Outfit";font-style:normal;font-weight:400 700;font-display:swap;src:url(outfit.woff2) format("woff2")}
