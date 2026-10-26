@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Waypoints Web Design | Websites, Lead Generation &amp; Automation</title>
+<meta name="description" content="Website design, lead generation and marketing automation for small businesses, coaches and professionals: sites that take orders, book consultations, follow up and get paid. See your custom mock-up first, free.">
+<link rel="canonical" href="https://waypoint-digital.netlify.app/">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Try your new website before you even pay · Waypoints Web Design">
+<meta property="og:description" content="Websites, lead generation and automation for small businesses, coaches and professionals. Bookings, orders, consultations, follow-ups and payments that land in your email and Google Sheet. Free custom mock-up first.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://waypoint-digital.netlify.app/">
+<meta property="og:image" content="https://waypoint-digital.netlify.app/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Waypoints Web Design: see your new website before you pay a thing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3D332B">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Waypoints Web Design","description":"Websites for small businesses that take orders, book appointments and accept payments. Free custom mock-up first.","email":"way.points00@gmail.com","areaServed":["PH","Worldwide"],"address":{"@type":"PostalAddress","addressLocality":"Marikina City","addressCountry":"PH"},"slogan":"Prepare · Plan · Enjoy"}
+</script>
+<style>
+/* Waypoints brand: warm paper, cocoa ink, dusty rose, terracotta pin. Playfair Display + DM Sans. */
+:root{--terra-ink:#A65A33;--rose-ink:#94584A;--taupe-ink:#73604F;--ink:#3D332B;--night:#221b16;--paper:#FAF5EF;--cream:#F1E4DC;--line:#E6D5C8;--rose:#B97D6B;--rose2:#D1A99C;--terra:#C1774F;--clay:#A9835A;--taupe:#8A7364;--soft:#7d6b5e;
+  --serif:"Playfair Display",Georgia,serif;--body:"DM Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--body)}
+[hidden]{display:none!important}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{max-width:1200px;--bs-gutter-x:3rem}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.04;letter-spacing:-.015em;margin:0}
+h2{font-size:clamp(2.3rem,5.2vw,4.2rem)}
+h1 i,h2 i{font-style:italic;color:var(--terra);font-weight:600}
+/* services + lead flow + sources */
+.flow-after{margin-top:40px}
+.who4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0}.who4 div{padding:20px 18px!important}.who4 b{font-size:1.08rem}.who4 div{padding:14px 16px;border-radius:16px;background:var(--cream)}.who4 b{display:block}.who4 small{color:var(--taupe-ink);font-size:.82rem}@media (max-width:767.98px){.who4{grid-template-columns:1fr 1fr}}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;counter-reset:fl}
+.flow li{position:relative;padding:16px 14px 14px;border-radius:18px;background:#fff;border:1px solid var(--line);counter-increment:fl}
+.flow li::before{content:counter(fl);display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--paper);font:700 .8rem var(--body);margin-bottom:8px}
+.flow li:not(:last-child)::after{content:"";position:absolute;top:28px;right:-9px;width:8px;height:2px;background:var(--terra)}
+.flow b{display:block;font-size:.98rem;line-height:1.3}
+.flow small{display:block;color:var(--soft);font-size:.8rem;line-height:1.4;margin-top:4px}
+.flow .who{display:inline-block;margin-top:8px;padding:2px 9px;border-radius:999px;background:var(--cream);color:#7a3e20;font-size:.72rem;font-weight:700}
+@media (max-width:991.98px){.flow{grid-template-columns:1fr;gap:8px}.flow li{display:grid;grid-template-columns:34px 1fr;column-gap:10px;padding:12px 14px}.flow li::before{grid-row:span 3;margin:0}.flow li:not(:last-child)::after{top:auto;bottom:-9px;right:auto;left:26px;width:2px;height:8px}.flow .who{justify-self:start}}
+.svc{height:100%;display:flex;flex-direction:column;padding:26px 24px;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:0 24px 50px -36px rgba(61,51,43,.45)}
+.svc .si{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--cream);color:var(--terra-ink);margin-bottom:16px}
+.svc .si svg{width:28px;height:28px}
+.svc h3{font-size:1.55rem;margin:0 0 6px}
+.svc .lead{color:var(--soft);margin:0 0 14px}
+.svc ul{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:8px;font-size:.95rem}
+.svc li{display:flex;gap:9px;align-items:flex-start}
+.svc li svg{flex:none;width:18px;height:18px;margin-top:4px;color:var(--terra)}
+.svc .proof{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line);font-size:.86rem;color:var(--taupe-ink)}
+.svc .proof b{color:var(--ink)}
+.src{background:var(--night);color:#efe4da}
+.src h2{color:#fff}
+.src .eyebrow{color:#e0b9a6}
+.src .muted{color:#cbb9aa!important}
+.srcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+.srcgrid article{padding:20px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
+.srcgrid h3{font-size:1.15rem;color:#fff;margin:0 0 6px;font-family:var(--body);font-weight:700}
+.srcgrid p{margin:0;font-size:.92rem;color:#d9c8ba}
+.srcgrid .tag{display:inline-block;margin-bottom:10px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#e0b9a6;font-weight:700}
+@media (max-width:991.98px){.srcgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:575.98px){.srcgrid{grid-template-columns:1fr}}
+.dark h2 i{color:#e8b48f}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.75rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--rose-ink);margin-bottom:14px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--terra);box-shadow:0 0 0 4px rgba(193,119,79,.18)}
+.dark{background:var(--night);color:#f4ece4}
+.dark .eyebrow,.promise .eyebrow{color:#e0b9a6}
+.ftr .wm small{color:#e0b9a6}
+.legal{display:flex;flex-wrap:wrap;gap:6px 16px;margin:22px 0 0;padding:0;list-style:none;font-size:.88rem}.legal a{text-decoration:underline;text-underline-offset:3px}
+.check a{color:var(--terra-ink)}
+.muted{color:var(--soft)}
+.dark .muted{color:#c9b9ab}
+section{position:relative}
+.pad{padding:clamp(76px,11vw,140px) 0}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px;top:8px;z-index:400;background:#fff;padding:8px 14px;border-radius:8px}.skip:focus{left:16px}
+.btn-w{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:0;background:var(--ink);color:var(--paper);font-weight:700;text-decoration:none;cursor:pointer;box-shadow:0 14px 30px -14px rgba(61,51,43,.7);transition:transform .25s,box-shadow .25s,background .25s}
+.btn-w::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s}
+.btn-w:hover{color:var(--paper);transform:translateY(-2px);box-shadow:0 20px 36px -14px rgba(61,51,43,.8)}
+.btn-w:hover::after{transform:translateX(120%)}
+.btn-w.terra{background:var(--terra-ink);color:#fff;box-shadow:0 14px 30px -12px rgba(193,119,79,.75)}
+.btn-w.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn-w svg{width:18px;height:18px;flex:none}
+.btn-w:disabled{opacity:.65;cursor:wait}
+
+/* header */
+.hdr{position:fixed;top:12px;left:12px;right:12px;z-index:100;border-radius:20px;transition:background .35s,box-shadow .35s,transform .4s cubic-bezier(.2,.7,.2,1)}
+.hdr.away{transform:translateY(calc(-100% - 16px))}
+@media (max-width:575.98px){.hdr{top:8px;left:8px;right:8px;border-radius:16px}.hdr .container{min-height:56px}.wm b{font-size:1.12rem}.wm small{font-size:.52rem;margin-top:4px}}
+.hdr.solid,.hdr.open{background:rgba(250,245,239,.86);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 14px 40px -24px rgba(61,51,43,.5),inset 0 0 0 1px var(--line)}
+.hdr .container{min-height:66px}
+.wm{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:var(--ink)}
+.wm b{font-family:var(--serif);font-weight:700;font-size:1.35rem;letter-spacing:.2em}
+.wm small{font-size:.6rem;letter-spacing:.42em;color:var(--rose-ink);margin-top:5px;font-weight:700}
+.wm b i{font-style:normal;color:var(--terra)}
+.hdr .nav-link{color:var(--ink);opacity:.8;font-weight:500;font-size:.95rem}
+.hdr .nav-link:hover{opacity:1;color:var(--ink)}
+.hdr .navbar-toggler{border:0;color:var(--ink);padding:10px;box-shadow:none}
+.burger{display:block;width:22px}.burger i{display:block;height:2px;background:currentColor;margin:5px 0;border-radius:2px;transition:transform .3s,opacity .3s}
+.navbar-toggler[aria-expanded=true] .burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.navbar-toggler[aria-expanded=true] .burger i:nth-child(2){opacity:0}
+.navbar-toggler[aria-expanded=true] .burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:991.98px){.hdr .navbar-collapse{padding:4px 0 18px}.hdr .btn-w{width:100%;margin-top:8px}}
+@media (min-width:992px){.hdr .navbar-nav{gap:22px;align-items:center}}
+.mbtn,.mpanel{display:none}
+@media (max-width:991.98px){
+  html{scroll-padding-top:92px}
+  .hdr,.hdr.solid,.hdr.open,.hdr.menu{top:10px;left:10px;right:10px;border-radius:18px;background:rgba(250,245,239,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 14px 34px -20px rgba(61,51,43,.55),inset 0 0 0 1px var(--line)}
+  .hdr.away{transform:none}
+  .hdr .navbar-toggler,.hdr .navbar-collapse{display:none!important}
+  .hdr .container{min-height:60px;padding-top:0;padding-bottom:0;--bs-gutter-x:1.6rem;flex-wrap:nowrap}
+  .wm b{font-size:1.12rem}.wm small{font-size:.52rem;margin-top:4px}
+  .mbtn{display:inline-flex;align-items:center;gap:10px;min-height:42px;padding:0 14px 0 16px;border:0;border-radius:999px;background:var(--ink);color:var(--paper);font:700 .9rem var(--body);cursor:pointer}
+  .mbtn .burger{width:18px}.mbtn .burger i{height:2px;margin:4px 0}
+  .mbtn[aria-expanded=true] .burger i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .mbtn[aria-expanded=true] .burger i:nth-child(2){opacity:0}
+  .mbtn[aria-expanded=true] .burger i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  .mpanel{display:grid;gap:2px;position:absolute;left:0;right:0;top:calc(100% + 8px);padding:10px;border-radius:18px;background:var(--paper);box-shadow:0 28px 60px -24px rgba(61,51,43,.6),inset 0 0 0 1px var(--line);opacity:0;visibility:hidden;transform:translateY(-10px) scale(.98);transform-origin:top center;transition:opacity .25s,transform .3s cubic-bezier(.2,.7,.2,1),visibility .3s}
+  .hdr.menu .mpanel{opacity:1;visibility:visible;transform:none}
+  .mpanel a:not(.btn-w){display:flex;justify-content:space-between;align-items:center;min-height:50px;padding:0 14px;border-radius:12px;text-decoration:none;font-weight:700;font-size:1.05rem;color:var(--ink)}
+  .mpanel a:not(.btn-w) span{color:var(--terra)}
+  .mpanel a[aria-current=true]{background:var(--cream)}
+  .mpanel .btn-w{margin-top:6px}
+  .hero{padding-top:110px!important}
+  body{padding-bottom:84px}
+}
+.read{position:fixed;top:0;left:0;height:3px;width:100%;z-index:110;background:linear-gradient(90deg,var(--rose),var(--terra));transform-origin:0 50%;transform:scaleX(0)}
+
+/* devices */
+.laptop{position:relative;width:var(--lw,560px);backface-visibility:hidden}
+.view{contain:paint}
+.view img{will-change:opacity;backface-visibility:hidden}
+.laptop .scr{position:relative;aspect-ratio:16/10;border-radius:16px 16px 4px 4px;background:#141110;padding:2.2%;box-shadow:0 0 0 1px rgba(255,255,255,.06),0 40px 80px -30px rgba(34,27,22,.75)}
+.laptop .base{position:relative;height:calc(var(--lw,560px) * .03);margin:0 -7%;background:linear-gradient(#e9e2d9,#b9b0a6);border-radius:0 0 22px 22px;box-shadow:0 30px 40px -20px rgba(34,27,22,.6)}
+.laptop .base::after{content:"";position:absolute;left:42%;right:42%;top:0;height:35%;background:#cfc6bb;border-radius:0 0 10px 10px}
+.phone{position:relative;width:var(--pw,200px);aspect-ratio:390/844;border-radius:calc(var(--pw,200px) * .16);background:#141110;padding:calc(var(--pw,200px) * .045);box-shadow:0 0 0 1px rgba(255,255,255,.08),0 40px 70px -24px rgba(34,27,22,.8)}
+.phone::before{content:"";position:absolute;left:50%;top:calc(var(--pw,200px) * .07);width:28%;height:calc(var(--pw,200px) * .05);transform:translateX(-50%);border-radius:999px;background:#141110;z-index:3}
+.view{position:relative;width:100%;height:100%;overflow:hidden;border-radius:8px;background:#2a2320}
+.phone .view{border-radius:calc(var(--pw,200px) * .12)}
+.view img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity 1s ease}
+.view img.on{opacity:1}
+.view::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.14),transparent 38%);pointer-events:none}
+
+/* 1 · HERO */
+.hero{min-height:100svh;padding:120px 0 60px;overflow:hidden;display:flex;align-items:center}
+.aura{position:absolute;border-radius:50%;opacity:.55;pointer-events:none;will-change:transform}
+.aura.a1{width:46vmax;height:46vmax;left:-12vmax;top:-14vmax;background:radial-gradient(circle,rgba(240,205,189,.95) 0%,rgba(240,205,189,.55) 30%,rgba(240,205,189,.18) 52%,transparent 70%);animation:drift 18s ease-in-out infinite alternate}
+.aura.a2{width:40vmax;height:40vmax;right:-14vmax;bottom:-16vmax;background:radial-gradient(circle,rgba(232,195,165,.95) 0%,rgba(232,195,165,.55) 30%,rgba(232,195,165,.18) 52%,transparent 70%);animation:drift 22s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(6vmax,4vmax) scale(1.08)}}
+.grain{position:absolute;inset:0;opacity:.06;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .col-lg-6:first-child{position:relative;z-index:2}
+.hero h1{font-size:clamp(2.8rem,6.6vw,5.8rem);line-height:.98}
+.hero h1 i{display:block}
+.hero .sub{font-size:clamp(1.05rem,1.5vw,1.2rem);color:#5c4e43;max-width:46ch;margin:22px 0 28px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:.88rem;font-weight:600;color:var(--taupe-ink)}
+.trust span{display:inline-flex;align-items:center;gap:7px}
+.trust svg{width:16px;height:16px;color:var(--terra)}
+.stage{position:relative;height:clamp(360px,44vw,560px);perspective:1600px}
+.rig{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform;contain:layout}
+.rig .laptop{--lw:min(540px,40vw);position:absolute;left:8%;top:8%;transform:translateZ(0)}
+.rig .phone{--pw:min(190px,15vw);position:absolute;right:2%;bottom:0;transform:translateZ(90px)}
+.rig .chip{position:absolute;z-index:4;display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:14px;background:rgba(255,255,255,.92);box-shadow:0 18px 34px -16px rgba(61,51,43,.55),inset 0 0 0 1px var(--line);font-size:.82rem;font-weight:700;transform:translateZ(140px);animation:bob 5s ease-in-out infinite}
+.rig .chip i{width:9px;height:9px;border-radius:50%;background:#3aa76d;box-shadow:0 0 0 4px rgba(58,167,109,.18)}
+.rig .c1{left:4%;bottom:12%}
+.rig .c2{right:18%;top:0;animation-delay:-2.5s}
+.rig .c2 i{background:var(--terra);box-shadow:0 0 0 4px rgba(193,119,79,.2)}
+@keyframes bob{50%{translate:0 -8px}}
+@media (max-width:991.98px){.hero{padding:112px 0 48px;align-items:flex-start}.rig .c2{top:4%;right:2%}.rig .c1{left:3%}.stage{height:auto;aspect-ratio:1.3;margin:0 0 22px}.rig .laptop{--lw:76vw}.rig .phone{--pw:25vw}}
+@media (max-width:575.98px){.stage{aspect-ratio:1.05}.rig .laptop{--lw:84vw;top:10%}.rig .phone{--pw:31vw;right:0}.rig .c2{top:7%;right:4%}}
+
+/* 2 · MISSION */
+.mission{padding:clamp(80px,12vw,150px) 0}
+.mission p{font-family:var(--serif);font-size:clamp(1.8rem,4.3vw,3.5rem);line-height:1.16;margin:0;max-width:24ch;font-weight:600}
+.mission .w{opacity:.14;transition:opacity .2s}
+.mission .w.em{font-style:italic;color:#e8b48f}
+
+/* 3 · WHAT IT DOES */
+.m3d{perspective:1100px;height:100%}
+.ph.noimg{display:grid;place-items:center;background:radial-gradient(circle at 30% 20%,var(--cream,#F1E4DC),#fff 70%)}
+.ph.noimg svg{width:34%;height:auto;color:var(--terra,#C1774F);opacity:.9}
+.mcard{position:relative;height:100%;border-radius:28px;background:#fff;box-shadow:0 0 0 1px var(--line),0 40px 70px -46px rgba(61,51,43,.55);transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.7,.2,1);padding:14px 14px 26px;display:flex;flex-direction:column}
+.mcard .ph{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/10.5;transform:translateZ(20px);background:var(--cream)}
+.mcard .ph img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.mcard:hover .ph img{transform:scale(1.06)}
+.mcard .glare{position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(500px circle at var(--gx,50%) var(--gy,0%),rgba(255,255,255,.4),transparent 45%);opacity:0;transition:opacity .4s;z-index:3}
+.mcard:hover .glare{opacity:1}
+.ic3{position:relative;width:72px;height:72px;margin:-38px 0 14px 18px;transform:translateZ(70px);transform-style:preserve-3d;z-index:2;animation:bob 5s ease-in-out infinite}
+.ic3 .face{position:absolute;inset:0;border-radius:22px;display:grid;place-items:center;background:linear-gradient(145deg,#fff,var(--cream));box-shadow:0 18px 30px -12px rgba(193,119,79,.55),inset 0 -4px 0 rgba(193,119,79,.14)}
+.ic3 .back{position:absolute;inset:0;border-radius:22px;background:linear-gradient(145deg,var(--terra),var(--rose));transform:translateZ(-14px) translate(6px,6px);opacity:.92}
+.ic3 svg{width:32px;height:32px;color:var(--terra);transition:transform .8s cubic-bezier(.34,1.56,.64,1)}
+.mcard:hover .ic3 svg{transform:rotateY(360deg) scale(1.1)}
+.mcard h3{font-size:1.9rem;margin:0 18px 6px;transform:translateZ(40px)}
+.mcard p{margin:0 18px 14px;color:var(--soft);transform:translateZ(30px)}
+.mcard .like{margin:auto 18px 0;align-self:flex-start;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:var(--cream);color:var(--ink);transform:translateZ(36px)}
+
+/* 4 · HOW IT WORKS (free first) */
+.how{background:linear-gradient(180deg,var(--paper),var(--cream))}
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:10px}
+.steps::before{content:"";position:absolute;left:6%;right:6%;top:38px;height:2px;background:var(--line)}
+.steps .bar{position:absolute;left:6%;top:38px;height:2px;width:88%;background:linear-gradient(90deg,var(--rose),var(--terra));transform-origin:0 50%;transform:scaleX(0)}
+.step{position:relative;text-align:left}
+.step .n{position:relative;z-index:1;width:76px;height:76px;border-radius:24px;display:grid;place-items:center;font-family:var(--serif);font-size:2rem;font-weight:700;background:#fff;box-shadow:0 0 0 1px var(--line),0 24px 40px -24px rgba(61,51,43,.6);margin-bottom:16px;transition:background .5s,color .5s}
+.step.lit .n{background:var(--ink);color:var(--paper)}
+.step h3{font-size:1.4rem;margin-bottom:6px}
+.step .t{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--terra-ink);margin-bottom:6px}
+.step p{color:var(--soft);font-size:.96rem;margin:0}
+@media (max-width:991.98px){.steps{grid-template-columns:minmax(0,1fr);gap:22px}.steps::before{left:37px;right:auto;top:20px;bottom:20px;width:2px;height:auto}.steps .bar{left:37px;top:20px;width:2px;height:calc(100% - 40px);transform-origin:50% 0;transform:scaleY(0)}.step{display:grid;grid-template-columns:76px minmax(0,1fr);gap:18px;align-items:start}.step .n{margin:0}}
+.promise{margin-top:48px;border-radius:28px;background:var(--night);color:#f4ece4;padding:clamp(26px,4vw,44px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;align-items:center;position:relative;overflow:hidden}
+.promise::before{content:"";position:absolute;width:300px;height:300px;right:-100px;top:-120px;border-radius:50%;box-shadow:0 0 0 1px rgba(232,180,143,.3),0 0 90px 10px rgba(232,180,143,.2)}
+.promise h3{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+.promise h3 i{color:#e8b48f}
+.promise ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.promise li{display:flex;gap:10px;align-items:flex-start}
+.promise li svg{width:22px;height:22px;flex:none;color:#7fd3a6;margin-top:2px}
+@media (max-width:767.98px){.promise{grid-template-columns:minmax(0,1fr)}}
+
+/* 5 · OUR WORK */
+.work{overflow:clip}
+.work .amb{position:absolute;inset:0;z-index:0}
+.work .amb img{width:100%;height:100%;object-fit:cover;filter:brightness(.25) blur(40px) saturate(1.2);transform:scale(1.2);transition:opacity 1s}
+.work .amb::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,rgba(34,27,22,.2),rgba(34,27,22,.94))}
+.work .container{position:relative;z-index:1}
+.picker{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:28px 0 34px}
+.picker button{position:relative;text-align:left;border:0;border-radius:20px;padding:16px 18px;background:rgba(255,255,255,.06);color:#f4ece4;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);cursor:pointer;transition:background .3s,box-shadow .3s}
+.picker button b{display:block;font-family:var(--serif);font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.15}
+.picker button small{color:#c9b9ab}
+.picker button[aria-selected=true]{background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1.5px #e8b48f}
+.picker .tag{position:absolute;right:14px;top:14px;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:rgba(127,211,166,.16);color:#9fe0bd}
+.picker .tag.mock{background:rgba(232,180,143,.18);color:#f1c7a7}
+@media (max-width:575.98px){.picker .tag{position:static;display:inline-block;margin-bottom:6px}}
+.case{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+@media (max-width:991.98px){.case{grid-template-columns:minmax(0,1fr)}}
+.wstage{position:relative;aspect-ratio:1.28;perspective:1600px}
+.wstage .rig .laptop{--lw:min(560px,82%);left:0;top:4%}
+.wstage .rig .phone{--pw:min(170px,25%);right:0;bottom:0}
+.case h3{font-size:clamp(1.9rem,3.6vw,2.8rem);color:#fff}
+.case .meta{color:#c9b9ab;margin:6px 0 16px;font-size:.95rem}
+.case .goal{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:#f1c7a7;margin-bottom:16px}
+.case ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:10px}
+.case li{display:flex;gap:10px}
+.case li svg{width:20px;height:20px;flex:none;color:#e8b48f;margin-top:3px}
+.case .btn-w.ghost{color:#f4ece4}
+.fadein{animation:fadeIn .7s ease both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* 6 · SAY HELLO */
+.stack{position:relative;height:clamp(420px,50vw,580px)}
+.stack .p1{position:absolute;left:0;top:0;width:66%;border-radius:28px;overflow:hidden;box-shadow:0 40px 70px -36px rgba(61,51,43,.6);background:#FAF5EF}
+.stack .p1 img{width:100%;aspect-ratio:1;object-fit:cover}
+.stack .p2{position:absolute;right:0;bottom:0;width:46%}
+.stack .p2 .phone{--pw:100%}
+.stack .badge{position:absolute;left:46%;top:58%;z-index:3;width:120px;height:120px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;box-shadow:0 20px 40px -14px rgba(0,0,0,.45)}
+.stack .badge svg{position:absolute;inset:0;animation:spin 18s linear infinite}
+.stack .badge b{font-family:var(--serif);font-style:italic;font-size:1.5rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}
+.facts div{padding:14px 16px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+.facts b{display:block;font-family:var(--serif);font-size:1.3rem;line-height:1.15}
+.facts small{color:var(--soft);overflow-wrap:anywhere}
+.joke{margin-top:18px;padding:14px 18px;border-left:3px solid var(--terra);background:var(--cream);border-radius:0 14px 14px 0;font-family:var(--serif);font-style:italic}
+.faq details{border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);margin-bottom:10px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:700;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--terra);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 18px 16px;margin:0;color:var(--soft)}
+
+/* 7 · BOOK */
+.cta{background:radial-gradient(ellipse at 50% 0%,#4a3b31,var(--night) 70%);color:#f4ece4}
+.cta h2{font-size:clamp(2.5rem,6vw,4.8rem)}
+.bookcard{border-radius:28px;background:var(--paper);color:var(--ink);padding:clamp(20px,3vw,32px);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.bookcard label{font-weight:700;font-size:.86rem;margin-bottom:4px}
+.bookcard .form-control,.bookcard .form-select{min-height:50px;border-radius:14px;border:1.5px solid var(--line);background:#fff;color:var(--ink)}
+.bookcard .form-control:focus,.bookcard .form-select:focus{border-color:var(--terra);box-shadow:0 0 0 4px rgba(193,119,79,.15)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{margin:0;min-height:42px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);font-weight:600;font-size:.88rem;cursor:pointer;transition:background .2s,color .2s}
+.chips input:checked+label{background:var(--ink);color:var(--paper);box-shadow:none}
+.chips input:focus-visible+label{outline:3px solid var(--terra)}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:500!important;font-size:.9rem!important}
+.check input{width:20px;height:20px;margin-top:2px;accent-color:var(--terra);flex:none}
+.hp{position:absolute;left:-9999px}
+.nopay{display:flex;gap:10px;align-items:center;font-size:.86rem;color:var(--soft);margin-top:12px}
+.nopay svg{width:18px;height:18px;color:#3aa76d;flex:none}
+.done{text-align:left}
+.done .tick{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#e6f4ec;color:#2f8f5b;margin-bottom:12px}
+.done .tick svg{width:30px;height:30px}
+.done ol{padding-left:20px;margin:14px 0}
+.done li{margin-bottom:6px}
+.ftr{background:#17120e;color:#c9b9ab;padding:56px 0 110px;font-size:.95rem}
+.ftr h4,.ftr .fh{font-family:var(--serif);color:#f4ece4;font-size:1.3rem;margin-bottom:.5rem}
+.ftr a{text-decoration:none}.ftr a:hover{color:#fff}
+.ftr .wm{color:#f4ece4}
+.sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:90;display:none;transform:translateY(160%);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.sticky-cta.on{transform:none}
+.sticky-cta .btn-w{width:100%}
+@media (max-width:767.98px){.sticky-cta{display:block}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.toast-w{position:fixed;left:50%;bottom:86px;z-index:150;transform:translate(-50%,160%);visibility:hidden;background:var(--ink);color:var(--paper);padding:12px 18px;border-radius:12px;font-weight:600;font-size:.92rem;transition:transform .5s cubic-bezier(.16,1,.3,1);max-width:calc(100vw - 32px)}
+.toast-w.show{transform:translate(-50%,0);visibility:visible}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.mission .w{opacity:1}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}.view img:first-child{opacity:1}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="read" id="read"></div>
+
+<header class="hdr navbar navbar-expand-lg" id="hdr"><div class="container">
+  <a class="navbar-brand wm" href="#top" aria-label="Waypoints Web Design, home"><b>WAYP<i>O</i>INTS</b><small>WEB DESIGN</small></a>
+  <button class="mbtn" id="mbtn" type="button" aria-expanded="false" aria-controls="mpanel">Menu<span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
+  <div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+    <li class="nav-item"><a class="nav-link" href="#work">Our work</a></li>
+    <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
+    <li class="nav-item"><a class="nav-link" href="#what">What you get</a></li>
+    <li class="nav-item"><a class="nav-link" href="#hello">About</a></li>
+    <li class="nav-item"><a class="btn-w terra" href="#book" style="min-height:44px;padding:0 20px">Get a free mock-up</a></li>
+  </ul></div>
+  <nav class="mpanel" id="mpanel" aria-label="Sections"><a href="#services">Services<span aria-hidden="true">→</span></a><a href="#who">Who it's for<span aria-hidden="true">→</span></a><a href="#work">Our work<span aria-hidden="true">→</span></a><a href="#how">How it works<span aria-hidden="true">→</span></a><a href="#what">What you get<span aria-hidden="true">→</span></a><a href="#hello">About us<span aria-hidden="true">→</span></a><a class="btn-w terra" href="#book">Get a free mock-up</a></nav>
+</div></header>
+
+<main id="main">
+<!-- 1 · FAT HEADLINE + CTA -->
+<section class="hero" id="top">
+  <div class="aura a1" aria-hidden="true"></div><div class="aura a2" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
+  <div class="container position-relative">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <span class="eyebrow">Websites, lead generation and automation · worldwide</span>
+        <h1>Try your new website <i>before you even pay.</i></h1>
+        <p class="sub">We design a working mock-up of your website for free, with your own photos, products and brand. You click through it on your phone and test the forms. If you want it live, we launch it and set up the booking, follow-up and payment steps behind it.</p>
+        <div class="d-flex flex-wrap gap-2"><a class="btn-w terra" href="#book">Get my free mock-up</a><a class="btn-w ghost" href="#work">See a site we built</a></div>
+        <div class="trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>No card needed</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Mock-up in 2–3 business days</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>You decide after you see it</span>
+        </div>
+      </div>
+      <div class="col-lg-6 order-first order-lg-last">
+        <div class="stage" id="heroStage" aria-hidden="true">
+          <div class="rig" id="heroRig">
+            <div class="laptop"><div class="scr"><div class="view" data-frames="eclipse-d-hero,eclipse-d-hero2,eclipse-d-hero3"></div></div><div class="base"></div></div>
+            <div class="phone"><div class="view" data-frames="eclipse-m-hero2,eclipse-m-hero3,eclipse-m-hero"></div></div>
+            <div class="chip c1"><i></i>Demo · New booking</div>
+            <div class="chip c2"><i></i>Demo · Down payment received</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · MISSION -->
+<section class="mission dark" id="mission">
+  <div class="container">
+    <span class="eyebrow">Why we do this</span>
+    <p id="missionText">A customer messages you at 11 PM to ask for your price. By the time you reply in the morning, they have booked someone else. We build websites that *answer* *the* *price* *question,* *take* *the* *booking* and *send* *the* *confirmation* while you sleep.</p>
+    <p class="muted mt-3 mb-0">You spend less time pasting prices into chats and more time on the work people pay you for.</p>
+  </div>
+</section>
+
+
+<!-- 2b · SERVICES (from the 2026-10-23 planning meeting) -->
+<section class="pad" id="services">
+  <div class="container">
+    <div class="row align-items-end g-3 mb-4">
+      <div class="col-lg-7"><span class="eyebrow">What we do</span><h2>Three services that<br><i>turn messages into bookings.</i></h2></div>
+      <div class="col-lg-5"><p class="muted mb-0">Most of the clients you lose never say no. They ask a question, wait for an answer and drift off. We build the steps that keep them moving, and you can start with one.</p></div>
+    </div>
+    <div class="row row-cols-1 row-cols-lg-3 g-4">
+      <div class="col"><article class="svc rv">
+        <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Website design</h3><p class="lead">A custom site with one job: getting you the order, the booking or the inquiry.</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Built around your brand, your products and photos of your real work</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Loads fast on a phone and is set up to be found on Google</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Order forms, booking calendars or quote requests</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Privacy Policy, Terms and a consent checkbox included</span></li></ul>
+        <p class="proof"><b>See it in:</b> Eclipse Beauty Lounge under <a href="#work">Our work</a>, an architect portfolio with consultation booking, and the mock-up we make for you.</p>
+      </article></div>
+      <div class="col"><article class="svc rv">
+        <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h10M4 12h6M4 17h10"/><circle cx="17" cy="7" r="2.2"/><circle cx="13" cy="12" r="2.2"/><circle cx="17" cy="17" r="2.2"/></svg></div>
+        <h3>Marketing automation</h3><p class="lead">Everything that has to happen after someone fills in your form, handled for you.</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Every order or booking goes into your own Google Sheet</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>You and your customer each get an email within seconds</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Deposits or full payments through the payment method you prefer</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Open slots update on their own, so two people can't book the same one</span></li></ul>
+        <p class="proof"><b>See it in:</b> Eclipse's booking calendar and down payment. A booking shows as paid only after the payment is confirmed.</p>
+      </article></div>
+      <div class="col"><article class="svc rv">
+        <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v10H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+        <h3>Lead generation &amp; follow-up</h3><p class="lead">More inquiries coming in, and a record of every one.</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Landing pages and free-consultation forms that take inquiries at any hour</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Each lead saved with who asked, when and what they want</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>A reminder for you when a lead hasn't heard back</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>A status for each lead in your Google Sheet that you can change</span></li></ul>
+        <p class="proof"><b>See it in:</b> the consultation booking on an architect portfolio we built, and the emails each Eclipse booking sends.</p>
+      </article></div>
+    </div>
+    <ol class="flow flow-after" aria-label="How a stranger becomes a client">
+      <li><b>Someone finds you</b><small>On Facebook, Instagram, LinkedIn, Google or through a friend</small><span class="who">Your page</span></li>
+      <li><b>They land on one page</b><small>What you offer, your prices or packages, and photos of your real work</small><span class="who">Website design</span></li>
+      <li><b>They take a step</b><small>Order, book a slot, ask for a quote or book a free consultation call</small><span class="who">Website + automation</span></li>
+      <li><b>You follow up on time</b><small>They get an instant email, and you get a reminder if they go quiet</small><span class="who">Lead generation</span></li>
+      <li><b>The job is booked</b><small>Deposit or full payment, a confirmation email and the date on your calendar</small><span class="who">Automation</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 2b2 · WHO IS THIS FOR? -->
+<section class="pad pt-0" id="who">
+  <div class="container">
+    <span class="eyebrow">Who we work with</span>
+    <h2 class="mb-3">Who is <i>this for?</i></h2><p class="muted mb-4" style="max-width:60ch">Anyone who gets clients through messages and loses some of them while they wait for a reply.</p>
+    <div class="who4" aria-label="Who we help"><div><b>Local businesses</b><small>Salons, bakeries, food, events, shops</small></div><div><b>Coaches</b><small>Fitness, business, life and skills coaches</small></div><div><b>Professionals</b><small>Architects, designers, clinics, consultants, real estate agents</small></div><div><b>Service providers</b><small>Studios, photographers, tutors, home services</small></div></div>
+  </div>
+</section>
+
+<!-- 2c · WHERE IT COMES FROM (sources) -->
+<section class="src pad" id="sources">
+  <div class="container">
+    <div class="row align-items-end g-3">
+      <div class="col-lg-7"><span class="eyebrow">What runs behind it</span><h2>The tools we build with,<br><i>and who owns them.</i></h2></div>
+      <div class="col-lg-5"><p class="muted mb-0">Your orders, leads and emails live in your own Google account, and your website files and domain are yours to keep. Here is what each part runs on.</p></div>
+    </div>
+    <div class="srcgrid">
+      <article class="rv"><span class="tag">Your data</span><h3>Your own Google Sheet</h3><p>Orders, bookings and leads land in a sheet in your Google account. Open it, filter it or download it whenever you like.</p></article>
+      <article class="rv"><span class="tag">The engine</span><h3>Google Apps Script</h3><p>Runs inside your Google account and does the saving, emailing, slot checks and reminders. The basics need no extra app subscription.</p></article>
+      <article class="rv"><span class="tag">Emails</span><h3>Sent from your own Gmail</h3><p>Confirmations and follow-ups go out from your address, so customer replies come back to you.</p></article>
+      <article class="rv"><span class="tag">Payments</span><h3>The payment method you choose</h3><p>Stripe, PayPal, Square, GCash, a bank QR or a plugin you already use. The money goes straight to your account.</p></article>
+      <article class="rv"><span class="tag">Hosting</span><h3>Fast hosting, files you keep</h3><p>We host on Netlify and keep your site files in a Git repository. The website and the domain are yours.</p></article>
+      <article class="rv"><span class="tag">Before launch</span><h3>Tested before we hand it over</h3><p>We try to break every booking and payment flow first, with fake receipts and edited payment links, and you get written setup steps.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · WHAT YOU GET -->
+<section class="pad" id="what">
+  <div class="container">
+    <div class="row align-items-end g-3 mb-4 mb-lg-5">
+      <div class="col-lg-7"><span class="eyebrow">What your website will do</span><h2>A website that<br><i>does part of the work.</i></h2></div>
+      <div class="col-lg-5"><p class="muted mb-0">Each site we build has one main job, so visitors know what to do next. Everything they send lands in your email and a Google Sheet.</p></div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="whatGrid"></div>
+  </div>
+</section>
+
+<!-- 4 · HOW IT WORKS (in place of "happy clients": the promise) -->
+<section class="how pad" id="how">
+  <div class="container">
+    <span class="eyebrow">How it works</span>
+    <h2 class="mb-5">Free first.<br><i>Decide later.</i></h2>
+    <div class="steps" id="steps"><span class="bar" id="stepsBar"></span>
+      <div class="step"><span class="n">1</span><div><span class="t">2 minutes</span><h3>Request your mock-up</h3><p>Tell us about your business and the one thing you want customers to do: order, book or ask.</p></div></div>
+      <div class="step"><span class="n">2</span><div><span class="t">2–3 business days</span><h3>We design it for free</h3><p>We build a homepage from scratch around your products, photos and brand.</p></div></div>
+      <div class="step"><span class="n">3</span><div><span class="t">On your phone</span><h3>You try it</h3><p>We email you a private link. Tap through it, test the forms and tell us what to change.</p></div></div>
+      <div class="step"><span class="n">4</span><div><span class="t">Only if you want it</span><h3>We launch it</h3><p>If you want to use it, we send the launch details in a separate email. If not, you don't owe us anything.</p></div></div>
+    </div>
+    <div class="promise rv">
+      <div><span class="eyebrow">Our promise</span><h3>You see it first.<br><i>Then you decide.</i></h3></div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>You don't need a card, deposit or contract to get your mock-up.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Your design email contains your design and nothing else. Launch details come separately, and only if you ask.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>You only ever pay through our official accounts, and you get a written payment confirmation by email.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · OUR WORK -->
+<section class="work dark pad" id="work">
+  <div class="amb" aria-hidden="true"><img id="amb" src="img/frames/eclipse-d-hero.jpg" alt=""></div>
+  <div class="container">
+    <span class="eyebrow">Our work</span>
+    <h2 style="color:#fff">One salon.<br><i>A website built to book.</i></h2>
+    <div class="picker" role="tablist" aria-label="Choose a project" id="picker"></div>
+    <div class="case" id="case" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- 6 · SAY HELLO -->
+<section class="pad" id="hello">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <span class="eyebrow">Say hello</span>
+        <h2>Hi, we're<br><i>Waypoints.</i></h2>
+        <p class="mt-3">We're a small remote design studio in Marikina City, Philippines. We work on one business at a time, from neighborhood shops in Metro Manila to small businesses in other countries. Everything happens online, and we schedule calls in your time zone.</p>
+        <p class="muted">The first design is free so you can judge our work before you spend anything.</p>
+        <p class="joke">The moment we design for: when an owner opens their mock-up and thinks, "Wait… that's us?"</p>
+        <div class="facts">
+          <div><b>Philippines</b><small>Remote studio, working with clients worldwide</small></div>
+          <div><b>2–3 days</b><small>to your free mock-up</small></div>
+          <div><b>Fast replies</b><small>We aim to reply within 1 business day</small></div>
+          <div><b>Email</b><small>way.points00@gmail.com</small></div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2">
+        <div class="stack" aria-hidden="true">
+          <div class="p1" data-par="-6"><img src="img/waypoints-logo.png" alt="" loading="lazy"></div>
+          <div class="p2" data-par="8"><div class="phone"><div class="view" data-frames="eclipse-m-hero,eclipse-m-hero2,eclipse-m-hero3"></div></div></div>
+          <div class="badge"><svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60 m-46 0 a46 46 0 1 1 92 0 a46 46 0 1 1 -92 0"/></defs><text font-size="9.5" letter-spacing="3" fill="#fff"><textPath href="#circ">PREPARE · PLAN · ENJOY · </textPath></text></svg><b>Hello!</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 g-4">
+      <div class="col-lg-4"><span class="eyebrow">Good questions</span><h3 style="font-size:2rem">Before you book</h3></div>
+      <div class="col-lg-8 faq" id="faq"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · CTA: BOOK -->
+<section class="cta pad" id="book">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <span class="eyebrow">Get your free mock-up</span>
+        <h2>Let's design<br><i>yours.</i></h2>
+        <p class="mt-3" style="color:#d9c8ba;max-width:42ch">The form takes about two minutes. Within 2–3 business days, a custom design for your business arrives in your inbox. You don't need a card, and you don't sign anything.</p>
+        <ul class="list-unstyled mt-4" style="display:grid;gap:12px;color:#e6d6c8">
+          <li>① You send the form, and we email you a confirmation right away.</li>
+          <li>② We design your homepage with your brand.</li>
+          <li>③ You get a private link to review on your phone.</li>
+          <li>④ If you like it, we talk about launching it.</li>
+        </ul>
+      </div>
+      <div class="col-lg-7">
+        <form class="bookcard" id="bookForm" name="mockup-request" method="POST" data-netlify="true" netlify-honeypot="company" novalidate>
+          <input type="hidden" name="form-name" value="mockup-request">
+          <input type="hidden" name="tz" id="tz">
+          <p class="hp" aria-hidden="true"><label>Leave this field empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
+          <div class="row g-3">
+            <div class="col-sm-6"><label for="fb" class="form-label">Business name</label><input class="form-control" id="fb" name="business" required autocomplete="organization"></div>
+            <div class="col-sm-6"><label for="ft" class="form-label">Type of business</label><input class="form-control" id="ft" name="type" placeholder="Salon, bakery, plumber…"></div>
+            <div class="col-sm-6"><label for="fn" class="form-label">Your name</label><input class="form-control" id="fn" name="name" required autocomplete="name"></div>
+            <div class="col-sm-6"><label for="fe" class="form-label">Email (your design goes here)</label><input class="form-control" id="fe" name="email" type="email" required autocomplete="email" placeholder="you@business.com"></div>
+            <div class="col-sm-6"><label for="fp" class="form-label">Phone / WhatsApp / Viber (optional)</label><input class="form-control" id="fp" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="col-sm-6"><label for="fc" class="form-label">Country</label><select class="form-select" id="fc" name="country"><option>Philippines</option><option>United States</option><option>Canada</option><option>Australia</option><option>United Kingdom</option><option>Other</option></select></div>
+            <div class="col-12"><label for="fl" class="form-label">Your Facebook, Instagram, Google Maps or current website (optional)</label><input class="form-control" id="fl" name="link" placeholder="Paste a link so we can see your brand"></div>
+            <div class="col-12"><span class="form-label d-block" id="goalLbl" style="font-weight:700;font-size:.86rem">What should customers do on your site?</span><div class="chips" role="radiogroup" aria-labelledby="goalLbl" id="goals"></div></div>
+            <div class="col-sm-6"><label for="fw" class="form-label">How would you like to review it?</label><select class="form-select" id="fw" name="walkthrough"><option>Email is fine</option><option>A short call</option><option>A video call</option></select></div>
+            <div class="col-sm-6"><label for="fx" class="form-label">Anything we should know? (optional)</label><input class="form-control" id="fx" name="notes" placeholder="Colors you love, must-haves…"></div>
+            <div class="col-12"><label class="check"><input type="checkbox" name="photos" value="Yes"> <span>Optional: you can use photos and the logo from my public pages for my private mock-up. I own them or have permission to use them. If you leave this unticked, we'll use stock photos.</span></label></div>
+            <div class="col-12"><label class="check"><input type="checkbox" name="consent" value="Yes" required> <span>I agree to the <a href="privacy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="terms/" target="_blank" rel="noopener">Terms</a>, and allow Waypoints Web Design to use my details to make and send my free mock-up.</span></label></div>
+            <div class="col-12"><button class="btn-w terra w-100" type="submit" id="bookBtn">Get my free mock-up</button>
+              <div class="nopay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>No payment needed. We only use your details to make and send your design.</div></div>
+          </div>
+        </form>
+        <div class="bookcard done" id="bookDone" hidden tabindex="-1" aria-live="polite">
+          <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h3 style="font-size:2rem">Request received. Thank you!</h3>
+          <p class="muted mb-0" id="doneRef"></p>
+          <ol>
+            <li>A confirmation is on its way to <b id="doneMail"></b>.</li>
+            <li>We design your homepage in 2–3 business days.</li>
+            <li>You get a private link by email. Just your design, nothing to pay.</li>
+          </ol>
+          <p class="mb-0">Can't find our email? Check your spam folder, or write to <a href="mailto:way.points00@gmail.com">way.points00@gmail.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr"><div class="container">
+  <div class="row g-4">
+    <div class="col-md-6"><a class="wm" href="#top"><b>WAYP<i>O</i>INTS</b><small>WEB DESIGN</small></a><p class="mt-3 mb-0">Website design, lead generation and marketing automation for small businesses, coaches and professionals. Sites that take orders, book appointments, follow up and get paid. Free mock-up first. Prepare · Plan · Enjoy.</p></div>
+    <div class="col-6 col-md-3"><h2 class="fh">Explore</h2><a href="#services">Services</a><br><a href="#sources">Where it comes from</a><br><a href="#work">Our work</a><br><a href="#how">How it works</a><br><a href="#book">Get a free mock-up</a></div>
+    <div class="col-6 col-md-3"><h2 class="fh">Contact</h2><a href="mailto:way.points00@gmail.com">way.points00@gmail.com</a><br>Marikina City, Philippines · working worldwide</div>
+  </div>
+  <ul class="legal" aria-label="Policies"><li><a href="privacy/">Privacy Policy</a></li><li><a href="terms/">Terms</a></li><li><a href="cookies/">Cookie Policy</a></li><li><a href="refunds/">Refund Policy</a></li></ul>
+  <p class="mt-3 mb-0" style="font-size:.8rem;opacity:.8">© 2026 Waypoints Web Design · Marikina City, Philippines · way.points00@gmail.com. Eclipse Beauty Lounge is a client project.</p>
+</div></footer>
+<aside class="sticky-cta" aria-label="Quick action"><a class="btn-w terra" href="#book">Get my free mock-up</a></aside>
+<div class="toast-w" id="toast" role="status"></div>
+
+<script src="assets/consent.js"></script>
+<script src="assets/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script>
+/* Booking endpoint: the Google Apps Script web app URL from requests/SETUP.txt. Empty = Netlify Forms only. */
+const REQUEST_API_URL = 'https://script.google.com/macros/s/AKfycbyYyiWq3yT2UBMu5qTnDprvIFEcdraD_xNoJzqwfaZm88cbObLduT2M-aiIHXAqp4iL/exec';
+const $ = id => document.getElementById(id);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(pointer: fine)').matches;
+gsap.registerPlugin(ScrollTrigger);
+const toast = m => { const t = $('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 2800); };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+
+/* Smooth scroll (desktop) */
+let lenis = null;
+if (!reduce && fine && window.Lenis) { lenis = new Lenis({ lerp: .1 }); lenis.on('scroll', ScrollTrigger.update); gsap.ticker.add(t => lenis.raf(t * 1000)); gsap.ticker.lagSmoothing(0); }
+const jump = sel => { const el = document.querySelector(sel); if (!el) return; lenis ? lenis.scrollTo(el, { offset: -(hdr.offsetHeight + 12) }) : el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); };
+/* phone menu: a fixed bar; tap "Menu" and the sections drop down */
+(() => {
+  const H = $('hdr'), btn = $('mbtn'), panel = $('mpanel'), set = open => { H.classList.toggle('menu', open); btn.setAttribute('aria-expanded', open); };
+  btn.addEventListener('click', e => { e.stopPropagation(); set(!H.classList.contains('menu')); });
+  panel.addEventListener('click', e => { if (e.target.closest('a')) set(false); });
+  document.addEventListener('click', e => { if (!e.target.closest('#hdr')) set(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+  const links = [...panel.querySelectorAll('a:not(.btn-w)')], secs = links.map(a => document.querySelector(a.getAttribute('href')));
+  const io2 = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; const i = secs.indexOf(e.target); links.forEach((a, k) => a.setAttribute('aria-current', k === i)); }), { rootMargin: '-45% 0px -50% 0px' });
+  secs.forEach(s => s && io2.observe(s));
+})();
+document.addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); if (!a) return; const h = a.getAttribute('href'); if (h.length > 1) { e.preventDefault(); jump(h); const col = $('nav'); if (col.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(col).hide(); } });
+
+/* Header + reading progress */
+const hdr = $('hdr');
+$('nav').addEventListener('show.bs.collapse', () => hdr.classList.add('open'));
+$('nav').addEventListener('hidden.bs.collapse', () => hdr.classList.remove('open'));
+let lastY = 0;
+const sticky = document.querySelector('.sticky-cta');
+let formSeen = false, maxY = 1, ticking = false;
+const measure = () => { maxY = Math.max(1, document.documentElement.scrollHeight - innerHeight); };
+measure(); addEventListener('resize', measure, { passive: true }); addEventListener('load', measure);
+new IntersectionObserver(es => es.forEach(e => { formSeen = e.isIntersecting; sticky.classList.toggle('on', !formSeen && scrollY > 200); }), { rootMargin: '-120px 0px -90px 0px' }).observe($('book'));
+const onScroll = () => { if (ticking) return; ticking = true; requestAnimationFrame(paintScroll); };
+const paintScroll = () => { ticking = false; const y = scrollY, max = maxY; hdr.classList.toggle('solid', y > 30);
+  if (innerWidth >= 992 && !hdr.classList.contains('open')) hdr.classList.toggle('away', y > lastY + 4 && y > 140); if (innerWidth < 992 || y < lastY - 4 || y < 140) hdr.classList.remove('away'); lastY = y;
+  sticky.classList.toggle('on', !formSeen && y > 200);
+  $('read').style.transform = `scaleX(${Math.min(1, y / max)})`; };
+addEventListener('scroll', onScroll, { passive: true }); paintScroll();
+
+/* Device screens: crossfading slideshows of the real sample sites */
+const viewIO = new IntersectionObserver(es => es.forEach(e => { e.target._vis = e.isIntersecting; }), { rootMargin: '100px' });
+function screens(root = document) {
+  root.querySelectorAll('.view[data-frames]').forEach(v => {
+    if (v._t) clearInterval(v._t);
+    const fr = v.dataset.frames.split(',');
+    v.innerHTML = fr.map((f, i) => `<img src="img/frames/${f}.jpg" alt="" ${i ? 'loading="lazy"' : ''} decoding="async"${i ? '' : ' class="on"'}>`).join('');
+    if (reduce) return;
+    let i = 0; const imgs = v.querySelectorAll('img');
+    v._t = setInterval(() => { if (!v._vis) return; imgs[i].classList.remove('on'); i = (i + 1) % imgs.length; imgs[i].classList.add('on'); }, 2600 + Math.random() * 600);
+    viewIO.observe(v);
+  });
+}
+screens();
+
+/* 1 · Hero: the device rig turns in 3D with the mouse and settles as you scroll */
+(() => {
+  const rig = $('heroRig'); if (reduce) return;
+  let px = 0, py = 0, tx = 0, ty = 0, p = 0;
+  if (fine) addEventListener('pointermove', e => { tx = (e.clientX / innerWidth - .5) * 2; ty = (e.clientY / innerHeight - .5) * 2; }, { passive: true });
+  ScrollTrigger.create({ trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true, onUpdate: s => p = s.progress });
+  let on = true, raf = 0;
+  const loop = t => {
+    px += (tx - px) * .06; py += (ty - py) * .06;
+    const idle = Math.sin(t / 2200) * 4;
+    rig.style.transform = `rotateY(${(-16 + px * 10 + idle + p * 16).toFixed(2)}deg) rotateX(${(8 - py * 6 - p * 8).toFixed(2)}deg) translateY(${(p * -60).toFixed(1)}px) scale(${(1 - p * .08).toFixed(3)})`;
+    raf = on ? requestAnimationFrame(loop) : 0;
+  };
+  new IntersectionObserver(([e]) => { on = e.isIntersecting; if (on && !raf) raf = requestAnimationFrame(loop); }).observe($('heroStage'));
+  raf = requestAnimationFrame(loop);
+  gsap.from('.rig .laptop', { y: 80, opacity: 0, duration: 1.3, ease: 'power3.out', delay: .1 });
+  gsap.from('.rig .phone', { y: 120, x: 40, opacity: 0, duration: 1.3, ease: 'power3.out', delay: .35 });
+  gsap.from('.rig .chip', { scale: .6, opacity: 0, duration: .8, ease: 'back.out(2)', stagger: .2, delay: 1 });
+})();
+
+/* 2 · Mission: words light up as you scroll */
+(() => {
+  const el = $('missionText'); el.innerHTML = el.textContent.split(/\s+/).map(w => { const em = /^\*.*\*/.test(w); return `<span class="w${em ? ' em' : ''}">${w.replace(/\*/g, '')}</span>`; }).join(' ');
+  const words = el.querySelectorAll('.w'); if (reduce) return;
+  ScrollTrigger.create({ trigger: '#mission', start: 'top 75%', end: 'bottom 55%', scrub: true, onUpdate: s => { const k = Math.round(s.progress * words.length); words.forEach((w, i) => w.style.opacity = i < k ? 1 : .14); } });
+})();
+
+/* 3 · What you get: 3D cards with real screens from our projects */
+const I = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+const WHAT = [
+  { t: 'Takes orders', img: '', icon: I('<path d="M3 4h2l2.2 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.2L20 8H6.2"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/>'), p: 'Your menu or catalog with prices, minimum orders and a running total. Customers choose a delivery or pick-up date, and each order arrives in your email and your Google Sheet.', like: 'For bakeries, food sellers and shops' },
+  { t: 'Books appointments', img: 'eclipse-d-book', icon: I('<rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M8.5 14.5l2.2 2.2 4.5-4.5"/>'), p: 'Customers see your services and rates, then pick a day and time, even at midnight. You open or close days and set the slots in a Google Sheet, which prevents double bookings.', like: 'For salons, studios, clinics & events' },
+  { t: 'Gets you paid', img: 'eclipse-m-pay', pos: 'center 17%', icon: I('<rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14.5v2.5"/>'), p: 'When you\'re ready, customers pay a deposit or the full amount with the payment method you choose. You both get an email once the payment is confirmed.', like: 'Like Eclipse' }
+];
+$('whatGrid').innerHTML = WHAT.map(m => `<div class="col"><div class="m3d"><article class="mcard"><span class="glare"></span>${m.img ? `<div class="ph"><img src="img/frames/${m.img}.jpg" alt="" loading="lazy" decoding="async"${m.pos ? ` style="object-position:${m.pos}"` : ''}></div>` : `<div class="ph noimg">${m.icon}</div>`}<div class="ic3"><span class="back"></span><span class="face">${m.icon}</span></div><h3>${m.t}</h3><p>${m.p}</p><span class="like">${m.like}</span></article></div></div>`).join('');
+document.querySelectorAll('.mcard').forEach((c, i) => {
+  if (!reduce) gsap.fromTo(c, { rotateX: 28, y: 90, opacity: 0, z: -120 }, { rotateX: 0, y: 0, opacity: 1, z: 0, ease: 'power3.out', duration: 1.2, delay: i * .12, scrollTrigger: { trigger: '#whatGrid', start: 'top 82%' } });
+  if (!fine || reduce) return;
+  c.addEventListener('pointermove', e => { const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height; c.style.transform = `rotateY(${(x - .5) * 14}deg) rotateX(${(.5 - y) * 12}deg) translateZ(10px)`; c.style.setProperty('--gx', x * 100 + '%'); c.style.setProperty('--gy', y * 100 + '%'); });
+  c.addEventListener('pointerleave', () => c.style.transform = '');
+});
+
+/* 4 · How it works: the line draws and the steps light up */
+(() => {
+  const steps = document.querySelectorAll('.step'), bar = $('stepsBar'), vert = () => innerWidth < 992;
+  if (reduce) { steps.forEach(s => s.classList.add('lit')); bar.style.transform = 'none'; return; }
+  ScrollTrigger.create({ trigger: '#steps', start: 'top 75%', end: 'bottom 55%', scrub: true, onUpdate: s => { bar.style.transform = vert() ? `scaleY(${s.progress})` : `scaleX(${s.progress})`; steps.forEach((st, i) => st.classList.toggle('lit', s.progress >= i / steps.length)); } });
+})();
+
+/* 5 · Our work: two projects, each in its own device rig */
+const WORK = [
+  { id: 'eclipse', name: 'Eclipse Beauty Lounge', tag: 'Client project', meta: 'Hair, nails & skin salon · Marikina, Philippines', goal: 'Goal: turn Facebook followers into booked appointments.',
+    built: ['A cinematic 3D photo orbit that opens the page', 'Services in 3D cards, a "Find your look" carousel and real Google reviews', 'Booking form that drops every request into a Google Sheet and emails the owner instantly', 'Down payment by GCash, Maya or bank QR, with receipt upload and email confirmation'],
+    d: ['eclipse-d-hero', 'eclipse-d-hero2', 'eclipse-d-hero3'], m: ['eclipse-m-hero', 'eclipse-m-hero2', 'eclipse-m-hero3'], href: 'work/eclipse/', goalPick: 'Book appointments' }
+
+];
+(() => {
+  let cur = 0;
+  $('picker').innerHTML = WORK.map((w, i) => `<button type="button" role="tab" id="tab-${w.id}" aria-controls="case" aria-selected="${i === 0}"><span class="tag${w.mock ? ' mock' : ''}">${w.tag}</span><b>${w.name}</b><small>${w.meta}</small></button>`).join('');
+  const show = i => {
+    cur = i; const w = WORK[i];
+    $('picker').querySelectorAll('button').forEach((b, k) => b.setAttribute('aria-selected', k === i));
+    $('case').setAttribute('aria-labelledby', 'tab-' + w.id);
+    $('case').innerHTML = `<div class="wstage fadein" aria-hidden="true"><div class="rig wrig"><div class="laptop"><div class="scr"><div class="view" data-frames="${w.d.join(',')}"></div></div><div class="base"></div></div><div class="phone"><div class="view" data-frames="${w.m.join(',')}"></div></div></div></div>
+      <div class="fadein" style="animation-delay:.1s"><h3>${w.name}</h3><p class="meta">${w.meta}</p><p class="goal">${w.goal}</p><ul>${w.built.map(b => `<li>${CHECK}<span>${b}</span></li>`).join('')}</ul>
+      <div class="d-flex flex-wrap gap-2"><a class="btn-w terra" href="${w.href}" target="_blank" rel="noopener">View the live sample</a><a class="btn-w ghost" href="#book" data-goal="${w.goalPick}">I want one like this</a></div></div>`;
+    screens($('case'));
+    const amb = $('amb'); amb.style.opacity = 0; setTimeout(() => { amb.src = `img/frames/${w.d[0]}.jpg`; amb.style.opacity = 1; }, 300);
+    tiltRig($('case').querySelector('.wrig'));
+  };
+  $('picker').addEventListener('click', e => { const b = e.target.closest('button'); if (b) show([...$('picker').children].indexOf(b)); });
+  $('picker').addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const n = (cur + (e.key === 'ArrowRight' ? 1 : -1) + WORK.length) % WORK.length; show(n); $('picker').children[n].focus(); } });
+  show(0);
+})();
+function tiltRig(rig) {
+  if (!rig) return; rig.style.transform = 'rotateY(-12deg) rotateX(6deg)';
+  if (!fine || reduce) return;
+  const st = rig.parentElement;
+  st.addEventListener('pointermove', e => { const r = st.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; rig.style.transform = `rotateY(${-12 + x * 14}deg) rotateX(${6 - y * 10}deg)`; });
+  st.addEventListener('pointerleave', () => rig.style.transform = 'rotateY(-12deg) rotateX(6deg)');
+  rig.style.transition = 'transform .4s cubic-bezier(.2,.7,.2,1)';
+}
+
+/* 6 · Say hello: parallax + FAQ */
+if (!reduce) document.querySelectorAll('[data-par]').forEach(el => gsap.fromTo(el, { yPercent: -+el.dataset.par }, { yPercent: +el.dataset.par, ease: 'none', scrollTrigger: { trigger: '.stack', start: 'top bottom', end: 'bottom top', scrub: true } }));
+const FAQ = [
+  ['Is the mock-up really free?', 'Yes. You don\'t need a card, a deposit or a contract. We design it so you can see exactly what you\'d get, and if it isn\'t for you, you owe us nothing.'],
+  ['What happens after I see it?', 'Tell us what you\'d change and we\'ll adjust it. If you want to use it, reply "Let\'s launch" and we\'ll send the next steps in a separate email. We won\'t keep chasing you.'],
+  ['Can you use my Facebook or Instagram photos?', 'With your permission, yes. That way your mock-up looks like your business from the first day. You can also send us photos, or we can use licensed stock photos.'],
+  ['I\'m outside the Philippines. Can you still help?', 'Yes. We work with clients online, schedule calls in your time zone and send everything by email.'],
+  ['I already have a website. Can you just add the automation or follow-up?', 'Yes. We can connect your existing forms to a Google Sheet, confirmation emails and a lead tracker, as long as your site lets us add or link a form. Tell us what you use and we\'ll check it first.'],
+  ['Do I need a domain and hosting?', 'We guide you through it at launch and can set it up for you. The website and the domain are yours.']
+];
+$('faq').innerHTML = FAQ.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join('');
+
+/* Reveal */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+document.querySelectorAll('.rv').forEach(el => reduce ? el.classList.add('in') : io.observe(el));
+if (!reduce) gsap.utils.toArray('section:not(.hero) h2').forEach(h => gsap.from(h, { y: 40, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: h, start: 'top 85%' } }));
+
+/* 7 · Book a free mock-up (no payment on the website, on purpose) */
+const GOALS = ['Take orders', 'Book appointments', 'Get inquiries / quotes', 'Show a menu or catalog', 'Get leads / book consultations', 'Follow up with leads', 'Not sure yet'];
+$('goals').innerHTML = GOALS.map((g, i) => `<input type="radio" name="goal" id="g${i}" value="${g}" ${g === 'Not sure yet' ? 'checked' : ''}><label for="g${i}">${g}</label>`).join('');
+try { $('tz').value = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch {}
+try { if (!/Manila/.test($('tz').value)) { const tz = $('tz').value; $('fc').value = /America\/(New_York|Chicago|Denver|Los_Angeles|Phoenix|Anchorage)|Pacific\/Honolulu/.test(tz) ? 'United States' : /Australia/.test(tz) ? 'Australia' : /Europe\/London/.test(tz) ? 'United Kingdom' : /America\/(Toronto|Vancouver)/.test(tz) ? 'Canada' : 'Philippines'; } } catch {}
+document.addEventListener('click', e => { const a = e.target.closest('[data-goal]'); if (!a) return; const r = [...document.querySelectorAll('[name=goal]')].find(x => x.value === a.dataset.goal); if (r) r.checked = true; });
+$('bookForm').addEventListener('submit', async e => {
+  e.preventDefault(); const f = e.target; if (!f.reportValidity()) return;
+  const btn = $('bookBtn'); btn.disabled = true; btn.textContent = 'Booking…';
+  const data = Object.fromEntries(new FormData(f)); data.photos = !!f.photos.checked;
+  const body = new URLSearchParams(new FormData(f)).toString();
+  const toSheet = REQUEST_API_URL ? fetch(REQUEST_API_URL, { method: 'POST', body: JSON.stringify(data) }).then(r => r.json()).catch(() => null) : Promise.resolve(null);
+  const toNetlify = fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body }).then(r => r.ok, () => false);
+  const [a, b] = await Promise.all([toSheet, toNetlify]);
+  if (a && a.ok === false) { btn.disabled = false; btn.textContent = 'Book my free mock-up'; return toast(a.error); }
+  if (!(a && a.ok) && !b) { btn.disabled = false; btn.textContent = 'Book my free mock-up'; return toast('Could not send. Please email us at way.points00@gmail.com.'); }
+  $('doneMail').textContent = data.email; $('doneRef').textContent = a && a.ref ? `Your request number: ${a.ref}` : `Thank you, ${data.name.split(' ')[0]}. We've got your request for ${data.business}.`;
+  f.hidden = true; $('bookDone').hidden = false; $('bookDone').focus();
+  wpTrack('generate_lead', { form: 'free_mockup', goal: data.goal || '' }); // no names or emails go to Google
+});
+/* button clicks people make (only counted after they accept analytics) */
+document.addEventListener('click', e => { const a = e.target.closest('a'); if (!a) return; const href = a.getAttribute('href') || '';
+  const sec = a.closest('header,.sticky-cta,footer,section[id]');
+  if (href === '#book') wpTrack('cta_click', { where: sec ? (sec.id || sec.tagName.toLowerCase() === 'aside' && 'sticky' || sec.tagName.toLowerCase()) : 'page' });
+  else if (href.includes('/work/') || href.startsWith('work/')) wpTrack('sample_open', { sample: href });
+});
+</script>
+</body>
+</html>

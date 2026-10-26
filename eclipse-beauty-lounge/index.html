@@ -687,6 +687,7 @@ async function loadAvailability() {
     if (!r || !r.ok) throw 0;
     Object.assign(CAL, { capacity: r.capacity || CAL.capacity, open: r.openDays || CAL.open, counts: r.counts || {}, live: true });
     if (r.online && !document.documentElement.hasAttribute('data-demo')) document.documentElement.dataset.pay = 'online';
+    if (r.deposits) { CAL.deposits = r.deposits; const upd = () => setAmt(r.deposits[$('bs').value] || r.downPayment || DOWN_PAYMENT); $('bs').addEventListener('change', upd); upd(); }
   } catch {
     if (document.documentElement.hasAttribute('data-demo')) { // preview only: believable sample numbers
       CAL.sample = true;
@@ -749,6 +750,7 @@ function showResult(r) {
     DemoPay: ['warn', 'Demo: no payment was made', 'This preview has no real payment behind it, so the booking is not confirmed. On the real website you pay on PayMongo\'s own page, and the booking only shows "Paid" after PayMongo itself tells our system the money arrived.'],
     Checking: ['wait', 'Confirming your payment…', 'We\'re asking PayMongo directly. This takes a few seconds.'],
     'Payment check needed': ['wait', 'We\'re checking your payment', 'Something about the payment needs a quick look from Eclipse (for example the amount). Your slot stays held and we\'ll email you shortly.'],
+    Cancelled: ['warn', 'Payment cancelled', `No money was taken. Your slot is still held${r.payBy ? ' until ' + r.payBy : ''}. Tap below to pay now, or message us to change your booking.`],
     Online: ['warn', 'Not paid yet', r.checkout_url ? 'Your slot is held, but we haven\'t received your down payment. Tap below to pay on PayMongo\'s secure page.' : 'We haven\'t received your down payment yet. If you just paid, wait a minute and refresh this page. Otherwise message us on Messenger.']
   };
   const [ic, title, msg] = T[r.status] || ['warn', 'Booking not confirmed yet', 'Please message us on Messenger with your booking number.'];
@@ -756,9 +758,9 @@ function showResult(r) {
   $('rcTitle').textContent = title; $('rcMsg').textContent = msg;
   $('rcDemo').innerHTML = r.status === 'Demo' || r.status === 'DemoPay' ? '<span class="demo-tag">DEMO ONLY · no payment was made or checked</span>' : '';
   const pmOk = u => { try { const x = new URL(u); return x.protocol === 'https:' && /(^|\.)paymongo\.com$/.test(x.hostname); } catch { return false; } };
-  $('rcPay').hidden = !(r.status === 'Online' && pmOk(r.checkout_url)); $('rcPay').href = $('rcPay').hidden ? '#book' : r.checkout_url;
+  $('rcPay').hidden = !((r.status === 'Online' || r.status === 'Cancelled') && pmOk(r.checkout_url)); $('rcPay').href = $('rcPay').hidden ? '#book' : r.checkout_url;
   const paid = r.status === 'Paid';
-  const rows = [['Booking no.', r.ref], ['Status', paid ? '<span class="paid">✓ Paid, confirmed</span>' : esc(r.status === 'Demo' || r.status === 'DemoPay' ? 'Preview, not paid' : r.status === 'Receipt check needed' || r.status === 'Payment check needed' || r.status === 'Checking' ? 'Checking your payment' : r.status === 'Online' ? 'Waiting for down payment' : r.status)], ['Service', r.service], ['Requested slot', r.day ? `${r.day}, ${r.time}` : ''], [paid ? 'Down payment received' : 'Down payment', peso(r.amount)], ['Paid to', paid ? r.paidTo : ''], ['Reference no.', paid ? r.refNo : '']];
+  const rows = [['Booking no.', r.ref], ['Status', paid ? '<span class="paid">✓ Paid, confirmed</span>' : esc(r.status === 'Demo' || r.status === 'DemoPay' ? 'Preview, not paid' : r.status === 'Receipt check needed' || r.status === 'Payment check needed' || r.status === 'Checking' ? 'Checking your payment' : r.status === 'Online' || r.status === 'Cancelled' ? 'Waiting for down payment' : r.status)], ['Service', r.service], ['Requested slot', r.day ? `${r.day}, ${r.time}` : ''], [paid ? 'Down payment received' : 'Down payment', peso(r.amount)], ['Paid to', paid ? r.paidTo : ''], ['Reference no.', paid ? r.refNo : '']];
   $('rcpt').innerHTML = rows.filter(x => x[0] && x[1]).map(([k, v]) => `<div><span>${k}</span><span>${k === 'Status' ? v : esc(v)}</span></div>`).join('');
   $('rcPrint').hidden = !paid; $('rcNew').hidden = !paid && r.status !== 'Demo' && r.status !== 'DemoPay';
   card('bookOk');
@@ -863,7 +865,7 @@ function sampleQR(v) {
         showResult(Object.assign({}, x, { status: 'Checking' }));
         for (let i = 0; i < 6 && x.status === 'Awaiting down payment'; i++) { await new Promise(s => setTimeout(s, 3000)); const y = await api(null, `?action=pay&ref=${encodeURIComponent(ref)}&k=${encodeURIComponent(k)}`); if (y.ok) x = Object.assign(y, { k }); }
       }
-      if (x.status === 'Awaiting down payment') { remember(x); return showResult(Object.assign({}, x, { status: 'Online' })); }
+      if (x.status === 'Awaiting down payment') { remember(x); return showResult(Object.assign({}, x, { status: q.get('cancelled') ? 'Cancelled' : 'Online' })); }
       forget(); return showResult(x);
     }
     p.accounts = await withQR(r.accounts);

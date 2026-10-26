@@ -1,0 +1,10 @@
+/* Self-hosted Google Fonts (SIL OFL): Playfair Display + DM Sans */
+@font-face{font-family:"DM Sans";font-style:italic;font-weight:400;font-display:swap;src:url(dm-sans-italic.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:400;font-display:swap;src:url(dm-sans-regular.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:500;font-display:swap;src:url(dm-sans-regular.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:700;font-display:swap;src:url(dm-sans-regular.woff2) format("woff2")}
+@font-face{font-family:"Playfair Display";font-style:italic;font-weight:600;font-display:swap;src:url(playfair-display-italic.woff2) format("woff2")}
+@font-face{font-family:"Playfair Display";font-style:italic;font-weight:700;font-display:swap;src:url(playfair-display-italic.woff2) format("woff2")}
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:600;font-display:swap;src:url(playfair-display-regular.woff2) format("woff2")}
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:700;font-display:swap;src:url(playfair-display-regular.woff2) format("woff2")}
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:800;font-display:swap;src:url(playfair-display-regular.woff2) format("woff2")}
